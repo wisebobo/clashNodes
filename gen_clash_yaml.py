@@ -6,7 +6,6 @@ def generate_clash_config(yaml_file):
 
     base_name, ext = os.path.splitext(os.path.basename(yaml_file))
     output_file = base_name + "_clash.yaml"
-    mobile_file = base_name + "_clash_mobile.yaml"
 
     data = None
 
@@ -3530,13 +3529,8 @@ def generate_clash_config(yaml_file):
         'MATCH,🐟 漏网之鱼'
     ]
 
-    with open(mobile_file, 'w', encoding='utf-8') as file:
-        yaml.dump(data, file, sort_keys=True, allow_unicode=True)
-
-
     with open(output_file, 'w', encoding='utf-8') as file:
         yaml.dump(data, file, sort_keys=True, allow_unicode=True)
-
 
 if __name__ == "__main__":
     yaml_file = r"rules.yaml"
