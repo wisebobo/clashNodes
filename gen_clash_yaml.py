@@ -31,7 +31,7 @@ def generate_clash_config(yaml_file):
     data['ipv6'] = False
     data['log-level'] = 'info'
     data['tun'] = {
-        'enable': True,
+        'enable': False,
         'stack': 'system',
         'dns-hijack': ['114.114.114.114', '180.76.76.76', '119.29.29.29', '233.5.5.5', '1.1.1.1', '1.0.0.1', '8.8.8.8', '8.8.4.4'],
         'auto-route': True,
