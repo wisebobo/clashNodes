@@ -49,7 +49,7 @@ def test_vmess(node):
         # 这里假设你已经安装了 Xray 或 V2Ray，并且可以通过命令行调用
         # 以下是一个示例命令（需要根据实际情况调整）
         command = [
-            "xray", "run", "-config", "vmess_config.json"
+            "xray-bin/xray", "run", "-config", "vmess_config.json"
         ]
         # 生成 Vmess 配置文件
         vmess_config = {
