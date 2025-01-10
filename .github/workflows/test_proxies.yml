@@ -23,6 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests pyyaml
 
+    - name: Download nodes.yaml
+      run: |
+        curl -o nodes.yaml https://raw.githubusercontent.com/imyaoxp/clashnode/refs/heads/main/sub/sub_merge_yaml.yml
+
     - name: Download Xray
       run: |
         curl -L -o xray.zip https://github.com/XTLS/Xray-core/releases/download/v1.8.1/Xray-linux-64.zip
