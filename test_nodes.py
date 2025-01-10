@@ -32,7 +32,7 @@ def test_ss(node):
             print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
             result = None
     except Exception as e:
-        print(f"Error testing Shadowsocks proxy {node['server']}:{node['port']}: {e}")
+        print(f"{node['name']} - Error testing Shadowsocks proxy {node['server']}:{node['port']}: {e}")
         result = None
     finally:
         # Kill any running ss-local process
@@ -54,7 +54,7 @@ def test_trojan(node):
             print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
             return None
     except Exception as e:
-        print(f"Error testing Trojan proxy {node['server']}:{node['port']}: {e}")
+        print(f"{node['name']} - Error testing Trojan proxy {node['server']}:{node['port']}: {e}")
         return None
 
 # 测试 Vmess 代理
@@ -128,7 +128,7 @@ def test_vmess(node):
             print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
             return None
     except Exception as e:
-        print(f"Error testing Vmess proxy {node['server']}:{node['port']}: {e}")
+        print(f"{node['name']} - Error testing Vmess proxy {node['server']}:{node['port']}: {e}")
         return None
 
 # 下载 nodes.yaml 文件
