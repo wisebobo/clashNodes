@@ -11,7 +11,7 @@ def test_ss(node):
     try:
         # Start a local shadowsocks client
         command = [
-            'ss-local', '-s', node['server'], '-p', node['port'], '-m', node['cipher'], '-k', node['password'], '-l', '1080', '--fast-open'
+            'ss-local', '-s', str(node['server']), '-p', str(node['port']), '-m', str(node['cipher']), '-k', str(node['password']), '-l', '1080', '--fast-open'
         ]
         subprocess.run(
             command,
