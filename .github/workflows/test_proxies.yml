@@ -45,10 +45,15 @@ jobs:
       run: |
         python test_nodes.py
 
+    - name: Run Gen Clash
+      run: |
+        python gen_clash_yaml.py
+
     - name: Commit and push rules
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         git add rules.yaml
+        git add rules_clash.yaml
         git commit -m "Update rules.yaml"
         git push
