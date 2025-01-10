@@ -115,12 +115,16 @@ def test_vmess(server, port, uuid, alter_id, cipher, network, ws_opts, tls, skip
         return False
 
 # 读取节点文件
-with open("nodes.yaml", "r") as file:
-    nodes = yaml.safe_load(file)
+with open("nodes.yaml", "r", encoding="utf-8") as file:
+    data = yaml.safe_load(file)
+
+# 提取代理列表
+proxies = data.get("proxies", [])
 
 # 测试节点并生成规则
 valid_nodes = []
-for node in nodes:
+for node in proxies:
+    print(node)
     if node["type"] == "ss":
         if test_ss(node["server"], node["port"], node["password"], node["cipher"]):
             valid_nodes.append(node)
