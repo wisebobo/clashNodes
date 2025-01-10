@@ -9,20 +9,35 @@ from concurrent.futures import ThreadPoolExecutor
 # 测试 Shadowsocks 代理
 def test_ss(node):
     try:
+        # Start a local shadowsocks client
+        command = [
+            'ss-local', '-s', node['server'], '-p', node['port'], '-m', node['cipher'], '-k', node['password'], '-l', '1080', '--fast-open'
+        ]
+        subprocess.run(
+            command,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+
+        # 测试代理
         proxies = {
-            "http": f"socks5://{node['cipher']}:{node['password']}@{node['server']}:{node['port']}",
-            "https": f"socks5://{node['cipher']}:{node['password']}@{node['server']}:{node['port']}"
+            "http": "socks5h://127.0.0.1:1080",
+            "https": "socks5h://127.0.0.1:1080"
         }
         response = requests.get("https://www.google.com", proxies=proxies, timeout=10)
         if response.status_code == 200:
             print(f"Valid node: {node['name']}")
-            return node
+            result = node
         else:
             print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
-            return None
+            result = None
     except Exception as e:
         print(f"Error testing Shadowsocks proxy {node['server']}:{node['port']}: {e}")
-        return None
+        result = None
+    finally:
+        # Kill any running ss-local process
+        subprocess.run(['pkill', '-f', 'ss-local'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    return result
 
 # 测试 Trojan 代理
 def test_trojan(node):
