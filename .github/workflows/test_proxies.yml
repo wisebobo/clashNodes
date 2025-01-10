@@ -1,0 +1,42 @@
+name: Test Proxies
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # 每小时运行一次
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  test-proxies:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests pyyaml
+
+    - name: Download Xray
+      run: |
+        curl -L -o xray.zip https://github.com/XTLS/Xray-core/releases/download/v1.8.1/Xray-linux-64.zip
+        unzip xray.zip
+        chmod +x xray
+
+    - name: Run tests
+      run: |
+        python test_nodes.py
+
+    - name: Commit and push rules
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add rules.yaml
+        git commit -m "Update rules.yaml"
+        git push
