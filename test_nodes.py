@@ -75,7 +75,7 @@ def test_vmess(node):
                     "protocol": "socks",
                     "settings": {
                         "auth": "noauth",
-                        "udp": True
+                        "udp": node.get("udp", False)  # 支持 UDP
                     }
                 }
             ],
@@ -98,7 +98,16 @@ def test_vmess(node):
                         ]
                     },
                     "streamSettings": {
-                        "network": node.get("network", "tcp")
+                        "network": node.get("network", "tcp"),
+                        "security": "tls" if node.get("tls", False) else "none",
+                        "tlsSettings": {
+                            "serverName": node.get("ws-opts", {}).get("headers", {}).get("host", ""),
+                            "allowInsecure": node.get("skip-cert-verify", False)
+                        },
+                        "wsSettings": {
+                            "path": node.get("ws-opts", {}).get("path", ""),
+                            "headers": node.get("ws-opts", {}).get("headers", {})
+                        }
                     }
                 }
             ]
