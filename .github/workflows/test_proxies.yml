@@ -26,8 +26,9 @@ jobs:
     - name: Download Xray
       run: |
         curl -L -o xray.zip https://github.com/XTLS/Xray-core/releases/download/v1.8.1/Xray-linux-64.zip
-        unzip xray.zip
-        chmod +x xray
+        mkdir -p xray-bin  # 创建新目录
+        unzip xray.zip -d xray-bin  # 解压到新目录
+        chmod +x xray-bin/xray
 
     - name: Run tests
       run: |
