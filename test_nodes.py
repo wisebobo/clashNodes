@@ -92,7 +92,7 @@ def test_vmess(server, port, uuid, alter_id, cipher, network, ws_opts, tls, skip
             json.dump(config, f)
 
         # 启动 Xray
-        xray_process = subprocess.Popen(["./xray", "-config", config_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        xray_process = subprocess.Popen(["./xray-bin/xray", "-config", config_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         # 等待 Xray 启动
         time.sleep(2)
