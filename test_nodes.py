@@ -166,7 +166,7 @@ def main():
 
     # 使用线程池测试代理
     valid_nodes = []
-    with ThreadPoolExecutor(max_workers=80) as executor:  # 限制为 80 个线程
+    with ThreadPoolExecutor(max_workers=50) as executor:  # 限制为 50 个线程
         futures = []
         for node in proxies:
             if node["type"] == "ss":
