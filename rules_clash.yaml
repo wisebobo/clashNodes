@@ -33,22 +33,7 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  name: 16-426-NOWHERE
-  network: ws
-  port: 8880
-  server: us-new03.daluquan.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a48eea8e-6507-461b-a941-b63c6ae289e3
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-548-SG
+  name: 16-376-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -56,62 +41,80 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: a386f32c-1086-4a2a-a4de-88ea208ed415
+  uuid: b7bb687c-32eb-49ec-85fc-2df5d48f9f53
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-430-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 944bc952-e323-4ce5-9379-319a5e9ada79
+  ws-opts:
+    headers:
+      host: xjp.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-432-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c1869248-d515-4a00-970b-0017db0750d8
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 17-666-CN
-  password: 62e6e0c3-3335-4ef0-9170-4aa38c288158
-  port: 20013
-  server: gy.666666222.shop
+  name: 16-561-CN
+  password: 038dcf7b-8423-4a42-8958-b4368cd44f25
+  port: 34701
+  server: chiyu.myfczy169.top
   type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-565-NOWHERE
+  network: ws
+  port: 8880
+  server: us-new03.daluquan.top
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e8a49dc6-e547-4f8d-891b-b7bceb054fbe
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: 17-676-CN
+  name: 17-726-CN
   password: f9f8376b-f2cb-4805-98d7-57f818a39c10
-  port: 20013
+  port: 20016
   server: gy.666666222.shop
   type: ss
 - cipher: aes-256-gcm
-  name: 17-769-CN
-  password: cf295b27-b6f2-47bf-a902-140f3659f1e5
+  name: 17-833-CN
+  password: 74e38259-7274-467d-a783-b1278e6f1332
   port: 49709
   server: jehw72eh.97kb.com
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-815-CN
-  password: c54647b5-85fa-4426-bb6d-712f61bbf705
-  port: 20032
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-834-CN
-  password: 6b04fe90-67b3-4510-aa47-71e0503f652e
-  port: 20002
-  server: gy.666666222.shop
-  type: ss
-- alterId: 64
-  cipher: auto
-  name: 18-845-US
-  network: ws
-  port: 38003
-  server: 38.14.107.225
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      host: www.23179753.xyz
-    path: /
 - alterId: 0
   cipher: auto
-  name: 18-860-RELAY
+  name: 18-858-RELAY
   network: ws
   port: 80
-  server: 104.17.213.241
+  server: 104.19.48.236
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -121,36 +124,19 @@ proxies:
     headers:
       host: chunchuan.kejixiaoqi666.store
     path: /
-- alterId: 0
-  cipher: auto
-  name: 18-867-RELAY
-  network: ws
-  port: 8080
-  server: 104.19.48.236
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
-  ws-opts:
-    headers:
-      host: 100-150-171-114.s4.cn-db.top
-    path: /
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 16-426-NOWHERE
-  - 16-548-SG
-  - 17-666-CN
-  - 17-676-CN
-  - 17-769-CN
-  - 17-815-CN
-  - 17-834-CN
-  - 18-845-US
-  - 18-860-RELAY
-  - 18-867-RELAY
+  - 16-376-SG
+  - 16-430-RELAY
+  - 16-432-SG
+  - 16-561-CN
+  - 16-565-NOWHERE
+  - 17-726-CN
+  - 17-833-CN
+  - 18-858-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
