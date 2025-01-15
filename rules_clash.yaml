@@ -31,48 +31,21 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: chacha20-ietf-poly1305
+  name: 16-399-CN
+  password: 594a8e8b-dcb8-4a34-88e8-9d4ab07af0a5
+  port: 14362
+  server: chiyu.myfczy169.top
+  type: ss
 - cipher: aes-256-gcm
   name: 16-420-CN
   password: 10fa7cbe-aba5-46ea-a522-2ff4eb2d2a3c
   port: 49709
   server: jehw72eh.97kb.com
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-467-CN
-  password: 2f4ec474-4230-4ab4-a609-8a4448db917a
-  port: 20016
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-543-CN
-  password: 640940a1-b856-459b-8ab3-57b52867788a
-  port: 14362
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-569-SG
-  password: 9f7ba3bf-e6c9-4017-9480-e58f2d04865b
-  port: 30443
-  server: 68.183.225.139
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-568-RELAY
-  network: ws
-  port: 8880
-  server: go.daluquan.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cf34ee4c-e21d-4f0f-86cd-85ed8ae44066
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-668-NOWHERE
+  name: 16-413-NOWHERE
   network: ws
   port: 8880
   server: us-new03.daluquan.top
@@ -80,45 +53,56 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 185a7069-8816-4dc8-9687-c8f4d49b3b82
+  uuid: 5155aee6-c643-41c6-af0f-111f1b301345
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 17-795-CN
-  password: b1a28c90-5038-41cb-a82c-d41449f9ef00
-  port: 47564
-  server: gy.666666222.shop
-  type: ss
-- alterId: 64
+- alterId: 0
   cipher: auto
-  name: 18-820-US
+  name: 16-510-JP
   network: ws
-  port: 38003
-  server: 38.14.107.228
+  port: 80
+  server: 13.231.141.124
   skip-cert-vertify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: a36cf530-3fa3-43a0-bb45-8a40ae498c79
   ws-opts:
     headers:
-      host: www.23179753.xyz
+      host: apple.com
     path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-618-CN
+  password: 640940a1-b856-459b-8ab3-57b52867788a
+  port: 34915
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: aes-256-gcm
+  name: 17-787-CN
+  password: b03bf42f-54b2-4e62-b952-76d320fd081b
+  port: 49709
+  server: jehw72eh.97kb.com
+  type: ss
+- cipher: aes-256-gcm
+  name: 17-779-CN
+  password: d718f518-dcc1-4eed-bc9c-6703181e6c5f
+  port: 49709
+  server: jehw72eh.97kb.com
+  type: ss
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
+  - 16-399-CN
   - 16-420-CN
-  - 16-467-CN
-  - 16-543-CN
-  - 16-569-SG
-  - 16-568-RELAY
-  - 17-668-NOWHERE
-  - 17-795-CN
-  - 18-820-US
+  - 16-413-NOWHERE
+  - 16-510-JP
+  - 16-618-CN
+  - 17-787-CN
+  - 17-779-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
