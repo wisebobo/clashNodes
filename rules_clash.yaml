@@ -31,8 +31,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- alterId: 0
+  cipher: auto
+  name: 04-010-RELAY
+  network: ws
+  port: 8880
+  server: s1.db-link02.top
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5088c21f-c3b9-3c51-8c69-0d5137cac427
+  ws-opts:
+    headers:
+      host: 100-242-195-172.s1.db-link02.top
+    path: /dabai.in104.19.136.6
 - cipher: aes-128-gcm
-  name: 04-086-CN
+  name: 04-104-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -40,12 +55,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9019
+  port: 9059
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-132-CN
+  name: 04-110-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -53,263 +68,106 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9052
-  server: 231103level2.unclemanco.com
+  port: 918
+  server: 231103level3.unclemanco.com
   type: ss
   udp: true
-- cipher: aes-128-gcm
-  name: 04-171-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 75b51105461.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 924
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-159-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 75b51105461.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 9047
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 16-331-HK
-  network: ws
-  port: 80
-  server: 8.218.213.13
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 3c40b090-25b2-4985-8b62-4788ff740eb5
-  ws-opts:
-    headers:
-      host: apple.com
-    path: /path
-- cipher: aes-256-gcm
-  name: 16-295-CN
-  password: 6ce2130a-1132-4835-ab06-b8ba956ee02d
-  port: 49709
-  server: jehw72eh.97kb.com
-  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-369-CN
+  name: 16-345-CN
   password: 8e3ea9ad-68fd-48a5-bd6b-7de3484187af
-  port: 14362
+  port: 21061
   server: chiyu.myfczy169.top
   type: ss
 - cipher: aes-256-gcm
-  name: 16-354-CN
+  name: 16-353-CN
   password: 33f293b5-0fd4-43aa-a631-474d9dfb1d41
   port: 49709
   server: jehw72eh.97kb.com
   type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-363-AU
+  network: ws
+  port: 23452
+  server: syd-01.oci.ee
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0cd56df8-5a1f-45c4-8c53-7c75390d640e
+  ws-opts:
+    headers:
+      host: syd-01.oci.ee
+    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-403-CN
-  password: 9f7ba3bf-e6c9-4017-9480-e58f2d04865b
-  port: 30001
-  server: gdgs.tarioblink.me
+  name: 16-409-CN
+  password: 172928cc-49a4-4dc2-a831-3d854941bd1f
+  port: 20004
+  server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-415-AU
+  name: 16-470-RELAY
   network: ws
-  port: 23452
-  server: syd-01.oci.ee
+  port: 8880
+  server: go.daluquan.top
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 7c309f88-b177-4aa4-b0ab-f9a626a2d4ac
+  uuid: 5155aee6-c643-41c6-af0f-111f1b301345
   ws-opts:
     headers:
-      host: syd-01.oci.ee
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-412-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 65c839d5-ab0e-432c-955c-6c2858b0de0a
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-461-AU
-  network: ws
-  port: 23452
-  server: syd-01.oci.ee
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 594852bf-de9e-41e9-a03a-4f8cd4a8ddb3
-  ws-opts:
-    headers:
-      host: syd-01.oci.ee
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-465-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: cf34ee4c-e21d-4f0f-86cd-85ed8ae44066
-  ws-opts:
-    headers:
-      host: xjp.daluquan.top
+      host: go.daluquan.top
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-601-CN
+  name: 16-485-CN
   password: 8e3ea9ad-68fd-48a5-bd6b-7de3484187af
-  port: 53473
+  port: 38180
   server: chiyu.myfczy169.top
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-564-RELAY
-  network: ws
-  port: 8880
-  server: go.daluquan.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cf34ee4c-e21d-4f0f-86cd-85ed8ae44066
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-597-RELAY
-  network: ws
-  port: 8880
-  server: go.daluquan.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8ff39680-c5e5-43a6-9e46-08729bbb0b74
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-613-JP
-  network: ws
-  port: 80
-  server: 13.231.141.124
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 3c40b090-25b2-4985-8b62-4788ff740eb5
-  ws-opts:
-    headers:
-      host: apple.com
-    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-521-CN
+  password: 9f7ba3bf-e6c9-4017-9480-e58f2d04865b
+  port: 30003
+  server: gdgs.tarioblink.me
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-704-CN
+  password: 3dbc4e77-c961-4d06-8c5c-5190d2e53d50
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
 - cipher: aes-256-gcm
-  name: 17-739-CN
-  password: 143a5dff-1693-429d-ac4c-8584999afa66
+  name: 17-780-CN
+  password: 66bd7256-b2d8-4731-9ba4-5fc50d7c2b9b
   port: 49709
   server: jehw72eh.97kb.com
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 18-868-DE
-  network: ws
-  port: 443
-  server: 57.129.24.125
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 18-881-RELAY
-  network: ws
-  port: 2086
-  server: shs.xiaoqi666.xyz
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312
-  ws-opts:
-    headers:
-      host: shs.xiaoqi666.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 18-848-RELAY
-  network: ws
-  port: 8443
-  server: 104.21.64.1
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 89c344f2-096c-445c-b629-9b15152f38e7
-  ws-opts:
-    headers:
-      host: ff.kncc2.top
-    path: /
+- cipher: aes-256-gcm
+  name: 17-835-CN
+  password: 38923891-c82a-4854-860d-ca13afe5b0bb
+  port: 49709
+  server: jehw72eh.97kb.com
+  type: ss
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 04-086-CN
-  - 04-132-CN
-  - 04-171-CN
-  - 04-159-CN
-  - 16-331-HK
-  - 16-295-CN
-  - 16-369-CN
-  - 16-354-CN
-  - 16-403-CN
-  - 16-415-AU
-  - 16-412-SG
-  - 16-461-AU
-  - 16-465-RELAY
-  - 16-601-CN
-  - 16-564-RELAY
-  - 16-597-RELAY
-  - 16-613-JP
-  - 17-739-CN
-  - 18-868-DE
-  - 18-881-RELAY
-  - 18-848-RELAY
+  - 04-010-RELAY
+  - 04-104-CN
+  - 04-110-CN
+  - 16-345-CN
+  - 16-353-CN
+  - 16-363-AU
+  - 16-409-CN
+  - 16-470-RELAY
+  - 16-485-CN
+  - 16-521-CN
+  - 17-704-CN
+  - 17-780-CN
+  - 17-835-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
