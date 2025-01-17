@@ -32,43 +32,42 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-128-gcm
-  name: 04-132-CN
-  password: ayucloud1
+  name: 04-111-CN
+  password: ay2dsd1
   plugin: obfs
   plugin-opts:
     host: 929da105489.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 818
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-171-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 929da105489.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 6879
-  server: 231103level1.unclemanco.com
+  port: 811
+  server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 10-245-CN
-  password: c4634606-ec2a-4178-ae59-548bc60a7a15
+  name: 16-386-CN
+  password: 9ffb446f-ba5e-4f9a-a202-5973dd0dd26b
+  port: 20901
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-401-SG
+  password: 9f7ba3bf-e6c9-4017-9480-e58f2d04865b
+  port: 30443
+  server: 152.42.222.25
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-433-CN
+  password: 172928cc-49a4-4dc2-a831-3d854941bd1f
   port: 20016
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-661-AU
+  name: 16-462-NOWHERE
   network: ws
-  port: 23452
-  server: syd-01.oci.ee
+  port: 8880
+  server: us-new03.daluquan.top
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -76,24 +75,96 @@ proxies:
   uuid: f3bd790d-778c-497f-ad61-fa055ce56141
   ws-opts:
     headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-511-RELAY
+  network: ws
+  port: 8880
+  server: go.daluquan.top
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6823881b-72bb-48af-8225-675253835a0d
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-525-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 6823881b-72bb-48af-8225-675253835a0d
+  ws-opts:
+    headers:
+      host: xjp.daluquan.top
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-531-CN
+  password: d521142a-2b2d-4ab2-8223-5fc80c33adbb
+  port: 21098
+  server: chiyu.myfczy169.top
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-591-AU
+  network: ws
+  port: 23452
+  server: syd-01.oci.ee
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 43fa3d3f-3a35-46b2-a4db-2da80de105f7
+  ws-opts:
+    headers:
       host: syd-01.oci.ee
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 17-701-CN
-  password: 9533abad-f868-4421-b292-b76cac67df19
+  name: 17-692-CN
+  password: f433937b-52bc-4baa-a52a-c187bc4a55a4
   port: 20032
   server: gy.666666222.shop
   type: ss
+- alterId: 64
+  cipher: auto
+  name: 18-895-US
+  network: ws
+  port: 37007
+  server: 199.180.103.23
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      host: www.35743578.xyz
+    path: /
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 04-132-CN
-  - 04-171-CN
-  - 10-245-CN
-  - 16-661-AU
-  - 17-701-CN
+  - 04-111-CN
+  - 16-386-CN
+  - 16-401-SG
+  - 16-433-CN
+  - 16-462-NOWHERE
+  - 16-511-RELAY
+  - 16-525-RELAY
+  - 16-531-CN
+  - 16-591-AU
+  - 17-692-CN
+  - 18-895-US
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
