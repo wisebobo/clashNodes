@@ -31,174 +31,46 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 16-449-AU
-  network: ws
-  port: 23452
-  server: syd-01.oci.ee
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6823881b-72bb-48af-8225-675253835a0d
-  ws-opts:
-    headers:
-      host: syd-01.oci.ee
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-396-SG
-  network: ws
-  port: 80
-  server: 54.169.136.28
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 3c40b090-25b2-4985-8b62-4788ff740eb5
-  ws-opts:
-    headers:
-      host: gw.alicdn.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-507-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 43fa3d3f-3a35-46b2-a4db-2da80de105f7
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-511-RELAY
-  network: ws
-  port: 80
-  server: yx.sulink.one
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 87c4d081-a989-4442-ac97-61c92c012b15
-  ws-opts:
-    headers:
-      host: us5.sulink.one
-    path: /
-- cipher: aes-256-gcm
-  name: 16-548-CN
-  password: 06b4aa46-6a0f-4af6-bd56-c17b6ccaa320
-  port: 49709
-  server: jehw72eh.97kb.com
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-545-NOWHERE
-  network: ws
-  port: 8880
-  server: us-new03.daluquan.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 54f05a05-53a5-43b1-8452-fca945f90eb5
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-564-RELAY
-  network: ws
-  port: 8880
-  server: go.daluquan.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 36b3e0e0-1cc2-48dd-9d3c-e125eb341c39
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-619-CN
-  password: 9ffb446f-ba5e-4f9a-a202-5973dd0dd26b
-  port: 32525
+  name: 16-402-SG
+  password: 9f7ba3bf-e6c9-4017-9480-e58f2d04865b
+  port: 30443
+  server: 152.42.222.25
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-409-CN
+  password: d521142a-2b2d-4ab2-8223-5fc80c33adbb
+  port: 20678
   server: chiyu.myfczy169.top
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-622-AU
-  network: ws
-  port: 23452
-  server: syd-01.oci.ee
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 1aacc5eb-6365-47f5-bc38-83239d2d0b95
-  ws-opts:
-    headers:
-      host: syd-01.oci.ee
-    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 17-719-CN
-  password: f433937b-52bc-4baa-a52a-c187bc4a55a4
-  port: 20016
+  name: 16-453-CN
+  password: 80cbbeca-6072-491c-b3c2-85d8fad847e4
+  port: 20008
   server: gy.666666222.shop
   type: ss
-- cipher: aes-256-gcm
-  name: 17-766-CN
-  password: 74e38259-7274-467d-a783-b1278e6f1332
-  port: 49709
-  server: jehw72eh.97kb.com
-  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 17-858-CN
-  password: 6b0bb0d9-5e62-4d15-b8b0-10b7a76847ac
-  port: 20032
+  name: 16-601-CN
+  password: 172928cc-49a4-4dc2-a831-3d854941bd1f
+  port: 20006
   server: gy.666666222.shop
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 18-873-RELAY
-  network: ws
-  port: 80
-  server: 104.19.48.236
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
-  ws-opts:
-    headers:
-      host: 100-49-141-209.s1.db-link02.top
-    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-603-CN
+  password: d521142a-2b2d-4ab2-8223-5fc80c33adbb
+  port: 14407
+  server: chiyu.myfczy169.top
+  type: ss
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 16-449-AU
-  - 16-396-SG
-  - 16-507-SG
-  - 16-511-RELAY
-  - 16-548-CN
-  - 16-545-NOWHERE
-  - 16-564-RELAY
-  - 16-619-CN
-  - 16-622-AU
-  - 17-719-CN
-  - 17-766-CN
-  - 17-858-CN
-  - 18-873-RELAY
+  - 16-402-SG
+  - 16-409-CN
+  - 16-453-CN
+  - 16-601-CN
+  - 16-603-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
