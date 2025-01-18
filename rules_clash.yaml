@@ -31,113 +31,71 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-128-gcm
-  name: 04-095-CN
-  password: ayu1245
-  plugin: obfs
-  plugin-opts:
-    host: bd1fd105542.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 824
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-142-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: bd1fd105542.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 1549
-  server: 231103levelx.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-165-CN
-  password: dajkdkjda&dja*/?
-  plugin: obfs
-  plugin-opts:
-    host: bd1fd105542.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 2205
-  server: 231103levelx.unclemanco.com
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 08-193-KR
-  network: ws
-  port: 23451
-  server: seoul-1ddns.aboutanime.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2beef116-e2ab-4c4a-ab2c-688fe44ff05e
-  ws-opts:
-    headers:
-      host: seoul-1ddns.aboutanime.eu.org
-    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 11-217-CN
-  password: 0f1287b5-75b9-435e-b8e7-b6b31dd2d951
-  port: 20035
+  name: 08-202-CN
+  password: 6e42035e-e9c0-494c-8e25-866c15eb441f
+  port: 20004
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-329-AU
+  name: 16-327-RELAY
   network: ws
-  port: 23452
-  server: syd-01.oci.ee
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 657d9bc1-e4e6-4eb6-8548-f70a77919562
+  ws-opts:
+    headers:
+      host: xjp.daluquan.top
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-557-CN
+  password: b3e73fea-a3a6-4deb-930b-afe79f74d5ab
+  port: 21071
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: aes-256-gcm
+  name: 16-580-CN
+  password: 7f2bfeed-565b-4472-95dc-453b4ce44448
+  port: 49709
+  server: jehw72eh.97kb.com
+  type: ss
+- cipher: aes-256-gcm
+  name: 17-669-CN
+  password: 67a85994-f7de-4c2a-aa67-3e5d91029457
+  port: 49709
+  server: jehw72eh.97kb.com
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 18-810-RELAY
+  network: ws
+  port: 2082
+  server: 104.16.155.10
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 14437964-c135-437c-b444-134b9fd49b36
+  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
   ws-opts:
     headers:
-      host: syd-01.oci.ee
+      host: 100-38-62-25.s5.db-link02.top
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-555-CN
-  password: b3e73fea-a3a6-4deb-930b-afe79f74d5ab
-  port: 20119
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: aes-256-gcm
-  name: 16-549-CN
-  password: 5621c678-781e-4528-9fb3-72b796a37234
-  port: 49709
-  server: jehw72eh.97kb.com
-  type: ss
-- cipher: aes-256-gcm
-  name: 17-679-CN
-  password: aa98ceb5-fd24-4c07-a678-1f7b38d964a3
-  port: 49709
-  server: jehw72eh.97kb.com
-  type: ss
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 04-095-CN
-  - 04-142-CN
-  - 04-165-CN
-  - 08-193-KR
-  - 11-217-CN
-  - 16-329-AU
-  - 16-555-CN
-  - 16-549-CN
-  - 17-679-CN
+  - 08-202-CN
+  - 16-327-RELAY
+  - 16-557-CN
+  - 16-580-CN
+  - 17-669-CN
+  - 18-810-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
