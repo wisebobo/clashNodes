@@ -33,22 +33,7 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  name: 16-310-US
-  network: ws
-  port: 49355
-  server: 192.9.147.146
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: ca79fec1-2a41-47ee-a83f-91aeb452e381
-  ws-opts:
-    headers:
-      host: tms.dingtalk.com
-    path: /wada12222
-- alterId: 0
-  cipher: auto
-  name: 16-358-SG
+  name: 16-378-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -56,50 +41,40 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: eda08512-49c4-4b76-aa3e-b806d557eaf6
+  uuid: 82001828-82c5-4a48-8175-d1d726c64ade
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-392-CN
+  password: 12d894e7-14fe-436d-8617-1a9ebf8924ce
+  port: 20008
+  server: gy.666666222.shop
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-404-AU
+  name: 16-397-RELAY
   network: ws
-  port: 23452
-  server: syd-01.oci.ee
+  port: 443
+  server: visa.com
   skip-cert-vertify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 14437964-c135-437c-b444-134b9fd49b36
+  uuid: 5516d7e7-72ca-48f0-87d3-e54588f77108
   ws-opts:
     headers:
-      host: syd-01.oci.ee
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-459-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 59b5a7eb-7433-4b00-a8fd-a2da12e8aafc
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
+      host: xjp.daluquan.top
     path: /
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 16-310-US
-  - 16-358-SG
-  - 16-404-AU
-  - 16-459-SG
+  - 16-378-SG
+  - 16-392-CN
+  - 16-397-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
