@@ -32,50 +32,41 @@ mode: rule
 port: 7890
 proxies:
 - cipher: chacha20-ietf-poly1305
-  name: 10-234-CN
+  name: 10-233-CN
   password: 17e273bf-c991-4d59-bcb5-67d7f51ea3b3
-  port: 20035
+  port: 20006
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-322-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b2df6953-f656-44eb-ae0d-ab3ca7a28afd
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-407-SG
+  name: 08-209-RELAY
   network: ws
   port: 80
-  server: 47.245.87.58
+  server: cf.hy2.one
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 3c40b090-25b2-4985-8b62-4788ff740eb5
+  uuid: 5991cae7-eab0-41f2-9257-9ef54c686fcd
   ws-opts:
     headers:
-      host: tms.dingtalk.com
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-492-CN
-  password: 66c9d51c-9109-4e1f-b752-a7cf6841aa62
-  port: 11618
-  server: chiyu.myfczy169.top
+      host: tw02.hy2.one
+    path: /af323d
+- cipher: aes-256-gcm
+  name: 12-280-CN
+  password: 4d1305da-ceb5-4177-9524-2aa473c34b6a
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: aes-256-gcm
+  name: 16-324-CN
+  password: 52769d3b-dd63-4944-a086-02131f8b3955
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-504-AU
+  name: 16-364-AU
   network: ws
   port: 23452
   server: syd-01.oci.ee
@@ -83,29 +74,68 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: f3bd790d-778c-497f-ad61-fa055ce56141
+  uuid: 3cd0d03c-d23d-4167-a7e1-f2f38db6ba31
   ws-opts:
     headers:
       host: syd-01.oci.ee
     path: /
-- cipher: aes-256-gcm
-  name: 17-645-CN
-  password: cf295b27-b6f2-47bf-a902-140f3659f1e5
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 17-716-CN
-  password: 89be77dd-9d4e-4c05-a6da-7c81c0b2b634
-  port: 47564
+  name: 16-391-CN
+  password: 9b2719ed-d8f8-4b86-bf82-387b8dcaffc5
+  port: 20016
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 18-767-RELAY
+  name: 16-442-AU
+  network: ws
+  port: 23452
+  server: syd-01.oci.ee
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 65c839d5-ab0e-432c-955c-6c2858b0de0a
+  ws-opts:
+    headers:
+      host: syd-01.oci.ee
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-504-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 65c839d5-ab0e-432c-955c-6c2858b0de0a
+  ws-opts:
+    headers:
+      host: xjp.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-502-JP
+  network: ws
+  port: 80
+  server: 13.231.141.124
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a36cf530-3fa3-43a0-bb45-8a40ae498c79
+  ws-opts:
+    headers:
+      host: apple.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 18-766-RELAY
   network: ws
   port: 2086
-  server: 104.17.213.241
+  server: 104.19.48.236
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -120,14 +150,16 @@ proxy-groups:
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 10-234-CN
-  - 16-322-SG
-  - 16-407-SG
-  - 16-492-CN
-  - 16-504-AU
-  - 17-645-CN
-  - 17-716-CN
-  - 18-767-RELAY
+  - 10-233-CN
+  - 08-209-RELAY
+  - 12-280-CN
+  - 16-324-CN
+  - 16-364-AU
+  - 16-391-CN
+  - 16-442-AU
+  - 16-504-RELAY
+  - 16-502-JP
+  - 18-766-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
