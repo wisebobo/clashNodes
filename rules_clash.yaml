@@ -31,50 +31,164 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 17-548-CN
-  password: 4282a9ef-770f-4d03-a54e-edce186596a3
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
+- alterId: 2
+  cipher: auto
+  name: 04-007-CN
+  network: ws
+  port: 23612
+  server: 12.mamamajd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0ba74086-8055-3397-b43d-e52a1e7a8a91
+  ws-opts:
+    headers:
+      host: 12.mamamajd.site
+    path: /
+- cipher: aes-128-gcm
+  name: 04-080-CN
+  password: ayuclsaa
+  plugin: obfs
+  plugin-opts:
+    host: ded8f105657.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 807
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-097-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: ded8f105657.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9059
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 10-227-CN
+  password: 7273bbd6-308a-4087-b815-bdc04dc74fd5
+  port: 20002
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 11-235-CN
+  password: 9a37d723-04bb-4c22-87e3-6ce4afa8503a
+  port: 47564
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 12-251-CN
+  password: f68b8012-8cb6-40bf-b71c-b9091f18e4f0
+  port: 20032
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 11-247-CN
+  password: 9a37d723-04bb-4c22-87e3-6ce4afa8503a
+  port: 20052
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 12-266-CN
+  password: f68b8012-8cb6-40bf-b71c-b9091f18e4f0
+  port: 20052
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-269-CN
+  password: c79e7597-3064-4068-bf17-cee9bef2298e
+  port: 22771
+  server: chiyu.myfczy169.top
   type: ss
 - alterId: 0
   cipher: auto
-  name: 18-787-RELAY
+  name: 16-292-SG
   network: ws
   port: 80
-  server: 104.17.221.248
+  server: 54.169.136.28
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: e6543319-0574-42ac-b778-1c4325d626f5
+  uuid: 3c40b090-25b2-4985-8b62-4788ff740eb5
   ws-opts:
     headers:
-      host: chunchuan.kejixiaoqi666.store
+      host: gw.alicdn.com
     path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-461-US
+  password: c79e7597-3064-4068-bf17-cee9bef2298e
+  port: 777
+  server: 666.com
+  type: ss
+- cipher: aes-256-gcm
+  name: 16-457-JP
+  password: 8427ca27-3ab3-4c8d-84f2-ae75c28ad325
+  port: 1200
+  server: hk.kfsldflk.xyz
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 18-791-RELAY
+  name: 16-499-SG
   network: ws
-  port: 2082
-  server: 104.16.155.10
+  port: 80
+  server: 122.248.224.109
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
+  uuid: 3c40b090-25b2-4985-8b62-4788ff740eb5
   ws-opts:
     headers:
-      host: 100-38-62-25.s5.db-link02.top
+      host: apple.com
     path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-625-CN
+  password: 7840ded6-e1f6-4a8b-be27-c8950c0497b1
+  port: 20008
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-676-CN
+  password: 7840ded6-e1f6-4a8b-be27-c8950c0497b1
+  port: 20006
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-696-CN
+  password: 32baaf5b-a786-42e5-aa96-1d90fd6dd025
+  port: 20002
+  server: gy.666666222.shop
+  type: ss
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 17-548-CN
-  - 18-787-RELAY
-  - 18-791-RELAY
+  - 04-007-CN
+  - 04-080-CN
+  - 04-097-CN
+  - 10-227-CN
+  - 11-235-CN
+  - 12-251-CN
+  - 11-247-CN
+  - 12-266-CN
+  - 16-269-CN
+  - 16-292-SG
+  - 16-461-US
+  - 16-457-JP
+  - 16-499-SG
+  - 17-625-CN
+  - 17-676-CN
+  - 17-696-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
