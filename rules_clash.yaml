@@ -31,69 +31,48 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 08-203-CN
-  password: 5017f172-b221-4697-ae89-ff149c830ed9
-  port: 51870
+- cipher: aes-128-gcm
+  name: 07-196-CN
+  password: e2c62a73-3132-48a6-a020-25c3ae0d8af2
+  port: 23733
   server: cu1.guguyun.xyz
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 08-209-CN
+  password: 1ca533f4-362e-4e08-a723-3c2f9f55b4b0
+  port: 20008
+  server: gy.666666222.shop
+  type: ss
+- alterId: 2
+  cipher: auto
+  name: 04-178-CN
+  network: ws
+  port: 23611
+  server: 11.mamamajd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: d0017990-b072-3ed7-8e84-18f7bb27b891
+  ws-opts:
+    headers:
+      host: 11.mamamajd.site
+    path: /
 - alterId: 0
   cipher: auto
-  name: 08-213-RELAY
+  name: 07-180-RELAY
   network: ws
   port: 80
-  server: yx.sulink.one
+  server: hsj.lbxjc.online
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 39c5f068-4973-4e62-9fd9-286c995c07e3
+  uuid: e6543319-0574-42ac-b778-1c4325d626f5
   ws-opts:
     headers:
-      host: us5.sulink.one
+      host: chunchuan.kejixiaoqi666.store
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 08-214-CN
-  password: 5017f172-b221-4697-ae89-ff149c830ed9
-  port: 21057
-  server: cu1.guguyun.xyz
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 08-216-CN
-  password: 5017f172-b221-4697-ae89-ff149c830ed9
-  port: 20234
-  server: cu1.guguyun.xyz
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 08-202-RELAY
-  network: ws
-  port: 2052
-  server: yx.sulink.one
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 39c5f068-4973-4e62-9fd9-286c995c07e3
-  ws-opts:
-    headers:
-      host: tw02.xn--io0a7iw0ab67b.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 07-191-RELAY
-  network: ws
-  port: 2082
-  server: s1.db-link02.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
-  ws-opts:
-    headers:
-      host: 100-113-212-3.s1.db-link02.top
-    path: /dabai.in172.67.79.231
 - alterId: 0
   cipher: auto
   name: 08-204-RELAY
@@ -109,22 +88,37 @@ proxies:
     headers:
       host: sg0002.hy-2.top
     path: /0
+- alterId: 0
+  cipher: auto
+  name: 08-213-RELAY
+  network: ws
+  port: 80
+  server: yx.sulink.one
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 39c5f068-4973-4e62-9fd9-286c995c07e3
+  ws-opts:
+    headers:
+      host: us5.sulink.one
+    path: /
+- cipher: aes-256-gcm
+  name: 11-234-CN
+  password: 74f6ea22-93b2-485e-9015-710bbc68bce2
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 11-243-CN
+  name: 11-237-CN
   password: 3677310e-a3aa-4f69-82db-f4c8bf9c7627
-  port: 20004
+  port: 20032
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 11-248-CN
+  name: 11-241-CN
   password: 3677310e-a3aa-4f69-82db-f4c8bf9c7627
-  port: 20013
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 12-251-CN
-  password: 199c5cff-d853-4576-b91f-7e81f1e92edf
-  port: 47564
+  port: 20008
   server: gy.666666222.shop
   type: ss
 - alterId: 0
@@ -142,30 +136,9 @@ proxies:
     headers:
       host: tw02.xn--io0a7iw0ab67b.xyz
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-307-CN
-  password: 9774d8e0-c677-4721-9be8-ae17aac873dc
-  port: 20032
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-318-US
-  network: ws
-  port: 49355
-  server: 192.9.147.146
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: ca79fec1-2a41-47ee-a83f-91aeb452e381
-  ws-opts:
-    headers:
-      host: tms.dingtalk.com
-    path: /wada12222
-- alterId: 0
-  cipher: auto
-  name: 16-295-RELAY
+  name: 16-273-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -173,14 +146,29 @@ proxies:
   tls: true
   type: vmess
   udp: true
-  uuid: c1869248-d515-4a00-970b-0017db0750d8
+  uuid: b108262c-6ee2-4acb-9f3b-3cc354e13950
   ws-opts:
     headers:
       host: xjp.daluquan.top
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-305-SG
+  name: 16-279-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1ac155f4-f3b2-4ef2-84f9-7b37ef72162a
+  ws-opts:
+    headers:
+      host: xjp.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-286-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -188,77 +176,62 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: dfb6c02b-c532-41c6-a4b2-048ba5c72ba4
+  uuid: 6823881b-72bb-48af-8225-675253835a0d
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-312-RELAY
+  name: 16-322-JP
+  network: ws
+  port: 23451
+  server: osaka002-a.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5155aee6-c643-41c6-af0f-111f1b301345
+  ws-opts:
+    headers:
+      host: osaka002-a.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-372-HK
+  network: ws
+  port: 80
+  server: 8.218.213.13
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 3c40b090-25b2-4985-8b62-4788ff740eb5
+  ws-opts:
+    headers:
+      host: apple.com
+    path: /path
+- alterId: 0
+  cipher: auto
+  name: 18-587-DE
   network: ws
   port: 443
-  server: visa.com
+  server: hms26.xpengmotors.sbs
   skip-cert-vertify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 657d9bc1-e4e6-4eb6-8548-f70a77919562
+  uuid: fb0a2de6-bf06-4ff0-97ce-c21abcdc2d55
   ws-opts:
     headers:
-      host: xjp.daluquan.top
+      host: hms26.xpengmotors.sbs
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-337-JP
+  name: 18-613-RELAY
   network: ws
-  port: 23451
-  server: osaka002-a.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e8a49dc6-e547-4f8d-891b-b7bceb054fbe
-  ws-opts:
-    headers:
-      host: osaka002-a.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-411-JP
-  network: ws
-  port: 23451
-  server: osaka002-a.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2bec8593-dcfb-477d-b67e-0de96fa1973e
-  ws-opts:
-    headers:
-      host: osaka002-a.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-422-JP
-  network: ws
-  port: 23451
-  server: osaka002-a.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6823881b-72bb-48af-8225-675253835a0d
-  ws-opts:
-    headers:
-      host: osaka002-a.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 18-615-RELAY
-  network: ws
-  port: 2082
-  server: s4.cn-db.top
+  port: 80
+  server: s2.cn-db.top
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -266,33 +239,30 @@ proxies:
   uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
   ws-opts:
     headers:
-      host: 100-59-178-247.s4.cn-db.top
+      host: 100-154-87-93.s2.cn-db.top
     path: /
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 08-203-CN
-  - 08-213-RELAY
-  - 08-214-CN
-  - 08-216-CN
-  - 08-202-RELAY
-  - 07-191-RELAY
+  - 07-196-CN
+  - 08-209-CN
+  - 04-178-CN
+  - 07-180-RELAY
   - 08-204-RELAY
-  - 11-243-CN
-  - 11-248-CN
-  - 12-251-CN
+  - 08-213-RELAY
+  - 11-234-CN
+  - 11-237-CN
+  - 11-241-CN
   - 12-253-RELAY
-  - 16-307-CN
-  - 16-318-US
-  - 16-295-RELAY
-  - 16-305-SG
-  - 16-312-RELAY
-  - 16-337-JP
-  - 16-411-JP
-  - 16-422-JP
-  - 18-615-RELAY
+  - 16-273-RELAY
+  - 16-279-RELAY
+  - 16-286-SG
+  - 16-322-JP
+  - 16-372-HK
+  - 18-587-DE
+  - 18-613-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
