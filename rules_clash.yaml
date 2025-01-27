@@ -30,12 +30,84 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  name: 08-190-CN
+  password: bc394ce0-8ef6-475c-a7a3-7077982a44c6
+  port: 20032
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 08-212-CN
+  password: 63b7a70b-8b07-4eb5-918c-b009ae5af889
+  port: 49306
+  server: yoyo.cmyiphone.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 11-235-CN
+  password: 0837998b-fd17-446d-b949-f258b59874f1
+  port: 49305
+  server: yoyo.cmyiphone.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 11-247-CN
+  password: 0837998b-fd17-446d-b949-f258b59874f1
+  port: 49306
+  server: yoyo.cmyiphone.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 12-263-CN
+  password: dd4f0cc5-19e2-443c-92a3-3ff5ca2b68bf
+  port: 20002
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-328-CN
+  password: 3eaae35b-bc40-4664-ad86-6bd2e5ec6cce
+  port: 36858
+  server: chiyu.myfczy169.top
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-520-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 657d9bc1-e4e6-4eb6-8548-f70a77919562
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-522-CN
+  password: 3eaae35b-bc40-4664-ad86-6bd2e5ec6cce
+  port: 32525
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-586-CN
+  password: ec84715d-e741-41f5-926a-07b6eac793fa
+  port: 20002
+  server: gy.666666222.shop
+  type: ss
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 08-190-CN
+  - 08-212-CN
+  - 11-235-CN
+  - 11-247-CN
+  - 12-263-CN
+  - 16-328-CN
+  - 16-520-SG
+  - 16-522-CN
+  - 16-586-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
