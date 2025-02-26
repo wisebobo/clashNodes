@@ -3,8 +3,8 @@ proxies:
   cipher: auto
   name: 04-007-RELAY
   network: ws
-  port: 80
-  server: s5.db-link02.top
+  port: 2052
+  server: s2.cn-db.top
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -12,13 +12,43 @@ proxies:
   uuid: 5b858e1b-0d42-3291-8095-681b8531463b
   ws-opts:
     headers:
-      host: 100-154-225-4.s5.db-link02.top
-    path: /dabai.in104.16.122.12
+      host: 100-165-63-229.s2.cn-db.top
+    path: /dabai.in172.67.16.223
 - alterId: 0
   cipher: auto
-  name: 04-004-RELAY
+  name: 04-008-RELAY
   network: ws
-  port: 2086
+  port: 2082
+  server: s2.cn-db.top
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5b858e1b-0d42-3291-8095-681b8531463b
+  ws-opts:
+    headers:
+      host: 100-56-92-149.s2.cn-db.top
+    path: /dabai.in172.64.19.176
+- alterId: 0
+  cipher: auto
+  name: 04-002-RELAY
+  network: ws
+  port: 2082
+  server: s1.cn-db.top
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5b858e1b-0d42-3291-8095-681b8531463b
+  ws-opts:
+    headers:
+      host: 100-14-153-55.s1.cn-db.top
+    path: /dabai.in104.24.159.59
+- alterId: 0
+  cipher: auto
+  name: 04-005-RELAY
+  network: ws
+  port: 2095
   server: s1.db-link02.top
   skip-cert-vertify: true
   tls: false
@@ -27,14 +57,29 @@ proxies:
   uuid: 5b858e1b-0d42-3291-8095-681b8531463b
   ws-opts:
     headers:
-      host: 100-131-76-20.s1.db-link02.top
-    path: /dabai.in104.24.236.172
+      host: 100-127-4-132.s1.db-link02.top
+    path: /dabai.in104.16.80.228
+- alterId: 2
+  cipher: auto
+  name: 02-001-CN
+  network: ws
+  port: 22643
+  server: tk.hzlt.tkddns.xyz
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
+  ws-opts:
+    headers:
+      host: tk.hzlt.tkddns.xyz
+    path: /
 - alterId: 0
   cipher: auto
-  name: 04-003-RELAY
+  name: 04-004-RELAY
   network: ws
   port: 8080
-  server: s3.db-link01.top
+  server: s2.db-link01.top
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -42,23 +87,23 @@ proxies:
   uuid: 5b858e1b-0d42-3291-8095-681b8531463b
   ws-opts:
     headers:
-      host: 100-121-195-23.s3.db-link01.top
-    path: /dabai.in172.64.24.225
-- alterId: 0
+      host: 100-59-125-69.s2.db-link01.top
+    path: /dabai.in104.19.145.248
+- alterId: 2
   cipher: auto
-  name: 04-002-RELAY
+  name: 04-055-CN
   network: ws
-  port: 8880
-  server: s4.cn-db.top
+  port: 23612
+  server: 12.mamamajd.site
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 5b858e1b-0d42-3291-8095-681b8531463b
+  uuid: 6758cdd2-2a26-3921-8072-a5e9a5fa7471
   ws-opts:
     headers:
-      host: 100-91-33-190.s4.cn-db.top
-    path: /dabai.in172.64.53.226
+      host: 12.mamamajd.site
+    path: /
 - alterId: 2
   cipher: auto
   name: 04-057-CN
@@ -91,10 +136,10 @@ proxies:
     path: /
 - alterId: 2
   cipher: auto
-  name: 04-058-CN
+  name: 04-061-CN
   network: ws
-  port: 23619
-  server: 19.mamamajd.site
+  port: 23615
+  server: 15.mamamajd.site
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -102,22 +147,7 @@ proxies:
   uuid: 6758cdd2-2a26-3921-8072-a5e9a5fa7471
   ws-opts:
     headers:
-      host: 19.mamamajd.site
-    path: /
-- alterId: 2
-  cipher: auto
-  name: 04-060-CN
-  network: ws
-  port: 23618
-  server: 18.mamamajd.site
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6758cdd2-2a26-3921-8072-a5e9a5fa7471
-  ws-opts:
-    headers:
-      host: 18.mamamajd.site
+      host: 15.mamamajd.site
     path: /
 - alterId: 2
   cipher: auto
@@ -135,7 +165,20 @@ proxies:
       host: 5.mamamajd.site
     path: /
 - cipher: aes-128-gcm
-  name: 04-074-CN
+  name: 04-087-CN
+  password: ayu1245
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 824
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-094-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -143,124 +186,7 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9019
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-101-CN
-  password: fjlfjafl231303831
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 1313
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-067-CN
-  password: QHPy2u
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 806
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-069-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 817
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-104-CN
-  password: QHPy2u
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 821
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-091-CN
-  password: ayucles1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 907
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-085-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 905
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-089-CN
-  password: QHPy2u
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 9063
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-079-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 919
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-068-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 913
+  port: 9062
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
@@ -278,7 +204,20 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-092-CN
+  name: 04-104-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 821
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-084-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -286,7 +225,7 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 823
+  port: 835
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
@@ -304,7 +243,33 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-073-CN
+  name: 04-072-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9035
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-067-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 806
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-099-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -312,12 +277,40 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 917
+  port: 918
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-090-CN
+  name: 04-078-CN
+  password: ayucl243113
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 921
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- alterId: 2
+  cipher: auto
+  name: 04-063-CN
+  network: ws
+  port: 23613
+  server: 13.mamamajd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6758cdd2-2a26-3921-8072-a5e9a5fa7471
+  ws-opts:
+    headers:
+      host: 13.mamamajd.site
+    path: /
+- cipher: aes-128-gcm
+  name: 04-097-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -325,20 +318,46 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 20012
+  port: 914
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-077-CN
-  password: QHPy2u
+  name: 04-085-CN
+  password: ayucloud1
   plugin: obfs
   plugin-opts:
     host: 621ce107168.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 810
+  port: 905
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-068-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 913
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-105-CN
+  password: ay2l23ud1
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 903
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
@@ -356,20 +375,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-078-CN
-  password: ayucl243113
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 921
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-088-CN
+  name: 04-080-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -377,25 +383,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9054
+  port: 825
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-075-CN
-  password: ayucew2
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 9001
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-103-CN
+  name: 04-083-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -403,12 +396,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9873
+  port: 9040
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-109-CN
+  name: 04-106-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -416,34 +409,8 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9037
+  port: 910
   server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-126-CN
-  password: QHPy2u
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 911
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-122-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 813
-  server: 231103level2.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -460,33 +427,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-112-CN
-  password: wedsa
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 804
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-110-CN
-  password: ayuc211
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 902
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-124-CN
+  name: 04-114-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -494,25 +435,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 820
+  port: 9022
   server: 231103level2.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-107-CN
-  password: ay2loud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 906
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-129-CN
+  name: 04-116-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -520,12 +448,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 2789
+  port: 926
   server: 231103level2.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-118-CN
+  name: 04-120-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -533,7 +461,20 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9053
+  port: 9052
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-122-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 813
   server: 231103level2.unclemanco.com
   type: ss
   udp: true
@@ -564,7 +505,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-119-CN
+  name: 04-124-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -572,12 +513,25 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 8001
+  port: 820
   server: 231103level2.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-121-CN
+  name: 04-132-CN
+  password: dajkdkjda&dja*/?
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 19999
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-134-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -585,47 +539,21 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 818
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-116-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 926
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-137-CN
-  password: dajkdr&dja*/?
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 38011
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-133-CN
-  password: ayugfsd
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 3033
+  port: 1549
   server: 231103levelx.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-128-CN
+  password: dajsdkdkjda&dja*/?
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 2201
+  server: 231103level2.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -638,6 +566,71 @@ proxies:
     skip-cert-verify: true
     tls: true
   port: 36203
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-144-CN
+  password: 1mj21sr
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 36452
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-140-CN
+  password: dajkbgja*/?
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 39073
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-138-CN
+  password: 2sa2/1a
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 10058
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-136-CN
+  password: ayds232sffssd1
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 44444
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-145-CN
+  password: Vdss1samj/2Zr
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 36243
   server: 231103level2.unclemanco.com
   type: ss
   udp: true
@@ -655,16 +648,16 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-149-CN
-  password: QHPy2u
+  name: 04-146-CN
+  password: 1mj21sr
   plugin: obfs
   plugin-opts:
     host: 621ce107168.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 840
-  server: 231103level1.unclemanco.com
+  port: 36454
+  server: 231103level2.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -681,72 +674,47 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-151-CN
-  password: ayucloud1
+  name: 04-153-CN
+  password: ayucl12s1
   plugin: obfs
   plugin-opts:
     host: 621ce107168.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 925
+  port: 837
   server: 231103level1.unclemanco.com
   type: ss
   udp: true
-- cipher: aes-128-gcm
-  name: 04-156-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 915
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-158-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 9020
-  server: 231103levelx.unclemanco.com
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 08-170-CN
-  password: 2f9d22fb-bab3-4f04-b662-0defcebc87cc
-  port: 47564
-  server: gy.666666222.shop
-  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 08-173-CN
   password: 2f9d22fb-bab3-4f04-b662-0defcebc87cc
   port: 20006
   server: gy.666666222.shop
   type: ss
+- cipher: aes-128-gcm
+  name: 04-161-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: 621ce107168.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9044
+  server: 231103level1.unclemanco.com
+  type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 08-175-CN
+  name: 08-176-CN
   password: 2f9d22fb-bab3-4f04-b662-0defcebc87cc
-  port: 20013
+  port: 20016
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 08-169-CN
+  name: 08-170-CN
   password: 2f9d22fb-bab3-4f04-b662-0defcebc87cc
-  port: 20032
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 08-174-CN
-  password: 2f9d22fb-bab3-4f04-b662-0defcebc87cc
-  port: 20008
+  port: 47564
   server: gy.666666222.shop
   type: ss
 - cipher: aes-128-gcm
@@ -762,38 +730,12 @@ proxies:
   server: 231103level1.unclemanco.com
   type: ss
   udp: true
-- cipher: aes-128-gcm
-  name: 04-160-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 6879
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 08-172-CN
+  name: 08-169-CN
   password: 2f9d22fb-bab3-4f04-b662-0defcebc87cc
-  port: 20004
+  port: 20032
   server: gy.666666222.shop
   type: ss
-- cipher: aes-128-gcm
-  name: 04-159-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 621ce107168.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 924
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 08-180-CN
   password: 2f9d22fb-bab3-4f04-b662-0defcebc87cc
@@ -801,15 +743,9 @@ proxies:
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 08-181-CN
+  name: 08-171-CN
   password: 2f9d22fb-bab3-4f04-b662-0defcebc87cc
-  port: 20035
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 10-185-CN
-  password: 44079510-1cbf-40db-9b43-09d034ec214f
-  port: 47564
+  port: 20002
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
@@ -819,9 +755,9 @@ proxies:
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 10-190-CN
+  name: 10-191-CN
   password: 44079510-1cbf-40db-9b43-09d034ec214f
-  port: 20004
+  port: 20006
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
@@ -831,21 +767,33 @@ proxies:
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 10-193-CN
-  password: 44079510-1cbf-40db-9b43-09d034ec214f
-  port: 20013
+  name: 11-202-CN
+  password: eff0aec4-ec10-422f-aeb1-2a272a277a45
+  port: 20035
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 11-195-CN
+  name: 11-197-CN
   password: eff0aec4-ec10-422f-aeb1-2a272a277a45
-  port: 20013
+  port: 20008
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 11-198-CN
   password: eff0aec4-ec10-422f-aeb1-2a272a277a45
   port: 20002
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 11-200-CN
+  password: eff0aec4-ec10-422f-aeb1-2a272a277a45
+  port: 34338
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 11-205-CN
+  password: eff0aec4-ec10-422f-aeb1-2a272a277a45
+  port: 20016
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
@@ -861,53 +809,20 @@ proxies:
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 12-210-CN
-  password: 718a69c3-627f-46b8-94fe-cd370893b030
-  port: 20002
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 12-219-CN
-  password: 718a69c3-627f-46b8-94fe-cd370893b030
-  port: 20035
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
   name: 12-218-CN
   password: 718a69c3-627f-46b8-94fe-cd370893b030
   port: 34338
   server: gy.666666222.shop
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 08-178-NOWHERE
-  network: ws
-  port: 443
-  server: ipzymegx.whmvmkwuey.store
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 9a19b142-f964-4693-9731-4a0ab92838b4
-  ws-opts:
-    headers:
-      host: ipzymegx.whmvmkwuey.store
-    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-224-CN
+  name: 16-239-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58807
+  port: 58833
   server: southvip1.pkyun.xyz
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-231-CN
-  password: 37c2cb5b-d257-45e5-8246-c3e9ac4e3bdf
-  port: 31989
-  server: sz.yd.1.03.cdnlinkms001.xyz
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 11-204-RELAY
+  name: 12-216-NOWHERE
   network: ws
   port: 443
   server: eppvc.mmzhk.website
@@ -915,41 +830,20 @@ proxies:
   tls: true
   type: vmess
   udp: true
-  uuid: 6a3077df-49e5-4407-aed5-d4e1f94b41b6
+  uuid: 8325c3af-a11c-45db-ad95-ee4e062e6b14
   ws-opts:
     headers:
       host: eppvc.mmzhk.website
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-251-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 34403
-  server: southvip1.pkyun.xyz
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-253-CN
-  password: 947e49a8-344c-4cac-adb2-1ef45bb8c1b4
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
+  name: 16-249-CN
+  password: 7db921a1-a211-447b-b3c6-8dfefcdb3b74
+  port: 20002
+  server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-223-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0ccc5936-1159-4b3f-ac6d-ce87ce501e43
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-235-RELAY
+  name: 16-227-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -957,47 +851,17 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 36f6572a-d787-4464-9a6a-9e94a72e1bcb
+  uuid: 4da0c91c-b925-4467-aab5-eab2a26c0aaf
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-241-DE
+  name: 16-229-RELAY
   network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0ccc5936-1159-4b3f-ac6d-ce87ce501e43
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-243-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 99086bdc-a4da-4b50-a35e-4fdcad6035a4
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-257-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
+  port: 443
+  server: visa.com
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -1005,13 +869,121 @@ proxies:
   uuid: 1365cb18-91a3-4b95-a740-6a28c0930adf
   ws-opts:
     headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-236-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 9a9ebfea-03e4-40d1-9f3c-585781705d44
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-242-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 990113f6-220d-4123-ba9d-5bcc2429d01a
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-237-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: fbe27b1e-6ecb-497f-a4e0-b0101adda882
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-233-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 41cf7443-ef16-4ebe-a08c-99b154242c10
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-231-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 64bf1087-f291-4a3f-a5da-fd5dd21df696
+  ws-opts:
+    headers:
       host: shhh001.oraclenat.cc
     path: /
 - cipher: chacha20-ietf-poly1305
+  name: 16-254-CN
+  password: 7db921a1-a211-447b-b3c6-8dfefcdb3b74
+  port: 20052
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
   name: 16-266-CN
+  password: 7db921a1-a211-447b-b3c6-8dfefcdb3b74
+  port: 34338
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-263-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 34402
+  port: 58815
   server: southvip1.pkyun.xyz
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-251-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 72f19539-944e-4c81-b9a3-856d29077080
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-269-CN
+  password: 7db921a1-a211-447b-b3c6-8dfefcdb3b74
+  port: 20016
+  server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
@@ -1023,14 +995,20 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: e5b8f61a-9f5b-4149-85d5-10e434751cc8
+  uuid: 0ccc5936-1159-4b3f-ac6d-ce87ce501e43
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-279-CN
+  password: e0441379-23d0-48e1-8911-e35bd0a9173b
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-260-SG
+  name: 16-267-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -1038,17 +1016,32 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: f2bf4e99-4701-4cbe-836e-ea95818026d6
+  uuid: 1d817435-8ecd-44df-9d03-20081d9a78f6
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-270-SG
+  name: 16-268-NOWHERE
   network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 090cb8d9-0914-4dd4-9d15-ecc8cc60923b
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-274-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -1056,23 +1049,89 @@ proxies:
   uuid: 0dbf8192-fe63-4ade-9a45-b4647bfb6cce
   ws-opts:
     headers:
-      host: westsg2-ddns.oraclenat.cc
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-280-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 8f39b945-8401-4c7d-baff-1e98dbfd1897
+  ws-opts:
+    headers:
+      host: go.daluquan.top
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-286-CN
+  name: 16-244-CN
+  password: 8b465334-ed85-429e-a421-83dcfcda90d9
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-225-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 11fd64ff-d550-467d-8c1f-72aebe6574ad
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-282-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 4da0c91c-b925-4467-aab5-eab2a26c0aaf
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-301-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58839
+  port: 34403
   server: southvip1.pkyun.xyz
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-296-CN
+  name: 16-303-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 34104
+  port: 34402
   server: southvip1.pkyun.xyz
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-289-DE
+  name: 16-222-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b13ff0a5-2891-45f5-b4f7-68c52fed11fb
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-287-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -1086,74 +1145,14 @@ proxies:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: 16-305-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 34004
-  server: southvip1.pkyun.xyz
+  name: 16-310-CN
+  password: f9bc72f2-51a6-4177-a34f-9e6d16e0359a
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-283-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 06eb7462-4f43-4340-a348-13528b88c9f5
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-290-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a8144270-951e-4ac1-9bf0-e36aac440e3a
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-287-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 64bf1087-f291-4a3f-a5da-fd5dd21df696
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-293-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6b770fee-54ef-48f2-8aeb-88d61cc30858
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-250-US
+  name: 16-293-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -1161,20 +1160,74 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: b13ff0a5-2891-45f5-b4f7-68c52fed11fb
+  uuid: 70cbb616-0ed0-4e97-b45b-8bca12f243a7
   ws-opts:
     headers:
       host: shhh001.oraclenat.cc
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-263-CN
-  password: f4e383bd-9ecf-4b65-bc88-8b4391ffd368
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-294-DE
+  name: 16-297-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 59dafb2d-475e-4563-aef3-354dbb898a67
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-298-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a2de060e-721a-42ff-9e0c-c69cf314ba63
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-295-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 92da7dfc-c6f4-4803-aaf0-9ec92ef63210
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-305-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a161d465-dda2-4b3a-90e2-89de5a213a4f
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-300-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -1182,17 +1235,146 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: f08638f1-20d4-4129-b8e7-5cd9bfcb6fbc
+  uuid: 6f8f9727-f03c-4d91-8e75-e724b388565e
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 16-244-RELAY
+  name: 16-309-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: fb4f5ffb-2d58-49cb-8797-133358dbc7dd
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-246-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 4da0c91c-b925-4467-aab5-eab2a26c0aaf
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-311-RELAY
   network: ws
   port: 443
   server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 71622500-265f-4a1b-ba9e-e068f6408f6c
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-260-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58825
+  server: southvip1.pkyun.xyz
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-343-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58853
+  server: southvip1.pkyun.xyz
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-324-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 24fa8f85-e866-4b62-ae2e-bb7c290aadd5
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-312-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 220aeea0-f813-499e-8ef6-1d8a074c18cc
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-337-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58822
+  server: southvip1.pkyun.xyz
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-340-CN
+  password: bda131d0-96d4-4a91-8e19-5482bf3b5a86
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-325-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 36f6572a-d787-4464-9a6a-9e94a72e1bcb
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-326-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b905fc2a-179a-4a09-af04-7cdb17991020
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-334-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -1200,188 +1382,35 @@ proxies:
   uuid: c58c24f4-56a6-452f-bb13-b1781cf11b6e
   ws-opts:
     headers:
-      host: go.daluquan.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-277-CN
-  password: 526fabe4-9d70-4414-9715-23c14159b5df
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-300-CN
-  password: e0441379-23d0-48e1-8911-e35bd0a9173b
-  port: 20008
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-324-CN
-  password: 37c2cb5b-d257-45e5-8246-c3e9ac4e3bdf
-  port: 45285
-  server: iepl.500.yd.ny.cdnlinkms001.xyz
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-321-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58734
-  server: southvip1.pkyun.xyz
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-311-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e5b8f61a-9f5b-4149-85d5-10e434751cc8
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-318-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 19ee1011-d8e1-416e-8aff-82e3fea04e55
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-304-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 11fd64ff-d550-467d-8c1f-72aebe6574ad
-  ws-opts:
-    headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-331-CN
+  name: 16-361-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 34401
+  server: southvip1.pkyun.xyz
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-270-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58849
+  server: southvip1.pkyun.xyz
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-360-CN
   password: d1a2122a-c141-45e5-ac39-617ebcda7b77
   port: 49709
   server: jg647hf446ghvw.eucs.cn
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-326-CN
-  password: bda131d0-96d4-4a91-8e19-5482bf3b5a86
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-310-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 19ee1011-d8e1-416e-8aff-82e3fea04e55
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-325-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: aa69d763-21db-4870-8cdc-a22e23f2f057
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 16-344-CN
-  password: e0441379-23d0-48e1-8911-e35bd0a9173b
-  port: 20002
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-341-CN
-  password: b83332bd-3f2d-4c61-b829-1bffdeab083c
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-336-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58830
-  server: southvip1.pkyun.xyz
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-337-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58808
-  server: southvip1.pkyun.xyz
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-352-CN
+  name: 16-359-CN
   password: e0441379-23d0-48e1-8911-e35bd0a9173b
   port: 20016
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-323-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a8144270-951e-4ac1-9bf0-e36aac440e3a
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 16-338-CN
-  password: f9bc72f2-51a6-4177-a34f-9e6d16e0359a
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-335-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0d6758f3-3d8a-47e2-958a-17e12e3580a5
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-329-SG
+  name: 16-341-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -1389,83 +1418,32 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 0d6758f3-3d8a-47e2-958a-17e12e3580a5
+  uuid: f2bf4e99-4701-4cbe-836e-ea95818026d6
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-356-CN
+  name: 16-374-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58803
+  port: 34303
   server: southvip1.pkyun.xyz
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-353-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58815
-  server: southvip1.pkyun.xyz
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-361-CN
-  password: 20df3273-39af-40a1-b13d-18dca857d739
+  name: 16-376-CN
+  password: 526fabe4-9d70-4414-9715-23c14159b5df
   port: 49709
   server: jg647hf446ghvw.eucs.cn
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-358-CN
+  name: 16-372-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58852
+  port: 58801
   server: southvip1.pkyun.xyz
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-346-RELAY
-  network: ws
-  port: 2082
-  server: cf2.yunduanjc.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6831525a-b706-4fdc-9652-3e32f6abd3b3
-  ws-opts:
-    headers:
-      host: akdg.yunduanjc.top
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 16-350-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 72f19539-944e-4c81-b9a3-856d29077080
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-357-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 1365cb18-91a3-4b95-a740-6a28c0930adf
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-363-RELAY
+  name: 16-349-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -1473,14 +1451,14 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 0cf78e56-e996-4223-9c39-c9576ec6f627
+  uuid: 99086bdc-a4da-4b50-a35e-4fdcad6035a4
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-365-RELAY
+  name: 16-348-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -1495,7 +1473,22 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-368-RELAY
+  name: 16-351-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0ccc5936-1159-4b3f-ac6d-ce87ce501e43
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-353-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -1503,14 +1496,89 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: fbe27b1e-6ecb-497f-a4e0-b0101adda882
+  uuid: 555f85d6-b81e-4a26-9ff6-5aa4f4eb741a
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-371-US
+  name: 16-362-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: e332782c-8723-4408-a585-5c3cb302d81f
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-366-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 64bf1087-f291-4a3f-a5da-fd5dd21df696
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-265-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 8268a5f3-1d70-44bf-8b08-0c69ad163f62
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-370-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ec025388-56bd-4680-b5e2-34e823dc8e59
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-373-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 64bf1087-f291-4a3f-a5da-fd5dd21df696
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-369-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -1518,59 +1586,29 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 17353f26-5f77-48c0-a53e-504210e2cec9
+  uuid: e5b8f61a-9f5b-4149-85d5-10e434751cc8
   ws-opts:
     headers:
       host: shhh001.oraclenat.cc
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-385-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58804
-  server: southvip1.pkyun.xyz
+  name: 16-399-CN
+  password: 7db921a1-a211-447b-b3c6-8dfefcdb3b74
+  port: 20008
+  server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-388-CN
+  name: 16-404-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58851
+  port: 58826
   server: southvip1.pkyun.xyz
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-372-DE
+  name: 16-381-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 59dafb2d-475e-4563-aef3-354dbb898a67
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-369-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: c58c24f4-56a6-452f-bb13-b1781cf11b6e
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-370-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -1578,69 +1616,12 @@ proxies:
   uuid: 6b770fee-54ef-48f2-8aeb-88d61cc30858
   ws-opts:
     headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-384-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58835
-  server: southvip1.pkyun.xyz
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-377-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0dbf8192-fe63-4ade-9a45-b4647bfb6cce
-  ws-opts:
-    headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: 16-399-CN
+  name: 16-407-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58819
-  server: southvip1.pkyun.xyz
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-380-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: c58c24f4-56a6-452f-bb13-b1781cf11b6e
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-381-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 4da0c91c-b925-4467-aab5-eab2a26c0aaf
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-394-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58838
+  port: 58845
   server: southvip1.pkyun.xyz
   type: ss
 - alterId: 0
@@ -1653,38 +1634,17 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 99086bdc-a4da-4b50-a35e-4fdcad6035a4
+  uuid: 24fa8f85-e866-4b62-ae2e-bb7c290aadd5
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-386-DE
+  name: 16-383-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: fb4f5ffb-2d58-49cb-8797-133358dbc7dd
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 16-411-CN
-  password: 37c2cb5b-d257-45e5-8246-c3e9ac4e3bdf
-  port: 43091
-  server: iepl.500.yd.ny.cdnlinkms001.xyz
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-391-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -1692,98 +1652,11 @@ proxies:
   uuid: a8144270-951e-4ac1-9bf0-e36aac440e3a
   ws-opts:
     headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-412-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 34103
-  server: southvip1.pkyun.xyz
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-393-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: ec025388-56bd-4680-b5e2-34e823dc8e59
-  ws-opts:
-    headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 16-398-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 92da7dfc-c6f4-4803-aaf0-9ec92ef63210
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-416-CN
-  password: fc996722-c430-4d27-a78f-dcee089a7563
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-407-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f08638f1-20d4-4129-b8e7-5cd9bfcb6fbc
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-410-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6f8f9727-f03c-4d91-8e75-e724b388565e
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-404-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: c58c24f4-56a6-452f-bb13-b1781cf11b6e
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-413-SG
+  name: 16-385-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -1791,59 +1664,14 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 70cbb616-0ed0-4e97-b45b-8bca12f243a7
+  uuid: ee33cbf0-bf6a-4bb5-90a2-98c06c569e85
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-409-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 17353f26-5f77-48c0-a53e-504210e2cec9
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-421-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 220aeea0-f813-499e-8ef6-1d8a074c18cc
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-414-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0ccc5936-1159-4b3f-ac6d-ce87ce501e43
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-419-SG
+  name: 16-389-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -1856,198 +1684,57 @@ proxies:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
-- alterId: 0
-  cipher: auto
-  name: 16-424-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 92da7dfc-c6f4-4803-aaf0-9ec92ef63210
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-430-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 06eb7462-4f43-4340-a348-13528b88c9f5
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-439-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: fb4f5ffb-2d58-49cb-8797-133358dbc7dd
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-451-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 24fa8f85-e866-4b62-ae2e-bb7c290aadd5
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-448-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: aa69d763-21db-4870-8cdc-a22e23f2f057
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-454-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e5b8f61a-9f5b-4149-85d5-10e434751cc8
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 16-453-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 19ee1011-d8e1-416e-8aff-82e3fea04e55
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-464-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58822
-  server: southvip1.pkyun.xyz
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-456-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f08638f1-20d4-4129-b8e7-5cd9bfcb6fbc
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 16-440-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b1838017-306f-404e-8f5b-89e62dfb9666
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-462-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58845
-  server: southvip1.pkyun.xyz
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-466-CN
-  password: 310b7d5a-ff60-4914-9fb2-74e72afb5955
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-484-CN
-  password: e0441379-23d0-48e1-8911-e35bd0a9173b
-  port: 47564
+  name: 16-412-CN
+  password: 7db921a1-a211-447b-b3c6-8dfefcdb3b74
+  port: 20013
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-465-SG
+  name: 16-392-RELAY
   network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
+  port: 443
+  server: visa.com
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 220aeea0-f813-499e-8ef6-1d8a074c18cc
+  uuid: ee33cbf0-bf6a-4bb5-90a2-98c06c569e85
   ws-opts:
     headers:
-      host: westsg2-ddns.oraclenat.cc
+      host: go.daluquan.top
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-429-SG
+  name: 16-290-RELAY
   network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
+  port: 443
+  server: visa.com
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: a161d465-dda2-4b3a-90e2-89de5a213a4f
+  uuid: 6f8f9727-f03c-4d91-8e75-e724b388565e
   ws-opts:
     headers:
-      host: westsg2-ddns.oraclenat.cc
+      host: go.daluquan.top
     path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-330-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 34302
+  server: southvip1.pkyun.xyz
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-442-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58837
+  server: southvip1.pkyun.xyz
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-428-US
+  name: 16-397-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -2055,20 +1742,71 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 11fd64ff-d550-467d-8c1f-72aebe6574ad
+  uuid: 17353f26-5f77-48c0-a53e-504210e2cec9
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-400-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 99086bdc-a4da-4b50-a35e-4fdcad6035a4
   ws-opts:
     headers:
       host: shhh001.oraclenat.cc
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-481-CN
+  name: 16-371-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58849
+  port: 58812
   server: southvip1.pkyun.xyz
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-468-DE
+  name: 16-375-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 71622500-265f-4a1b-ba9e-e068f6408f6c
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-390-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: c65959a0-162f-4c39-a18d-c0c8690c4479
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-405-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58835
+  server: southvip1.pkyun.xyz
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-406-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -2076,14 +1814,14 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: a161d465-dda2-4b3a-90e2-89de5a213a4f
+  uuid: 70cbb616-0ed0-4e97-b45b-8bca12f243a7
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 16-463-RELAY
+  name: 16-408-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -2091,29 +1829,29 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 11fd64ff-d550-467d-8c1f-72aebe6574ad
+  uuid: a2de060e-721a-42ff-9e0c-c69cf314ba63
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-472-RELAY
+  name: 16-415-SG
   network: ws
-  port: 443
-  server: visa.com
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 70cbb616-0ed0-4e97-b45b-8bca12f243a7
+  uuid: 17353f26-5f77-48c0-a53e-504210e2cec9
   ws-opts:
     headers:
-      host: go.daluquan.top
+      host: westsg2-ddns.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-478-DE
+  name: 16-418-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -2128,22 +1866,70 @@ proxies:
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 16-477-RELAY
+  name: 16-432-SG
   network: ws
-  port: 443
-  server: visa.com
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 7d8a0801-bff9-4901-b503-401b962c9505
+  uuid: 71622500-265f-4a1b-ba9e-e068f6408f6c
   ws-opts:
     headers:
-      host: go.daluquan.top
+      host: westsg2-ddns.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 16-473-US
+  name: 16-420-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ec025388-56bd-4680-b5e2-34e823dc8e59
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-435-CN
+  password: 7db921a1-a211-447b-b3c6-8dfefcdb3b74
+  port: 20032
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-422-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 72f19539-944e-4c81-b9a3-856d29077080
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 16-433-CN
+  password: 310b7d5a-ff60-4914-9fb2-74e72afb5955
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-446-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58839
+  server: southvip1.pkyun.xyz
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-444-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -2151,26 +1937,116 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 7d8a0801-bff9-4901-b503-401b962c9505
+  uuid: a8144270-951e-4ac1-9bf0-e36aac440e3a
   ws-opts:
     headers:
       host: shhh001.oraclenat.cc
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-500-CN
-  password: d72b2f12-90df-424b-aa53-9990653aced5
+  name: 16-467-CN
+  password: a2a1677c-0799-487e-8827-6cf0d4b5b86a
   port: 49709
   server: jg647hf446ghvw.eucs.cn
   type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-451-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a161d465-dda2-4b3a-90e2-89de5a213a4f
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-450-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6f8f9727-f03c-4d91-8e75-e724b388565e
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-454-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 11fd64ff-d550-467d-8c1f-72aebe6574ad
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-453-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 59dafb2d-475e-4563-aef3-354dbb898a67
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-452-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 220aeea0-f813-499e-8ef6-1d8a074c18cc
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-457-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 9986dee4-d63e-43dd-98fe-4fe186a2d314
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-490-CN
+  name: 16-482-CN
   password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 58827
+  port: 34501
   server: southvip1.pkyun.xyz
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-480-US
+  name: 16-401-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -2183,42 +2059,9 @@ proxies:
     headers:
       host: shhh001.oraclenat.cc
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 16-493-CN
-  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
-  port: 34303
-  server: southvip1.pkyun.xyz
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-485-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 71622500-265f-4a1b-ba9e-e068f6408f6c
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-509-CN
-  password: 5be069c7-4927-4fca-95a5-97620939c37c
-  port: 20052
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-510-CN
-  password: 962c9fca-de6a-4db8-bc5b-335541a1cb4e
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-494-DE
+  name: 16-470-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -2226,56 +2069,65 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 8f39b945-8401-4c7d-baff-1e98dbfd1897
+  uuid: 92da7dfc-c6f4-4803-aaf0-9ec92ef63210
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: 17-513-CN
-  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
-  port: 20004
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-512-CN
-  password: beb719bf-1d04-47ea-937a-b89de8517589
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-517-CN
-  password: 5be069c7-4927-4fca-95a5-97620939c37c
-  port: 20013
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-526-CN
-  password: 922876fb-b344-465e-988b-3085b43a77f0
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
+  name: 16-494-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58828
+  server: southvip1.pkyun.xyz
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-498-SG
+  name: 16-466-US
   network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
+  port: 23451
+  server: shhh001.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 36f6572a-d787-4464-9a6a-9e94a72e1bcb
+  uuid: 555f85d6-b81e-4a26-9ff6-5aa4f4eb741a
   ws-opts:
     headers:
-      host: westsg2-ddns.oraclenat.cc
+      host: shhh001.oraclenat.cc
     path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-490-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58852
+  server: southvip1.pkyun.xyz
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-495-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 34301
+  server: southvip1.pkyun.xyz
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-496-RELAY
+  name: 16-471-RELAY
   network: ws
   port: 443
   server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 70cbb616-0ed0-4e97-b45b-8bca12f243a7
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-479-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -2283,32 +2135,11 @@ proxies:
   uuid: f08638f1-20d4-4129-b8e7-5cd9bfcb6fbc
   ws-opts:
     headers:
-      host: go.daluquan.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-540-CN
-  password: 6be35b20-8035-47ca-a80c-ab063ef2a9ff
-  port: 20013
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-520-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 764bba79-bd48-4523-a500-52528ffb5655
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
+      host: shhh001.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-530-US
+  name: 16-480-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -2316,35 +2147,14 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 6e8b9125-eb43-41a7-9f3e-9c4d438619c2
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-546-CN
-  password: 5be069c7-4927-4fca-95a5-97620939c37c
-  port: 34338
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-539-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 979bcd55-5ece-4c45-884f-eae8ee52360c
+  uuid: aa69d763-21db-4870-8cdc-a22e23f2f057
   ws-opts:
     headers:
       host: shhh001.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-529-SG
+  name: 16-476-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -2352,35 +2162,47 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 5de3a5c2-5a31-4b36-96b5-f378f36e4a09
+  uuid: 59dafb2d-475e-4563-aef3-354dbb898a67
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
-- alterId: 0
-  cipher: auto
-  name: 17-565-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b8f33154-0f89-495d-ba5f-8ec0b2eb570f
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: 17-551-CN
-  password: adabf72a-267f-4eed-8345-33a1cec95af2
-  port: 20032
-  server: gy.666666222.shop
+  name: 16-515-CN
+  password: 3e628c3e-465a-433c-9abf-3346aa6bcfbb
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-512-CN
+  password: 20df3273-39af-40a1-b13d-18dca857d739
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
   type: ss
 - alterId: 0
   cipher: auto
-  name: 17-541-SG
+  name: 16-496-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 7898a9d5-ad7b-490f-baa9-2bcdd58ffdee
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-513-CN
+  password: deff309e-7742-446d-a996-df5e5b868704
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-424-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -2388,14 +2210,29 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 074636de-aaed-4a77-bd38-fd0ed022215b
+  uuid: 99086bdc-a4da-4b50-a35e-4fdcad6035a4
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-560-RELAY
+  name: 16-500-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e5b8f61a-9f5b-4149-85d5-10e434751cc8
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-499-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -2403,20 +2240,83 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 4238fab4-7798-46f8-b9ce-c0054b976af9
+  uuid: 06eb7462-4f43-4340-a348-13528b88c9f5
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 17-561-CN
-  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
-  port: 20008
-  server: gy.666666222.shop
+  name: 16-441-CN
+  password: f29417a6-8e44-41e9-85fa-779c3351fade
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
   type: ss
 - alterId: 0
   cipher: auto
-  name: 17-545-DE
+  name: 16-447-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 8f39b945-8401-4c7d-baff-1e98dbfd1897
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-462-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58840
+  server: southvip1.pkyun.xyz
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-505-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0ccc5936-1159-4b3f-ac6d-ce87ce501e43
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-464-CN
+  password: 76f61aec-e53f-42a1-b584-d41165e4aa67
+  port: 58847
+  server: southvip1.pkyun.xyz
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-460-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 72f19539-944e-4c81-b9a3-856d29077080
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-481-CN
+  password: f4e383bd-9ecf-4b65-bc88-8b4391ffd368
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-509-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -2424,20 +2324,218 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 979bcd55-5ece-4c45-884f-eae8ee52360c
+  uuid: 1365cb18-91a3-4b95-a740-6a28c0930adf
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-510-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1365cb18-91a3-4b95-a740-6a28c0930adf
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-540-CN
+  password: adabf72a-267f-4eed-8345-33a1cec95af2
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-469-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 8f39b945-8401-4c7d-baff-1e98dbfd1897
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-478-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 71622500-265f-4a1b-ba9e-e068f6408f6c
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: 17-559-CN
-  password: 6be35b20-8035-47ca-a80c-ab063ef2a9ff
+  name: 17-550-CN
+  password: adabf72a-267f-4eed-8345-33a1cec95af2
   port: 20004
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 17-542-US
+  name: 16-484-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1365cb18-91a3-4b95-a740-6a28c0930adf
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-491-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c58c24f4-56a6-452f-bb13-b1781cf11b6e
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-520-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: fb4f5ffb-2d58-49cb-8797-133358dbc7dd
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 17-556-CN
+  password: 8f11e240-3c36-42ef-9ebf-694fb534506b
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-525-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 4da0c91c-b925-4467-aab5-eab2a26c0aaf
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-528-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f03bf67a-1817-403b-801a-0db95ba1673e
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-534-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b8ea99d7-8153-4406-921c-8e79b726eef0
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-573-CN
+  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
+  port: 20052
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-516-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c58c24f4-56a6-452f-bb13-b1781cf11b6e
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 16-519-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f08638f1-20d4-4129-b8e7-5cd9bfcb6fbc
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-530-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 2a3c9638-489c-41d8-accb-5d2a1b5f4dde
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-543-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -2450,45 +2548,15 @@ proxies:
     headers:
       host: shhh001.oraclenat.cc
     path: /
-- alterId: 0
-  cipher: auto
-  name: 17-525-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0deadd17-344e-422c-816d-d7a0e9a0bd12
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 17-547-CN
-  password: 8f9780a1-9100-4f5c-a7c8-295978ac9145
+  name: 17-576-CN
+  password: 267b7b04-955a-41f8-813f-41dedfd752d5
   port: 49709
   server: jg647hf446ghvw.eucs.cn
   type: ss
 - alterId: 0
   cipher: auto
-  name: 17-557-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 764bba79-bd48-4523-a500-52528ffb5655
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-566-SG
+  name: 17-571-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -2496,152 +2564,65 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: b8ea99d7-8153-4406-921c-8e79b726eef0
+  uuid: adac13c8-dddc-4b33-91c0-4e784127c35a
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-579-DE
+  name: 17-559-RELAY
   network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
+  port: 443
+  server: visa.com
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 26be7643-c892-4928-ac61-e2c7a0aaa65e
+  uuid: ad73eae3-6955-4550-894e-c478fee17cfe
   ws-opts:
     headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 17-613-CN
-  password: 5be069c7-4927-4fca-95a5-97620939c37c
-  port: 20002
-  server: gy.666666222.shop
-  type: ss
+      host: go.daluquan.top
+    path: /
 - alterId: 0
   cipher: auto
-  name: 17-568-DE
+  name: 17-564-SG
   network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 4238fab4-7798-46f8-b9ce-c0054b976af9
+  uuid: b8f33154-0f89-495d-ba5f-8ec0b2eb570f
   ws-opts:
     headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
+      host: westsg2-ddns.oraclenat.cc
+    path: /
 - cipher: chacha20-ietf-poly1305
   name: 17-589-CN
   password: 5be069c7-4927-4fca-95a5-97620939c37c
-  port: 20008
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-582-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 657d4d24-1ab1-453e-8da9-05c8cc2f9917
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 17-608-CN
-  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
-  port: 20032
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-585-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 26be7643-c892-4928-ac61-e2c7a0aaa65e
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-628-CN
-  password: 655bf82e-102b-4406-891f-9f06bc6462f1
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-596-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 074636de-aaed-4a77-bd38-fd0ed022215b
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-640-CN
-  password: 8f11e240-3c36-42ef-9ebf-694fb534506b
-  port: 20006
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-641-CN
-  password: f06b2887-a1e7-4afa-82a5-b626b4349bd1
   port: 20013
   server: gy.666666222.shop
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-642-CN
-  password: 7a835934-123b-4c45-a2a6-5fe2901e0b35
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-591-SG
+  name: 17-572-NOWHERE
   network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
+  port: 443
+  server: eppvc.mmzhk.website
   skip-cert-vertify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 884fd35b-be21-4ed3-93aa-dd81c3f76b67
+  uuid: 4b1c1101-c648-493b-ad64-9aedb9347a33
   ws-opts:
     headers:
-      host: westsg2-ddns.oraclenat.cc
+      host: eppvc.mmzhk.website
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-620-CN
-  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
-  port: 20002
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-629-DE
+  name: 17-574-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -2649,14 +2630,35 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 8e22e06f-617a-490c-96aa-6df3030180bb
+  uuid: 91484031-14fa-4491-876b-7ae2cad9dabe
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 17-587-US
+  name: 17-575-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 4f9799ac-41e1-4506-83f3-53e3c3827fdf
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-597-CN
+  password: e87a85eb-7863-4bd1-a8f9-b02df56d97e5
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-586-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -2664,89 +2666,20 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: e31633ba-af38-46b6-b6b0-933a5c1b2383
+  uuid: f03bf67a-1817-403b-801a-0db95ba1673e
   ws-opts:
     headers:
       host: shhh001.oraclenat.cc
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 17-652-CN
-  password: ae4018d0-d242-4cd7-bff6-f414c737ac7c
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-657-CN
-  password: 6be35b20-8035-47ca-a80c-ab063ef2a9ff
-  port: 20016
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-624-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 26be7643-c892-4928-ac61-e2c7a0aaa65e
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-636-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e31633ba-af38-46b6-b6b0-933a5c1b2383
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-638-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8e22e06f-617a-490c-96aa-6df3030180bb
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-663-CN
+  name: 17-610-CN
   password: adabf72a-267f-4eed-8345-33a1cec95af2
   port: 34338
   server: gy.666666222.shop
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-660-CN
-  password: 6be35b20-8035-47ca-a80c-ab063ef2a9ff
-  port: 20032
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-676-CN
-  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
-  port: 20013
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-659-RELAY
+  name: 17-614-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -2754,14 +2687,89 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: b8ea99d7-8153-4406-921c-8e79b726eef0
+  uuid: 1aae1620-95dc-4571-86a2-9b2bb7f06bbc
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-665-DE
+  name: 17-592-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 979bcd55-5ece-4c45-884f-eae8ee52360c
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-616-CN
+  password: f06b2887-a1e7-4afa-82a5-b626b4349bd1
+  port: 20052
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-588-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: adb16b96-cee2-461b-a154-ddd991d49183
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-551-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: b3b57598-7f20-4afa-baae-bc4f576a3040
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-629-CN
+  password: f06b2887-a1e7-4afa-82a5-b626b4349bd1
+  port: 20016
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-625-CN
+  password: 04b11852-2985-4fde-b085-8521e7314a82
+  port: 20006
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-634-CN
+  password: 8f11e240-3c36-42ef-9ebf-694fb534506b
+  port: 20008
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-639-CN
+  password: 43e58628-217f-4747-8f79-d1ed8fd0d9c1
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-599-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -2769,35 +2777,20 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 0deadd17-344e-422c-816d-d7a0e9a0bd12
+  uuid: 1aae1620-95dc-4571-86a2-9b2bb7f06bbc
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: 17-685-CN
-  password: f06b2887-a1e7-4afa-82a5-b626b4349bd1
-  port: 20016
+  name: 17-618-CN
+  password: 8f11e240-3c36-42ef-9ebf-694fb534506b
+  port: 20002
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 17-667-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b8ea99d7-8153-4406-921c-8e79b726eef0
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 17-609-US
+  name: 17-548-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -2812,166 +2805,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-615-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 21cdc003-4e54-4e5c-9369-bf13491f6e7b
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-694-CN
-  password: e87a85eb-7863-4bd1-a8f9-b02df56d97e5
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-692-CN
-  password: bc2de704-bc8a-46ab-b26b-3380c922c81c
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-649-CN
-  password: 29417523-21d9-47d5-ab4e-edd823911976
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-708-CN
-  password: 6be35b20-8035-47ca-a80c-ab063ef2a9ff
-  port: 20002
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-653-CN
-  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
-  port: 34338
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-655-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8e22e06f-617a-490c-96aa-6df3030180bb
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-710-CN
-  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
-  port: 20035
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-658-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8e22e06f-617a-490c-96aa-6df3030180bb
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-711-CN
-  password: b5419ac1-72b8-4b84-804d-39c84aee2ff7
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-662-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: adb16b96-cee2-461b-a154-ddd991d49183
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-683-CN
-  password: f06b2887-a1e7-4afa-82a5-b626b4349bd1
-  port: 47564
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-672-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9f908d80-9d91-4659-910b-ee44840f9e4c
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-671-RELAY
-  network: ws
-  port: 443
-  server: visa.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9f908d80-9d91-4659-910b-ee44840f9e4c
-  ws-opts:
-    headers:
-      host: go.daluquan.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-682-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6e8b9125-eb43-41a7-9f3e-9c4d438619c2
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 17-716-CN
-  password: d617869e-af90-450c-8cee-28bfccf75203
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-696-SG
+  name: 17-552-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -2979,53 +2813,224 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: ad73eae3-6955-4550-894e-c478fee17cfe
+  uuid: 4238fab4-7798-46f8-b9ce-c0054b976af9
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
+- alterId: 0
+  cipher: auto
+  name: 17-608-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 21cdc003-4e54-4e5c-9369-bf13491f6e7b
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-624-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f11d91f2-a39b-43d2-9cb7-25fc4446410f
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 17-731-CN
-  password: adabf72a-267f-4eed-8345-33a1cec95af2
-  port: 20006
+  name: 17-593-CN
+  password: 04b11852-2985-4fde-b085-8521e7314a82
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-623-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 229558a6-aee1-4f50-b621-10a6a9fe7242
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-640-CN
+  password: 04b11852-2985-4fde-b085-8521e7314a82
+  port: 20008
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 17-721-CN
-  password: c30e5ae7-c025-415f-8501-6aff5f094f62
+  name: 17-648-CN
+  password: 8f11e240-3c36-42ef-9ebf-694fb534506b
+  port: 47564
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-669-CN
+  password: 29417523-21d9-47d5-ab4e-edd823911976
   port: 49709
   server: jg647hf446ghvw.eucs.cn
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 17-727-CN
+  name: 17-652-CN
+  password: ceaf0f69-5ac6-479a-8d66-fc114b8bd78e
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-654-CN
   password: 5be069c7-4927-4fca-95a5-97620939c37c
   port: 20016
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 17-720-CN
-  password: 5be069c7-4927-4fca-95a5-97620939c37c
-  port: 20032
+  name: 17-670-CN
+  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
+  port: 20016
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 17-765-RELAY
+  name: 17-638-NOWHERE
   network: ws
   port: 443
-  server: visa.com
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 59a81a57-4e30-43c2-a6b8-7a41e060ef05
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-641-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 26be7643-c892-4928-ac61-e2c7a0aaa65e
+  uuid: b8ea99d7-8153-4406-921c-8e79b726eef0
   ws-opts:
     headers:
-      host: go.daluquan.top
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-680-CN
+  password: f06b2887-a1e7-4afa-82a5-b626b4349bd1
+  port: 20008
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-662-CN
+  password: 5be069c7-4927-4fca-95a5-97620939c37c
+  port: 20006
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-666-CN
+  password: f06b2887-a1e7-4afa-82a5-b626b4349bd1
+  port: 20004
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-683-CN
+  password: 962c9fca-de6a-4db8-bc5b-335541a1cb4e
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-673-CN
+  password: 04b11852-2985-4fde-b085-8521e7314a82
+  port: 20052
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-684-CN
+  password: 8f11e240-3c36-42ef-9ebf-694fb534506b
+  port: 20006
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-644-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 76fc2f5c-425e-405d-b297-046523be0f05
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-701-DE
+  name: 17-650-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 868c897e-0551-4d68-9a50-e3e5a7552e80
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-675-CN
+  password: f06b2887-a1e7-4afa-82a5-b626b4349bd1
+  port: 20006
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-659-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 4e5f2db7-a634-4a1d-a3b3-ea3cdcaa8288
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-692-CN
+  password: 5be069c7-4927-4fca-95a5-97620939c37c
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-655-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -3040,25 +3045,10 @@ proxies:
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 17-762-US
+  name: 17-664-SG
   network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 074636de-aaed-4a77-bd38-fd0ed022215b
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-743-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -3066,14 +3056,35 @@ proxies:
   uuid: f53845cc-ecc9-4931-8534-14f7a57eb583
   ws-opts:
     headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-703-CN
+  password: 8f11e240-3c36-42ef-9ebf-694fb534506b
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-665-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 884fd35b-be21-4ed3-93aa-dd81c3f76b67
+  ws-opts:
+    headers:
       host: shhh001.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-749-RELAY
+  name: 17-667-DE
   network: ws
-  port: 443
-  server: visa.com
+  port: 23451
+  server: frankfurt.faforex.eu.org
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -3081,62 +3092,698 @@ proxies:
   uuid: f1659ce6-6993-4d20-8124-c8472439ae4a
   ws-opts:
     headers:
-      host: go.daluquan.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 18-786-DE
-  password: 8fcf64c4-2ac5-4f2f-8298-5052d8cff826
-  port: 8388
-  server: shadow-de01.gproxy.gratis
-  type: ss
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 18-793-RELAY
+  name: 17-660-DE
   network: ws
-  port: 8443
-  server: 162.120.94.103
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: e88b85c6-93b4-47f6-b3fb-2c55dcb1289f
-  ws-opts:
-    headers:
-      host: lax2.ibgfw.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 18-792-RELAY
-  network: ws
-  port: 2082
-  server: s2.db-link02.top
+  port: 23451
+  server: frankfurt.faforex.eu.org
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 13514c2c-d5a4-335f-965a-5dc292e36759
+  uuid: 764bba79-bd48-4523-a500-52528ffb5655
   ws-opts:
     headers:
-      host: 100-87-160-252.s2.db-link02.top
-    path: /
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 18-781-RELAY
+  name: 17-672-NOWHERE
   network: ws
-  port: 8443
-  server: 104.21.3.219
+  port: 443
+  server: eppvc.mmzhk.website
   skip-cert-vertify: true
   tls: true
   type: vmess
   udp: true
-  uuid: c313606f-98c2-4d7b-ba74-48b94f61b11d
+  uuid: 8f1d77b3-9867-46e7-9678-9739c25651e7
   ws-opts:
     headers:
-      host: uswuxian.pai50288.uk
+      host: eppvc.mmzhk.website
     path: /
 - alterId: 0
   cipher: auto
-  name: 18-790-RELAY
+  name: 17-676-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 764bba79-bd48-4523-a500-52528ffb5655
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-707-CN
+  password: 262969b1-717a-4054-807d-0de9df1e2f4f
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-696-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5de3a5c2-5a31-4b36-96b5-f378f36e4a09
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-697-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f1659ce6-6993-4d20-8124-c8472439ae4a
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-685-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1098b90b-86a6-48b7-9abb-cfae036e69a9
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-701-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 281e1a79-ca53-40cb-a1c2-4b301ccc6e10
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-688-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 21cdc003-4e54-4e5c-9369-bf13491f6e7b
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-709-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: d9b244f4-76b3-47c6-952f-d87d06957f44
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 17-729-CN
+  password: 36a312ae-7d78-4371-a499-184abb3e8846
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-723-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 074636de-aaed-4a77-bd38-fd0ed022215b
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-704-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: adac13c8-dddc-4b33-91c0-4e784127c35a
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-706-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 764bba79-bd48-4523-a500-52528ffb5655
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-744-CN
+  password: 8f11e240-3c36-42ef-9ebf-694fb534506b
+  port: 20032
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-725-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 104a6dd7-320a-46dd-9d38-fc56e1d01113
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-726-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 979bcd55-5ece-4c45-884f-eae8ee52360c
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-712-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 4238fab4-7798-46f8-b9ce-c0054b976af9
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 17-761-CN
+  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
+  port: 20008
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-721-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1098b90b-86a6-48b7-9abb-cfae036e69a9
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-722-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f1659ce6-6993-4d20-8124-c8472439ae4a
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-736-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6e8b9125-eb43-41a7-9f3e-9c4d438619c2
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-753-CN
+  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
+  port: 20002
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-738-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 657d4d24-1ab1-453e-8da9-05c8cc2f9917
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-747-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5de3a5c2-5a31-4b36-96b5-f378f36e4a09
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 17-758-CN
+  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-728-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1aae1620-95dc-4571-86a2-9b2bb7f06bbc
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-762-CN
+  password: ae4018d0-d242-4cd7-bff6-f414c737ac7c
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-732-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: c4b1c14b-a0be-4b12-8e8f-c3bfb6a84ac4
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-730-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f53845cc-ecc9-4931-8534-14f7a57eb583
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-749-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: adb16b96-cee2-461b-a154-ddd991d49183
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-775-CN
+  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
+  port: 20006
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-794-CN
+  password: 5be069c7-4927-4fca-95a5-97620939c37c
+  port: 20052
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-754-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: adb16b96-cee2-461b-a154-ddd991d49183
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 17-805-CN
+  password: 5be069c7-4927-4fca-95a5-97620939c37c
+  port: 20004
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-757-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 91484031-14fa-4491-876b-7ae2cad9dabe
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-763-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 104a6dd7-320a-46dd-9d38-fc56e1d01113
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-800-CN
+  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-771-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 979bcd55-5ece-4c45-884f-eae8ee52360c
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-772-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 26be7643-c892-4928-ac61-e2c7a0aaa65e
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-816-CN
+  password: 99f6fde0-41c4-4555-9ee9-5cd803006661
+  port: 47564
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-774-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 4238fab4-7798-46f8-b9ce-c0054b976af9
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-785-NOWHERE
+  network: ws
+  port: 443
+  server: eppvc.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 2917ad23-d550-41be-a0f6-18456bcdb07f
+  ws-opts:
+    headers:
+      host: eppvc.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-782-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 21cdc003-4e54-4e5c-9369-bf13491f6e7b
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-792-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b8f33154-0f89-495d-ba5f-8ec0b2eb570f
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-803-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 884fd35b-be21-4ed3-93aa-dd81c3f76b67
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-808-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 9f908d80-9d91-4659-910b-ee44840f9e4c
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 18-831-CA
+  network: ws
+  port: 443
+  server: 134.195.198.147
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      host: inna.cfd
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-818-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1098b90b-86a6-48b7-9abb-cfae036e69a9
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-822-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 8e22e06f-617a-490c-96aa-6df3030180bb
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 5
+  cipher: auto
+  name: 18-832-US
+  network: ws
+  port: 41507
+  server: ny1.bulkcash.top
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 695ac0a3-406a-41d7-83c5-5af8c39d3bec
+  ws-opts:
+    headers:
+      host: ny1.bulkcash.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-826-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ad73eae3-6955-4550-894e-c478fee17cfe
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 18-839-FR
+  network: ws
+  port: 443
+  server: 51.77.20.137
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      host: tilebani.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 18-842-RELAY
   network: ws
   port: 443
   server: mods-destruction-academy-gear.trycloudflare.com
@@ -3148,4 +3795,34 @@ proxies:
   ws-opts:
     headers:
       host: mods-destruction-academy-gear.trycloudflare.com
+    path: /
+- alterId: 64
+  cipher: auto
+  name: 18-836-US
+  network: ws
+  port: 38003
+  server: 38.14.107.228
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      host: www.23179753.xyz
+    path: /
+- alterId: 64
+  cipher: auto
+  name: 18-837-US
+  network: ws
+  port: 38003
+  server: 38.14.107.225
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      host: www.23179753.xyz
     path: /
