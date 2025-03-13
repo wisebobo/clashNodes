@@ -33,25 +33,10 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  name: 04-004-RELAY
-  network: ws
-  port: 80
-  server: s3.cn-db.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
-  ws-opts:
-    headers:
-      host: 100-48-32-80.s3.cn-db.top
-    path: /dabai.in172.64.63.205
-- alterId: 0
-  cipher: auto
-  name: 04-000-RELAY
+  name: 04-006-RELAY
   network: ws
   port: 2095
-  server: s3.cn-db.top
+  server: s2.cn-db.top
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -59,8 +44,8 @@ proxies:
   uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
   ws-opts:
     headers:
-      host: 100-14-107-209.s3.cn-db.top
-    path: /dabai.in172.64.5.132
+      host: 100-110-28-177.s2.cn-db.top
+    path: /dabai.in104.20.175.206
 - alterId: 0
   cipher: auto
   name: 04-005-RELAY
@@ -78,6 +63,21 @@ proxies:
     path: /dabai.in104.25.57.161
 - alterId: 0
   cipher: auto
+  name: 04-004-RELAY
+  network: ws
+  port: 80
+  server: s3.cn-db.top
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
+  ws-opts:
+    headers:
+      host: 100-48-32-80.s3.cn-db.top
+    path: /dabai.in172.64.63.205
+- alterId: 0
+  cipher: auto
   name: 04-003-RELAY
   network: ws
   port: 2095
@@ -93,10 +93,10 @@ proxies:
     path: /dabai.in104.24.212.200
 - alterId: 0
   cipher: auto
-  name: 04-006-RELAY
+  name: 04-002-RELAY
   network: ws
-  port: 2095
-  server: s2.cn-db.top
+  port: 2082
+  server: s4.cn-db.top
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -104,23 +104,8 @@ proxies:
   uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
   ws-opts:
     headers:
-      host: 100-110-28-177.s2.cn-db.top
-    path: /dabai.in104.20.175.206
-- alterId: 0
-  cipher: auto
-  name: 04-001-RELAY
-  network: ws
-  port: 80
-  server: s5.db-link01.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
-  ws-opts:
-    headers:
-      host: 100-159-99-14.s5.db-link01.top
-    path: /dabai.in104.21.51.132
+      host: 100-134-106-256.s4.cn-db.top
+    path: /dabai.in104.25.176.145
 - alterId: 2
   cipher: auto
   name: 04-061-CN
@@ -138,6 +123,21 @@ proxies:
     path: /
 - alterId: 2
   cipher: auto
+  name: 04-058-CN
+  network: ws
+  port: 23612
+  server: 12.mamamajd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 678bd4c0-2b02-38b1-bb27-1ce046d1d49f
+  ws-opts:
+    headers:
+      host: 12.mamamajd.site
+    path: /
+- alterId: 2
+  cipher: auto
   name: 04-062-CN
   network: ws
   port: 23616
@@ -152,6 +152,19 @@ proxies:
       host: 16.mamamajd.site
     path: /
 - cipher: aes-128-gcm
+  name: 04-106-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9873
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
   name: 04-072-CN
   password: ayucloud1
   plugin: obfs
@@ -165,20 +178,46 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-073-CN
-  password: QHPy2u
+  name: 04-105-CN
+  password: ay21d1
   plugin: obfs
   plugin-opts:
     host: d6247107977.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9030
+  port: 901
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-107-CN
+  name: 04-090-CN
+  password: ayu1245
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 824
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-097-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9062
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-086-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -186,16 +225,94 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 821
+  port: 9040
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-077-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9019
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-093-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 20012
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-070-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 806
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-100-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 914
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-094-CN
+  password: ayucles1
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 907
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-099-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9021
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - alterId: 2
   cipher: auto
-  name: 04-063-CN
+  name: 04-067-CN
   network: ws
-  port: 23618
-  server: 18.mamamajd.site
+  port: 23614
+  server: 14.mamamajd.site
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -203,23 +320,23 @@ proxies:
   uuid: 678bd4c0-2b02-38b1-bb27-1ce046d1d49f
   ws-opts:
     headers:
-      host: 18.mamamajd.site
+      host: 14.mamamajd.site
     path: /
 - cipher: aes-128-gcm
-  name: 04-111-CN
-  password: QHPy2u
+  name: 04-115-CN
+  password: wedsa
   plugin: obfs
   plugin-opts:
     host: d6247107977.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9060
-  server: 231103level3.unclemanco.com
+  port: 804
+  server: 231103level2.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-112-CN
+  name: 04-150-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -227,60 +344,21 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9037
-  server: 231103level3.unclemanco.com
+  port: 9047
+  server: 231103level1.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-117-CN
-  password: QHPy2u
+  name: 04-148-CN
+  password: Vdss1samj/2Zr
   plugin: obfs
   plugin-opts:
     host: d6247107977.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9022
+  port: 36243
   server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-114-CN
-  password: dajkdkjda&dja*/?
-  plugin: obfs
-  plugin-opts:
-    host: d6247107977.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 37863
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-147-CN
-  password: 1mj21sr
-  plugin: obfs
-  plugin-opts:
-    host: d6247107977.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 36452
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-137-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: d6247107977.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 1549
-  server: 231103levelx.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -297,6 +375,97 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
+  name: 04-151-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 912
+  server: 231103level1.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-145-CN
+  password: Vdssf.mj/2Zr
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 36203
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-135-CN
+  password: dajkdkjda&dja*/?
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 19999
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-143-CN
+  password: dajkbgja*/?
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 39073
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-133-CN
+  password: dadk2jat*/?
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 39201
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-159-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 915
+  server: 231103level1.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-157-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 816
+  server: 231103level1.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
   name: 04-162-CN
   password: ayucloud1
   plugin: obfs
@@ -309,24 +478,308 @@ proxies:
   server: 231103level1.unclemanco.com
   type: ss
   udp: true
+- cipher: aes-128-gcm
+  name: 04-164-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9044
+  server: 231103level1.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-165-CN
+  password: Vdssf.mj/2Zr
+  plugin: obfs
+  plugin-opts:
+    host: d6247107977.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 36201
+  server: 231103level1.unclemanco.com
+  type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 16-250-CN
-  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
-  port: 20006
+  name: 11-168-CN
+  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
+  port: 47564
   server: gy.666666222.shop
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 11-174-CN
+  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
+  port: 20032
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 11-178-CN
+  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-191-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7f1bbc21-5597-4bb3-ae74-cf0e7e08f203
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-196-CN
+  password: fc996722-c430-4d27-a78f-dcee089a7563
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-197-CN
+  password: f9bc72f2-51a6-4177-a34f-9e6d16e0359a
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-218-CN
+  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
+  port: 25578
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-201-CN
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 41512
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-206-CN
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 21059
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-216-CN
+  password: 07c065d4-1ea4-4b67-b7fa-cbb25a0aa12a
+  port: 34338
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-208-CN
+  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
+  port: 21061
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-226-CN
+  password: e26cf260-b633-41d1-936e-c878ff0782ea
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-205-CN
+  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
+  port: 50815
+  server: chiyu2.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-241-RELAY
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 8888
+  server: cainiao999.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-223-CN
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 57141
+  server: chiyu2.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-232-CN
+  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
+  port: 20032
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-202-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7f1bbc21-5597-4bb3-ae74-cf0e7e08f203
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-240-CN
+  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
+  port: 19115
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-251-CN
+  password: aefba090-1b5f-47f9-a4bd-62430615c96d
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-242-CN
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 25578
+  server: chiyu.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-255-CN
+  password: 947e49a8-344c-4cac-adb2-1ef45bb8c1b4
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-249-CN
+  password: c3de2edb-15a9-40ce-a68f-fb7aa95930ed
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-261-CN
+  password: 07c065d4-1ea4-4b67-b7fa-cbb25a0aa12a
+  port: 20016
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-231-RELAY
+  network: ws
+  port: 2082
+  server: dibai.kxxd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c889ef72-bda6-43da-a790-68da806793d7
+  ws-opts:
+    headers:
+      host: dibai.kxxd.site
+    path: /ccc
+- cipher: chacha20-ietf-poly1305
+  name: 16-262-CN
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 19055
+  server: chiyu2.myfczy169.top
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-234-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ca59991f-d5ab-46b6-867b-34d59278a5fe
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
 - cipher: chacha20-ietf-poly1305
   name: 16-265-CN
   password: 08a0da76-a276-49ce-b7ba-378a1532d15e
   port: 20016
   server: gy.666666222.shop
   type: ss
-- cipher: aes-256-gcm
-  name: 16-238-JP
-  password: 07c065d4-1ea4-4b67-b7fa-cbb25a0aa12a
-  port: 1200
-  server: hk.kfsldflk.xyz
+- cipher: chacha20-ietf-poly1305
+  name: 16-260-CN
+  password: c3de2edb-15a9-40ce-a68f-fb7aa95930ed
+  port: 47564
+  server: gy.666666222.shop
   type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-264-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b6117a95-9a96-4ff1-8d4c-f2596bb37cc1
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-258-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f71ac2a2-0c6b-474f-b7ba-dd950f9e60bb
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 16-272-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ca59991f-d5ab-46b6-867b-34d59278a5fe
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 16-281-CN
+  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-282-CN
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 50555
+  server: chiyu.myfczy169.top
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-278-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ca59991f-d5ab-46b6-867b-34d59278a5fe
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
 - cipher: chacha20-ietf-poly1305
   name: 16-298-CN
   password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
@@ -334,67 +787,91 @@ proxies:
   server: chiyu.myfczy169.top
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-304-CN
-  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
-  port: 34338
+  name: 16-291-CN
+  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
+  port: 57141
+  server: chiyu2.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-306-CN
+  password: f29417a6-8e44-41e9-85fa-779c3351fade
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-314-CN
+  password: 07c065d4-1ea4-4b67-b7fa-cbb25a0aa12a
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-292-CN
+  password: d1a2122a-c141-45e5-ac39-617ebcda7b77
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-293-CN
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 50563
+  server: chiyu.myfczy169.top
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-300-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 2e7187f8-56f6-419c-a503-f10a82ce7ce7
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 16-334-CN
+  password: 07c065d4-1ea4-4b67-b7fa-cbb25a0aa12a
+  port: 20006
   server: gy.666666222.shop
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-301-RELAY
+  name: 16-322-SG
   network: ws
-  port: 2082
-  server: dibai.kxxd.site
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: aca23828-3ceb-4079-b85b-1aa893788728
+  uuid: 5ccf8940-4fbc-4882-a0af-d3f268a2d84e
   ws-opts:
     headers:
-      host: dibai.kxxd.site
-    path: /ccc
+      host: westsg2-ddns.oraclenat.cc
+    path: /
 - alterId: 0
   cipher: auto
-  name: 16-302-RELAY
+  name: 16-296-SG
   network: ws
-  port: 2082
-  server: dibai.kxxd.site
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 576771d7-aa0b-44d8-9426-0346a3a176f2
+  uuid: aeadf73a-6ab4-4e7c-9211-93e929636de5
   ws-opts:
     headers:
-      host: dibai.kxxd.site
-    path: /ccc
+      host: westsg2-ddns.oraclenat.cc
+    path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-325-CN
-  password: bda131d0-96d4-4a91-8e19-5482bf3b5a86
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-259-RELAY
-  network: ws
-  port: 2082
-  server: dibai.kxxd.site
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d28abec1-e26b-4a60-94d1-d312c841ad59
-  ws-opts:
-    headers:
-      host: dibai.kxxd.site
-    path: /ccc
-- cipher: chacha20-ietf-poly1305
-  name: 16-270-CN
-  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
-  port: 39886
-  server: chiyu2.myfczy169.top
+  name: 16-339-CN
+  password: c3de2edb-15a9-40ce-a68f-fb7aa95930ed
+  port: 20008
+  server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 16-333-CN
@@ -403,31 +880,76 @@ proxies:
   server: chiyu.myfczy169.top
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-336-CN
-  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
-  port: 47695
-  server: chiyu2.myfczy169.top
+  name: 16-350-CN
+  password: c3de2edb-15a9-40ce-a68f-fb7aa95930ed
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
+- cipher: aes-256-gcm
+  name: 16-346-JP
+  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
+  port: 1200
+  server: hk.kfsldflk.xyz
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-324-US
+  name: 16-332-RELAY
   network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
+  port: 2082
+  server: dibai.kxxd.site
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 5ccf8940-4fbc-4882-a0af-d3f268a2d84e
+  uuid: 2b0c3cdb-4a87-4cd0-87e6-1d93e7818c99
   ws-opts:
     headers:
-      host: shhh001.oraclenat.cc
-    path: /
+      host: dibai.kxxd.site
+    path: /ccc
 - cipher: chacha20-ietf-poly1305
-  name: 16-335-CN
-  password: b83332bd-3f2d-4c61-b829-1bffdeab083c
+  name: 16-331-CN
+  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
+  port: 40780
+  server: chiyu2.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-341-CN
+  password: 07c065d4-1ea4-4b67-b7fa-cbb25a0aa12a
+  port: 20008
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-347-CN
+  password: c3de2edb-15a9-40ce-a68f-fb7aa95930ed
+  port: 20032
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-348-CN
+  password: f4e383bd-9ecf-4b65-bc88-8b4391ffd368
   port: 49709
   server: jg647hf446ghvw.eucs.cn
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-345-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0b6f3f75-d687-4506-b84b-215f6e2c4f0c
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 16-351-CN
+  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
+  port: 21091
+  server: chiyu.myfczy169.top
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 16-352-CN
@@ -435,66 +957,9 @@ proxies:
   port: 49709
   server: jg647hf446ghvw.eucs.cn
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-361-CN
-  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
-  port: 57329
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-363-CN
-  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
-  port: 50563
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-364-CN
-  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
-  port: 20936
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-365-CN
-  password: c8d705a7-15c0-4ffd-aede-18333c9d08ab
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-369-CN
-  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
-  port: 34338
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-378-CN
-  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
-  port: 20052
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 16-366-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 7f1bbc21-5597-4bb3-ae74-cf0e7e08f203
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-392-CN
-  password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
-  port: 20008
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-384-RELAY
+  name: 17-371-RELAY
   network: ws
   port: 443
   server: biazh.mmzhk.website
@@ -502,14 +967,92 @@ proxies:
   tls: true
   type: vmess
   udp: true
-  uuid: 1b04c567-ef81-4f8d-bdba-23ee8a17a33c
+  uuid: 91ce01da-2be5-4358-ac4b-dc027676868a
   ws-opts:
     headers:
       host: biazh.mmzhk.website
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-393-SG
+  name: 17-373-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: bd24887a-79f0-4443-b6de-02e06bec845d
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 16-368-CN
+  password: 7d6d47dd-dded-4d96-99e8-523b22ee434b
+  port: 50555
+  server: chiyu.myfczy169.top
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-379-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 576c70f6-9129-4cfc-85ac-cfe078d2fbb7
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-387-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 75670c17-08ab-4103-9441-076099e362c2
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-388-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: d57e0f63-464d-4efc-9962-e8e730bad7d0
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-400-CN
+  password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
+  port: 20016
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-403-CN
+  password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
+  port: 20052
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-389-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -517,11 +1060,47 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 89169acc-0727-4ea5-bbd2-f90b30ec361d
+  uuid: 2680c108-4323-4daa-b36f-e3d214ce31bb
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
+- alterId: 0
+  cipher: auto
+  name: 17-399-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f69f0575-45be-471f-83cc-3e0beced8aba
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-405-RELAY
+  network: ws
+  port: 2082
+  server: dibai.kxxd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: bc835c6d-d310-469f-a720-d88b8e4c10b0
+  ws-opts:
+    headers:
+      host: dibai.kxxd.site
+    path: /ccc
+- cipher: chacha20-ietf-poly1305
+  name: 17-417-CN
+  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
+  port: 20004
+  server: gy.666666222.shop
+  type: ss
 - alterId: 0
   cipher: auto
   name: 17-395-DE
@@ -537,39 +1116,102 @@ proxies:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 16-303-CN
-  password: 00ec8452-43f1-40dd-a0db-4a8979e7c655
-  port: 20119
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 17-417-CN
-  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
-  port: 20004
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-418-DE
+  name: 17-407-SG
   network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 06370d40-5bac-434b-840a-74312ae11c6d
+  uuid: 7a2b216d-2548-4c5a-91d7-0050398cfb5f
   ws-opts:
     headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
+      host: westsg2-ddns.oraclenat.cc
+    path: /
 - cipher: chacha20-ietf-poly1305
   name: 17-429-CN
   password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
   port: 20006
   server: gy.666666222.shop
   type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-412-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: b976c3f6-23d1-4208-a506-f053686e3775
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-415-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 89169acc-0727-4ea5-bbd2-f90b30ec361d
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-413-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 414d7c49-1927-4078-9d21-9f301a31bec2
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-416-RELAY
+  network: ws
+  port: 2082
+  server: dibai.kxxd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 8e74df5e-2d75-4b07-9659-d10a93115efe
+  ws-opts:
+    headers:
+      host: dibai.kxxd.site
+    path: /ccc
+- alterId: 0
+  cipher: auto
+  name: 17-410-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1e4a3e3f-ca1a-47aa-a517-3c56231bfde5
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
 - alterId: 0
   cipher: auto
   name: 17-422-DE
@@ -587,6 +1229,66 @@ proxies:
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
+  name: 17-424-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 69443ffb-4b31-4612-9fd3-9a0fab544eec
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-421-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7a2b216d-2548-4c5a-91d7-0050398cfb5f
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-425-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 09bb6bca-29e9-42c6-b1cd-3fd250976d7c
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-428-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 78427d31-d570-4454-a7e5-17fa075fdc3c
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
   name: 17-432-RELAY
   network: ws
   port: 443
@@ -596,6 +1298,51 @@ proxies:
   type: vmess
   udp: true
   uuid: e46dd914-a6d9-400c-ba7d-8f397cc868cc
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-420-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7dd4ad45-29a1-47d1-ae5b-f92c93aa2da0
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-436-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: bc2191ea-dbf8-44c4-ac34-f5f9a134579f
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-437-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 96c03d43-839d-48bf-a09e-2fdabb269335
   ws-opts:
     headers:
       host: go.daluquan.top
@@ -615,81 +1362,9 @@ proxies:
     headers:
       host: go.daluquan.top
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-447-CN
-  password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
-  port: 20032
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-438-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: dd9800c8-f3e4-48fa-a839-85ade3faa197
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-385-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cd6a9800-cd07-4094-ac6a-42183e6f0dbe
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-400-CN
-  password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
-  port: 20016
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-442-RELAY
-  network: ws
-  port: 2082
-  server: dibai.kxxd.site
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: ea570155-9919-4ee6-adf4-fa562b0c7bef
-  ws-opts:
-    headers:
-      host: dibai.kxxd.site
-    path: /ccc
-- alterId: 0
-  cipher: auto
-  name: 17-454-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cd6a9800-cd07-4094-ac6a-42183e6f0dbe
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-421-DE
+  name: 17-443-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -697,55 +1372,73 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 7a2b216d-2548-4c5a-91d7-0050398cfb5f
+  uuid: 2680c108-4323-4daa-b36f-e3d214ce31bb
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 17-462-CN
+  password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
+  port: 20002
+  server: gy.666666222.shop
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-448-RELAY
+  name: 17-435-RELAY
   network: ws
-  port: 443
-  server: visa.com
+  port: 2082
+  server: dibai.kxxd.site
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 7a2b216d-2548-4c5a-91d7-0050398cfb5f
+  uuid: 2d78f9d6-1844-4cba-a6c3-7138beba6653
   ws-opts:
     headers:
-      host: go.daluquan.top
-    path: /
+      host: dibai.kxxd.site
+    path: /ccc
+- cipher: chacha20-ietf-poly1305
+  name: 17-455-CN
+  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-450-RELAY
+  name: 17-445-RELAY
   network: ws
-  port: 443
-  server: visa.com
+  port: 2082
+  server: dibai.kxxd.site
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 7dd4ad45-29a1-47d1-ae5b-f92c93aa2da0
+  uuid: 06e504b9-7eba-4ef4-95ef-e5a32e92ed5e
   ws-opts:
     headers:
-      host: go.daluquan.top
-    path: /
+      host: dibai.kxxd.site
+    path: /ccc
+- cipher: chacha20-ietf-poly1305
+  name: 17-465-CN
+  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
+  port: 20032
+  server: gy.666666222.shop
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-451-RELAY
+  name: 17-459-US
   network: ws
-  port: 443
-  server: visa.com
+  port: 23451
+  server: shhh001.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: ad2ceef2-4371-4464-ab3a-73f2c1d90b51
+  uuid: 01a79ab6-0bb4-43d7-b8ad-e10f0fe4f3bf
   ws-opts:
     headers:
-      host: go.daluquan.top
+      host: shhh001.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
@@ -764,6 +1457,51 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
+  name: 17-451-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ad2ceef2-4371-4464-ab3a-73f2c1d90b51
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-454-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cd6a9800-cd07-4094-ac6a-42183e6f0dbe
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-468-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7dd4ad45-29a1-47d1-ae5b-f92c93aa2da0
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
   name: 17-466-DE
   network: ws
   port: 23451
@@ -777,15 +1515,39 @@ proxies:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 17-465-CN
-  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
-  port: 20032
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-475-RELAY
+  name: 17-470-RELAY
+  network: ws
+  port: 2082
+  server: dibai.kxxd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbd9d888-7903-4408-b166-fcf172898b94
+  ws-opts:
+    headers:
+      host: dibai.kxxd.site
+    path: /ccc
+- alterId: 0
+  cipher: auto
+  name: 17-469-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 2680c108-4323-4daa-b36f-e3d214ce31bb
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-460-RELAY
   network: ws
   port: 443
   server: biazh.mmzhk.website
@@ -793,7 +1555,64 @@ proxies:
   tls: true
   type: vmess
   udp: true
-  uuid: c4b1c14b-a0be-4b12-8e8f-c3bfb6a84ac4
+  uuid: a32b1d24-8673-4916-8ce4-32ef3d576a81
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 17-482-CN
+  password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
+  port: 20013
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 17-483-CN
+  password: 56361f0e-7212-4359-980f-e4a7e93ca3cb
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 17-484-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 43e63f0e-27a4-4cc0-839b-939bbe3b4572
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-489-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 468fc9fb-a101-432d-8d56-630f3006bb66
+  ws-opts:
+    headers:
+      host: biazh.mmzhk.website
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-495-RELAY
+  network: ws
+  port: 443
+  server: biazh.mmzhk.website
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 71272a21-39ff-4855-a1ca-96558697b313
   ws-opts:
     headers:
       host: biazh.mmzhk.website
@@ -815,73 +1634,7 @@ proxies:
     path: /ccc
 - alterId: 0
   cipher: auto
-  name: 17-487-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: dd9800c8-f3e4-48fa-a839-85ade3faa197
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-495-RELAY
-  network: ws
-  port: 443
-  server: biazh.mmzhk.website
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 71272a21-39ff-4855-a1ca-96558697b313
-  ws-opts:
-    headers:
-      host: biazh.mmzhk.website
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-489-RELAY
-  network: ws
-  port: 443
-  server: biazh.mmzhk.website
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 468fc9fb-a101-432d-8d56-630f3006bb66
-  ws-opts:
-    headers:
-      host: biazh.mmzhk.website
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-494-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: bd24887a-79f0-4443-b6de-02e06bec845d
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 17-509-CN
-  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
-  port: 20002
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-502-US
+  name: 17-497-US
   network: ws
   port: 23451
   server: shhh001.oraclenat.cc
@@ -889,14 +1642,14 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: e46dd914-a6d9-400c-ba7d-8f397cc868cc
+  uuid: 414d7c49-1927-4078-9d21-9f301a31bec2
   ws-opts:
     headers:
       host: shhh001.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-508-DE
+  name: 17-501-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -904,11 +1657,26 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: d57e0f63-464d-4efc-9962-e8e730bad7d0
+  uuid: e46dd914-a6d9-400c-ba7d-8f397cc868cc
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-506-RELAY
+  network: ws
+  port: 443
+  server: visa.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 01a79ab6-0bb4-43d7-b8ad-e10f0fe4f3bf
+  ws-opts:
+    headers:
+      host: go.daluquan.top
+    path: /
 - alterId: 0
   cipher: auto
   name: 17-503-US
@@ -926,10 +1694,55 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-517-RELAY
+  name: 17-477-RELAY
   network: ws
-  port: 443
-  server: visa.com
+  port: 2082
+  server: dibai.kxxd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c31ac013-c2dd-433f-b884-32f003460a54
+  ws-opts:
+    headers:
+      host: dibai.kxxd.site
+    path: /ccc
+- alterId: 0
+  cipher: auto
+  name: 17-487-SG
+  network: ws
+  port: 23452
+  server: westsg2-ddns.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: dd9800c8-f3e4-48fa-a839-85ade3faa197
+  ws-opts:
+    headers:
+      host: westsg2-ddns.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-510-RELAY
+  network: ws
+  port: 2082
+  server: dibai.kxxd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f76a407e-edb9-420d-a394-f125853bff14
+  ws-opts:
+    headers:
+      host: dibai.kxxd.site
+    path: /ccc
+- alterId: 0
+  cipher: auto
+  name: 17-498-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -937,7 +1750,7 @@ proxies:
   uuid: 43e63f0e-27a4-4cc0-839b-939bbe3b4572
   ws-opts:
     headers:
-      host: go.daluquan.top
+      host: shhh001.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
@@ -954,89 +1767,178 @@ proxies:
     headers:
       host: go.daluquan.top
     path: /
+- alterId: 0
+  cipher: auto
+  name: 17-522-RELAY
+  network: ws
+  port: 2082
+  server: dibai.kxxd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 9588a911-c442-4312-a710-acb9bf565e24
+  ws-opts:
+    headers:
+      host: dibai.kxxd.site
+    path: /ccc
 proxy-groups:
 - interval: 10
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 04-004-RELAY
-  - 04-000-RELAY
-  - 04-005-RELAY
-  - 04-003-RELAY
   - 04-006-RELAY
-  - 04-001-RELAY
+  - 04-005-RELAY
+  - 04-004-RELAY
+  - 04-003-RELAY
+  - 04-002-RELAY
   - 04-061-CN
+  - 04-058-CN
   - 04-062-CN
+  - 04-106-CN
   - 04-072-CN
-  - 04-073-CN
-  - 04-107-CN
-  - 04-063-CN
-  - 04-111-CN
-  - 04-112-CN
-  - 04-117-CN
-  - 04-114-CN
-  - 04-147-CN
-  - 04-137-CN
+  - 04-105-CN
+  - 04-090-CN
+  - 04-097-CN
+  - 04-086-CN
+  - 04-077-CN
+  - 04-093-CN
+  - 04-070-CN
+  - 04-100-CN
+  - 04-094-CN
+  - 04-099-CN
+  - 04-067-CN
+  - 04-115-CN
+  - 04-150-CN
+  - 04-148-CN
   - 04-139-CN
+  - 04-151-CN
+  - 04-145-CN
+  - 04-135-CN
+  - 04-143-CN
+  - 04-133-CN
+  - 04-159-CN
+  - 04-157-CN
   - 04-162-CN
-  - 16-250-CN
+  - 04-164-CN
+  - 04-165-CN
+  - 11-168-CN
+  - 11-174-CN
+  - 11-178-CN
+  - 16-191-SG
+  - 16-196-CN
+  - 16-197-CN
+  - 16-218-CN
+  - 16-201-CN
+  - 16-206-CN
+  - 16-216-CN
+  - 16-208-CN
+  - 16-226-CN
+  - 16-205-CN
+  - 16-241-RELAY
+  - 16-223-CN
+  - 16-232-CN
+  - 16-202-RELAY
+  - 16-240-CN
+  - 16-251-CN
+  - 16-242-CN
+  - 16-255-CN
+  - 16-249-CN
+  - 16-261-CN
+  - 16-231-RELAY
+  - 16-262-CN
+  - 16-234-SG
   - 16-265-CN
-  - 16-238-JP
+  - 16-260-CN
+  - 16-264-US
+  - 16-258-US
+  - 16-272-DE
+  - 16-281-CN
+  - 16-282-CN
+  - 16-278-RELAY
   - 16-298-CN
-  - 16-304-CN
-  - 16-301-RELAY
-  - 16-302-RELAY
-  - 16-325-CN
-  - 16-259-RELAY
-  - 16-270-CN
+  - 16-291-CN
+  - 16-306-CN
+  - 16-314-CN
+  - 16-292-CN
+  - 16-293-CN
+  - 16-300-DE
+  - 16-334-CN
+  - 16-322-SG
+  - 16-296-SG
+  - 16-339-CN
   - 16-333-CN
-  - 16-336-CN
-  - 16-324-US
-  - 16-335-CN
+  - 16-350-CN
+  - 16-346-JP
+  - 16-332-RELAY
+  - 16-331-CN
+  - 16-341-CN
+  - 16-347-CN
+  - 16-348-CN
+  - 16-345-DE
+  - 16-351-CN
   - 16-352-CN
-  - 16-361-CN
-  - 16-363-CN
-  - 16-364-CN
-  - 16-365-CN
-  - 17-369-CN
-  - 17-378-CN
-  - 16-366-US
-  - 17-392-CN
-  - 17-384-RELAY
-  - 17-393-SG
-  - 17-395-DE
-  - 16-303-CN
-  - 17-417-CN
-  - 17-418-DE
-  - 17-429-CN
-  - 17-422-DE
-  - 17-432-RELAY
-  - 17-427-RELAY
-  - 17-447-CN
-  - 17-438-US
-  - 17-385-US
+  - 17-371-RELAY
+  - 17-373-RELAY
+  - 16-368-CN
+  - 17-379-DE
+  - 17-387-RELAY
+  - 17-388-US
   - 17-400-CN
-  - 17-442-RELAY
-  - 17-454-SG
+  - 17-403-CN
+  - 17-389-SG
+  - 17-399-RELAY
+  - 17-405-RELAY
+  - 17-417-CN
+  - 17-395-DE
+  - 17-407-SG
+  - 17-429-CN
+  - 17-412-RELAY
+  - 17-415-US
+  - 17-413-SG
+  - 17-416-RELAY
+  - 17-410-RELAY
+  - 17-422-DE
+  - 17-424-RELAY
   - 17-421-DE
-  - 17-448-RELAY
-  - 17-450-RELAY
-  - 17-451-RELAY
-  - 17-463-US
-  - 17-466-DE
+  - 17-425-RELAY
+  - 17-428-RELAY
+  - 17-432-RELAY
+  - 17-420-US
+  - 17-436-RELAY
+  - 17-437-RELAY
+  - 17-427-RELAY
+  - 17-443-DE
+  - 17-462-CN
+  - 17-435-RELAY
+  - 17-455-CN
+  - 17-445-RELAY
   - 17-465-CN
-  - 17-475-RELAY
-  - 17-476-RELAY
-  - 17-487-SG
-  - 17-495-RELAY
+  - 17-459-US
+  - 17-463-US
+  - 17-451-RELAY
+  - 17-454-SG
+  - 17-468-DE
+  - 17-466-DE
+  - 17-470-RELAY
+  - 17-469-US
+  - 17-460-RELAY
+  - 17-482-CN
+  - 17-483-CN
+  - 17-484-DE
   - 17-489-RELAY
-  - 17-494-DE
-  - 17-509-CN
-  - 17-502-US
-  - 17-508-DE
+  - 17-495-RELAY
+  - 17-476-RELAY
+  - 17-497-US
+  - 17-501-DE
+  - 17-506-RELAY
   - 17-503-US
-  - 17-517-RELAY
+  - 17-477-RELAY
+  - 17-487-SG
+  - 17-510-RELAY
+  - 17-498-US
   - 17-521-RELAY
+  - 17-522-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
