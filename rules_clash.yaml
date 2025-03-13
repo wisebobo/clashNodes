@@ -33,10 +33,10 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  name: 04-005-RELAY
+  name: 04-002-RELAY
   network: ws
-  port: 2095
-  server: s2.cn-db.top
+  port: 2082
+  server: s3.db-link01.top
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -44,13 +44,28 @@ proxies:
   uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
   ws-opts:
     headers:
-      host: 100-25-203-42.s2.cn-db.top
-    path: /dabai.in104.24.108.136
+      host: 100-233-176-44.s3.db-link01.top
+    path: /dabai.in172.67.6.42
 - alterId: 0
   cipher: auto
-  name: 04-003-RELAY
+  name: 04-005-RELAY
   network: ws
-  port: 8880
+  port: 2082
+  server: s4.cn-db.top
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
+  ws-opts:
+    headers:
+      host: 100-227-134-229.s4.cn-db.top
+    path: /dabai.in172.64.17.19
+- alterId: 0
+  cipher: auto
+  name: 04-004-RELAY
+  network: ws
+  port: 2082
   server: s5.db-link02.top
   skip-cert-vertify: true
   tls: false
@@ -59,71 +74,26 @@ proxies:
   uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
   ws-opts:
     headers:
-      host: 100-30-246-88.s5.db-link02.top
-    path: /dabai.in104.25.117.44
-- alterId: 0
-  cipher: auto
-  name: 04-001-RELAY
-  network: ws
-  port: 8880
-  server: s5.db-link01.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
-  ws-opts:
-    headers:
-      host: 100-191-217-22.s5.db-link01.top
-    path: /dabai.in172.64.16.87
-- alterId: 0
-  cipher: auto
-  name: 04-004-RELAY
-  network: ws
-  port: 8880
-  server: s1.db-link02.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
-  ws-opts:
-    headers:
-      host: 100-3-163-85.s1.db-link02.top
-    path: /dabai.in172.64.25.200
-- alterId: 0
-  cipher: auto
-  name: 04-002-RELAY
-  network: ws
-  port: 2052
-  server: s1.cn-db.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
-  ws-opts:
-    headers:
-      host: 100-5-140-245.s1.cn-db.top
-    path: /dabai.in104.16.48.78
-- alterId: 0
-  cipher: auto
-  name: 04-000-RELAY
-  network: ws
-  port: 2095
-  server: s3.cn-db.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6339954a-4c5b-3052-9d2e-e106c79cf41a
-  ws-opts:
-    headers:
-      host: 100-226-155-177.s3.cn-db.top
-    path: /dabai.in104.24.71.240
+      host: 100-171-45-109.s5.db-link02.top
+    path: /dabai.in104.20.134.180
 - alterId: 2
   cipher: auto
-  name: 04-058-CN
+  name: 04-059-CN
+  network: ws
+  port: 23611
+  server: 11.mamamajd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 19c7ec8b-4d2b-3548-9503-5e957616c6fd
+  ws-opts:
+    headers:
+      host: 11.mamamajd.site
+    path: /
+- alterId: 2
+  cipher: auto
+  name: 04-057-CN
   network: ws
   port: 23612
   server: 12.mamamajd.site
@@ -136,36 +106,8 @@ proxies:
     headers:
       host: 12.mamamajd.site
     path: /
-- alterId: 2
-  cipher: auto
-  name: 04-059-CN
-  network: ws
-  port: 23617
-  server: 17.mamamajd.site
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 19c7ec8b-4d2b-3548-9503-5e957616c6fd
-  ws-opts:
-    headers:
-      host: 17.mamamajd.site
-    path: /
 - cipher: aes-128-gcm
-  name: 04-099-CN
-  password: QHPy2u
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 9021
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-102-CN
+  name: 04-076-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -173,12 +115,25 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 918
+  port: 9019
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-076-CN
+  name: 04-103-CN
+  password: fjlfjafl231303831
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 1313
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-075-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -190,49 +145,47 @@ proxies:
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
-- alterId: 2
-  cipher: auto
-  name: 04-065-CN
-  network: ws
-  port: 23605
-  server: 5.mamamajd.site
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 19c7ec8b-4d2b-3548-9503-5e957616c6fd
-  ws-opts:
-    headers:
-      host: 5.mamamajd.site
-    path: /
 - cipher: aes-128-gcm
-  name: 04-092-CN
-  password: QHPy2u
+  name: 04-088-CN
+  password: a12cloud1
   plugin: obfs
   plugin-opts:
     host: 5100e107924.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9063
+  port: 904
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-086-CN
-  password: QHPy2u
+  name: 04-102-CN
+  password: ay2dsd1
   plugin: obfs
   plugin-opts:
     host: 5100e107924.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9040
+  port: 811
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-068-CN
+  name: 04-108-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 910
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-067-CN
   password: 1m23sddsc4532r
   plugin: obfs
   plugin-opts:
@@ -245,7 +198,20 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-088-CN
+  name: 04-107-CN
+  password: ay2l23ud1
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 903
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-087-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -258,7 +224,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-096-CN
+  name: 04-094-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -266,25 +232,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9059
+  port: 823
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-101-CN
-  password: ayu1245
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 909
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-083-CN
+  name: 04-082-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -297,20 +250,20 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-084-CN
-  password: QHPy2u
+  name: 04-081-CN
+  password: ayucloud1
   plugin: obfs
   plugin-opts:
     host: 5100e107924.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 834
+  port: 919
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-073-CN
+  name: 04-072-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -323,33 +276,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-078-CN
-  password: ayucew2
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 9001
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-105-CN
-  password: ay21d1
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 901
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-098-CN
+  name: 04-097-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -361,64 +288,8 @@ proxies:
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
-- alterId: 2
-  cipher: auto
-  name: 04-063-CN
-  network: ws
-  port: 23618
-  server: 18.mamamajd.site
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 19c7ec8b-4d2b-3548-9503-5e957616c6fd
-  ws-opts:
-    headers:
-      host: 18.mamamajd.site
-    path: /
-- alterId: 2
-  cipher: auto
-  name: 04-062-CN
-  network: ws
-  port: 23616
-  server: 16.mamamajd.site
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 19c7ec8b-4d2b-3548-9503-5e957616c6fd
-  ws-opts:
-    headers:
-      host: 16.mamamajd.site
-    path: /
 - cipher: aes-128-gcm
-  name: 04-113-CN
-  password: ayuc211
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 902
-  server: 231103level3.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-138-CN
-  password: ayds232sffssd1
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 6041
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-130-CN
+  name: 04-084-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -426,103 +297,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 857
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-131-CN
-  password: dajsdkdkjda&dja*/?
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 2201
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-114-CN
-  password: dajkdkjda&dja*/?
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 37863
+  port: 908
   server: 231103level3.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
   name: 04-118-CN
-  password: fsfal2
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 916
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-136-CN
-  password: ayugfsd
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 3033
-  server: 231103levelx.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-123-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 9052
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-124-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 818
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-139-CN
-  password: ayds232sffssd1
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 44444
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-119-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -535,7 +315,85 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-144-CN
+  name: 04-117-CN
+  password: fsfal2
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 916
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-116-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9022
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-124-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 813
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-121-CN
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 8001
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-127-CN
+  password: ayucjrsll
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 809
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-145-CN
+  password: dajkdkjda&dja*/?
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 6559
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-143-CN
   password: dajkdkjdssa&dja*/?
   plugin: obfs
   plugin-opts:
@@ -548,7 +406,20 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-134-CN
+  name: 04-135-CN
+  password: ayugfsd
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 3033
+  server: 231103levelx.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-136-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -556,51 +427,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9038
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-151-CN
-  password: QHPy2u
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 912
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-153-CN
-  password: QHPy2u
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 9051
-  server: 231103level1.unclemanco.com
+  port: 1549
+  server: 231103levelx.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
   name: 04-142-CN
-  password: dajkdkjdsa&dja*/?
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 37865
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-143-CN
   password: dajkbgja*/?
   plugin: obfs
   plugin-opts:
@@ -613,33 +445,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-140-CN
-  password: dajkdr&dja*/?
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 38011
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-147-CN
-  password: 1mj21sr
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 36452
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-157-CN
+  name: 04-126-CN
   password: QHPy2u
   plugin: obfs
   plugin-opts:
@@ -647,12 +453,64 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 816
+  port: 820
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-137-CN
+  password: ayds232sffssd1
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 6041
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-132-CN
+  password: dadk2jat*/?
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 39201
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-147-CN
+  password: Vdss1samj/2Zr
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 36243
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 04-149-CN
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: 5100e107924.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 9047
   server: 231103level1.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-158-CN
+  name: 04-157-CN
   password: fs23l/
   plugin: obfs
   plugin-opts:
@@ -665,20 +523,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-156-CN
-  password: ayucl12s1
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 837
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-161-CN
+  name: 04-153-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -686,12 +531,12 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9020
-  server: 231103levelx.unclemanco.com
+  port: 925
+  server: 231103level1.unclemanco.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-155-CN
+  name: 04-154-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -704,7 +549,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 04-162-CN
+  name: 04-160-CN
   password: ayucloud1
   plugin: obfs
   plugin-opts:
@@ -712,210 +557,91 @@ proxies:
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 924
-  server: 231103level1.unclemanco.com
+  port: 9020
+  server: 231103levelx.unclemanco.com
   type: ss
   udp: true
-- cipher: aes-128-gcm
-  name: 04-163-CN
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 6879
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 04-166-CN
-  password: aa2x2sa2/1a
-  plugin: obfs
-  plugin-opts:
-    host: 5100e107924.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 10021
-  server: 231103level1.unclemanco.com
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 11-177-CN
-  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
-  port: 34338
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 12-185-CN
-  password: 35c29931-f256-48a6-988d-4e9becd3f7c5
-  port: 20013
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-193-CN
-  password: 348a259f-d3f8-4437-b152-c96158f75fd7
-  port: 21091
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 11-170-CN
-  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
-  port: 20035
-  server: gy.666666222.shop
-  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 11-172-CN
   password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
-  port: 20004
+  port: 20008
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 12-183-CN
-  password: 35c29931-f256-48a6-988d-4e9becd3f7c5
+  name: 11-174-CN
+  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
   port: 20006
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 12-181-CN
-  password: 35c29931-f256-48a6-988d-4e9becd3f7c5
-  port: 20002
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 12-179-CN
+  name: 12-178-CN
   password: 35c29931-f256-48a6-988d-4e9becd3f7c5
   port: 20032
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 12-182-CN
+  name: 12-183-CN
   password: 35c29931-f256-48a6-988d-4e9becd3f7c5
-  port: 20004
+  port: 20008
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 11-178-CN
-  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
-  port: 20013
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 12-186-CN
+  name: 12-187-CN
   password: 35c29931-f256-48a6-988d-4e9becd3f7c5
-  port: 20016
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 11-176-CN
-  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
-  port: 20052
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 11-175-CN
-  password: 05ca7d27-4fb5-4ee7-8c2b-0cd80d3545aa
-  port: 20006
+  port: 34338
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 12-180-CN
   password: 35c29931-f256-48a6-988d-4e9becd3f7c5
-  port: 47564
+  port: 20002
   server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 12-190-CN
-  password: 35c29931-f256-48a6-988d-4e9becd3f7c5
-  port: 20052
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-205-CN
+  name: 16-192-CN
   password: 348a259f-d3f8-4437-b152-c96158f75fd7
-  port: 21059
+  port: 21091
   server: chiyu.myfczy169.top
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-214-CN
+  name: 16-191-CN
+  password: eb27401c-9706-4f64-875a-b908ba9ce936
+  port: 47695
+  server: chiyu2.myfczy169.top
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-196-CN
   password: 348a259f-d3f8-4437-b152-c96158f75fd7
-  port: 54804
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-212-CN
-  password: eb27401c-9706-4f64-875a-b908ba9ce936
-  port: 54804
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-231-CN
-  password: eb27401c-9706-4f64-875a-b908ba9ce936
   port: 13489
   server: chiyu.myfczy169.top
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-236-CN
+  name: 16-198-CN
+  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
+  port: 20008
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-216-CN
   password: eb27401c-9706-4f64-875a-b908ba9ce936
-  port: 25578
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-221-CN
-  password: 348a259f-d3f8-4437-b152-c96158f75fd7
-  port: 41512
-  server: chiyu.myfczy169.top
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 16-215-RELAY
-  network: ws
-  port: 2082
-  server: dibai.kxxd.site
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2b0c3cdb-4a87-4cd0-87e6-1d93e7818c99
-  ws-opts:
-    headers:
-      host: dibai.kxxd.site
-    path: /ccc
-- cipher: chacha20-ietf-poly1305
-  name: 16-244-CN
-  password: eb27401c-9706-4f64-875a-b908ba9ce936
-  port: 20119
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-243-CN
-  password: 348a259f-d3f8-4437-b152-c96158f75fd7
   port: 19946
   server: chiyu.myfczy169.top
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-248-CN
-  password: 348a259f-d3f8-4437-b152-c96158f75fd7
-  port: 41473
-  server: chiyu.myfczy169.top
+  name: 16-228-CN
+  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
+  port: 20006
+  server: gy.666666222.shop
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-249-CN
-  password: eb27401c-9706-4f64-875a-b908ba9ce936
-  port: 21071
-  server: chiyu.myfczy169.top
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-253-CN
-  password: eb27401c-9706-4f64-875a-b908ba9ce936
-  port: 21061
-  server: chiyu.myfczy169.top
+  name: 16-244-CN
+  password: 3e628c3e-465a-433c-9abf-3346aa6bcfbb
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-237-RELAY
+  name: 16-236-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -929,56 +655,59 @@ proxies:
       host: go.daluquan.top
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 16-199-CN
-  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
-  port: 20008
-  server: gy.666666222.shop
+  name: 16-260-CN
+  password: eb27401c-9706-4f64-875a-b908ba9ce936
+  port: 39886
+  server: chiyu2.myfczy169.top
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 16-206-CN
-  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
-  port: 20004
-  server: gy.666666222.shop
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-270-CN
+  name: 16-269-CN
   password: eb27401c-9706-4f64-875a-b908ba9ce936
   port: 20289
   server: chiyu.myfczy169.top
   type: ss
+- alterId: 0
+  cipher: auto
+  name: 16-251-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0b6f3f75-d687-4506-b84b-215f6e2c4f0c
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: 16-269-CN
-  password: a468ddb4-f06f-4a10-be2b-2b8951699b6c
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-285-CN
-  password: 20df3273-39af-40a1-b13d-18dca857d739
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-299-CN
-  password: fc7bd112-9154-42f6-baa2-e7254dd75293
-  port: 49709
-  server: jg647hf446ghvw.eucs.cn
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 16-294-CN
+  name: 16-283-CN
   password: 348a259f-d3f8-4437-b152-c96158f75fd7
-  port: 20936
+  port: 50555
   server: chiyu.myfczy169.top
   type: ss
 - cipher: chacha20-ietf-poly1305
+  name: 16-306-CN
+  password: 08a0da76-a276-49ce-b7ba-378a1532d15e
+  port: 20035
+  server: gy.666666222.shop
+  type: ss
+- cipher: chacha20-ietf-poly1305
   name: 16-316-CN
-  password: 348a259f-d3f8-4437-b152-c96158f75fd7
-  port: 57329
+  password: bda131d0-96d4-4a91-8e19-5482bf3b5a86
+  port: 49709
+  server: jg647hf446ghvw.eucs.cn
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 16-321-CN
+  password: eb27401c-9706-4f64-875a-b908ba9ce936
+  port: 20936
   server: chiyu.myfczy169.top
   type: ss
 - alterId: 0
   cipher: auto
-  name: 16-311-SG
+  name: 17-363-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
@@ -986,20 +715,44 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: b6117a95-9a96-4ff1-8d4c-f2596bb37cc1
+  uuid: 06370d40-5bac-434b-840a-74312ae11c6d
   ws-opts:
     headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-335-CN
-  password: df7601c0-993c-4341-ad7b-a9f2b03941cb
-  port: 20008
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-333-RELAY
+  name: 17-360-US
+  network: ws
+  port: 23451
+  server: shhh001.oraclenat.cc
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 414d7c49-1927-4078-9d21-9f301a31bec2
+  ws-opts:
+    headers:
+      host: shhh001.oraclenat.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 17-370-RELAY
+  network: ws
+  port: 2082
+  server: dibai.kxxd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: dc047d26-937e-42e4-a9ee-a58ce4dcd8d2
+  ws-opts:
+    headers:
+      host: dibai.kxxd.site
+    path: /ccc
+- alterId: 0
+  cipher: auto
+  name: 17-440-RELAY
   network: ws
   port: 443
   server: visa.com
@@ -1007,35 +760,14 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 7a2b216d-2548-4c5a-91d7-0050398cfb5f
+  uuid: 576c70f6-9129-4cfc-85ac-cfe078d2fbb7
   ws-opts:
     headers:
       host: go.daluquan.top
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-353-CN
-  password: 8db84c5b-64a6-477b-af6e-12235579d474
-  port: 20035
-  server: gy.666666222.shop
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 17-354-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 7a2b216d-2548-4c5a-91d7-0050398cfb5f
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-350-DE
+  name: 17-426-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -1043,113 +775,17 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 06370d40-5bac-434b-840a-74312ae11c6d
+  uuid: 01a79ab6-0bb4-43d7-b8ad-e10f0fe4f3bf
   ws-opts:
     headers:
       host: us-new03.daluquan.top
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: 17-364-SG
+  name: 17-459-SG
   network: ws
   port: 23452
   server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 06370d40-5bac-434b-840a-74312ae11c6d
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-390-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 576c70f6-9129-4cfc-85ac-cfe078d2fbb7
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-377-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 96c03d43-839d-48bf-a09e-2fdabb269335
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-385-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 43e63f0e-27a4-4cc0-839b-939bbe3b4572
-  ws-opts:
-    headers:
-      host: westsg2-ddns.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-398-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: dd9800c8-f3e4-48fa-a839-85ade3faa197
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 17-412-DE
-  network: ws
-  port: 23451
-  server: frankfurt.faforex.eu.org
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 96c03d43-839d-48bf-a09e-2fdabb269335
-  ws-opts:
-    headers:
-      host: us-new03.daluquan.top
-    path: /itdog?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 17-413-CN
-  password: 8db84c5b-64a6-477b-af6e-12235579d474
-  port: 20004
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-437-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
   skip-cert-vertify: true
   tls: false
   type: vmess
@@ -1157,47 +793,11 @@ proxies:
   uuid: d57e0f63-464d-4efc-9962-e8e730bad7d0
   ws-opts:
     headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 17-449-SG
-  network: ws
-  port: 23452
-  server: westsg2-ddns.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 89169acc-0727-4ea5-bbd2-f90b30ec361d
-  ws-opts:
-    headers:
       host: westsg2-ddns.oraclenat.cc
     path: /
 - alterId: 0
   cipher: auto
-  name: 17-456-US
-  network: ws
-  port: 23451
-  server: shhh001.oraclenat.cc
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 06370d40-5bac-434b-840a-74312ae11c6d
-  ws-opts:
-    headers:
-      host: shhh001.oraclenat.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 17-476-CN
-  password: 04c6b010-76ff-451b-a4be-6a4ffcdf0ed4
-  port: 20008
-  server: gy.666666222.shop
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 17-472-DE
+  name: 17-464-DE
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -1205,7 +805,37 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 43e63f0e-27a4-4cc0-839b-939bbe3b4572
+  uuid: 2680c108-4323-4daa-b36f-e3d214ce31bb
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-462-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 576c70f6-9129-4cfc-85ac-cfe078d2fbb7
+  ws-opts:
+    headers:
+      host: us-new03.daluquan.top
+    path: /itdog?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 17-482-DE
+  network: ws
+  port: 23451
+  server: frankfurt.faforex.eu.org
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7a2b216d-2548-4c5a-91d7-0050398cfb5f
   ws-opts:
     headers:
       host: us-new03.daluquan.top
@@ -1215,113 +845,76 @@ proxy-groups:
   lazy: true
   name: ♻️ 自动选择
   proxies: &id001
-  - 04-005-RELAY
-  - 04-003-RELAY
-  - 04-001-RELAY
-  - 04-004-RELAY
   - 04-002-RELAY
-  - 04-000-RELAY
-  - 04-058-CN
+  - 04-005-RELAY
+  - 04-004-RELAY
   - 04-059-CN
-  - 04-099-CN
-  - 04-102-CN
+  - 04-057-CN
   - 04-076-CN
-  - 04-065-CN
-  - 04-092-CN
-  - 04-086-CN
-  - 04-068-CN
+  - 04-103-CN
+  - 04-075-CN
   - 04-088-CN
-  - 04-096-CN
-  - 04-101-CN
-  - 04-083-CN
+  - 04-102-CN
+  - 04-108-CN
+  - 04-067-CN
+  - 04-107-CN
+  - 04-087-CN
+  - 04-094-CN
+  - 04-082-CN
+  - 04-081-CN
+  - 04-072-CN
+  - 04-097-CN
   - 04-084-CN
-  - 04-073-CN
-  - 04-078-CN
-  - 04-105-CN
-  - 04-098-CN
-  - 04-063-CN
-  - 04-062-CN
-  - 04-113-CN
-  - 04-138-CN
-  - 04-130-CN
-  - 04-131-CN
-  - 04-114-CN
   - 04-118-CN
-  - 04-136-CN
-  - 04-123-CN
+  - 04-117-CN
+  - 04-116-CN
   - 04-124-CN
-  - 04-139-CN
-  - 04-119-CN
-  - 04-144-CN
-  - 04-134-CN
-  - 04-151-CN
-  - 04-153-CN
-  - 04-142-CN
+  - 04-121-CN
+  - 04-127-CN
+  - 04-145-CN
   - 04-143-CN
-  - 04-140-CN
+  - 04-135-CN
+  - 04-136-CN
+  - 04-142-CN
+  - 04-126-CN
+  - 04-137-CN
+  - 04-132-CN
   - 04-147-CN
+  - 04-149-CN
   - 04-157-CN
-  - 04-158-CN
-  - 04-156-CN
-  - 04-161-CN
-  - 04-155-CN
-  - 04-162-CN
-  - 04-163-CN
-  - 04-166-CN
-  - 11-177-CN
-  - 12-185-CN
-  - 16-193-CN
-  - 11-170-CN
+  - 04-153-CN
+  - 04-154-CN
+  - 04-160-CN
   - 11-172-CN
+  - 11-174-CN
+  - 12-178-CN
   - 12-183-CN
-  - 12-181-CN
-  - 12-179-CN
-  - 12-182-CN
-  - 11-178-CN
-  - 12-186-CN
-  - 11-176-CN
-  - 11-175-CN
+  - 12-187-CN
   - 12-180-CN
-  - 12-190-CN
-  - 16-205-CN
-  - 16-214-CN
-  - 16-212-CN
-  - 16-231-CN
-  - 16-236-CN
-  - 16-221-CN
-  - 16-215-RELAY
+  - 16-192-CN
+  - 16-191-CN
+  - 16-196-CN
+  - 16-198-CN
+  - 16-216-CN
+  - 16-228-CN
   - 16-244-CN
-  - 16-243-CN
-  - 16-248-CN
-  - 16-249-CN
-  - 16-253-CN
-  - 16-237-RELAY
-  - 16-199-CN
-  - 16-206-CN
-  - 16-270-CN
+  - 16-236-RELAY
+  - 16-260-CN
   - 16-269-CN
-  - 16-285-CN
-  - 16-299-CN
-  - 16-294-CN
+  - 16-251-DE
+  - 16-283-CN
+  - 16-306-CN
   - 16-316-CN
-  - 16-311-SG
-  - 17-335-CN
-  - 17-333-RELAY
-  - 17-353-CN
-  - 17-354-SG
-  - 17-350-DE
-  - 17-364-SG
-  - 17-390-SG
-  - 17-377-SG
-  - 17-385-SG
-  - 17-398-DE
-  - 17-412-DE
-  - 17-413-CN
-  - 17-437-US
-  - 17-449-SG
-  - 17-456-US
-  - 17-476-CN
-  - 17-472-DE
+  - 16-321-CN
+  - 17-363-SG
+  - 17-360-US
+  - 17-370-RELAY
+  - 17-440-RELAY
+  - 17-426-DE
+  - 17-459-SG
+  - 17-464-DE
+  - 17-462-DE
+  - 17-482-DE
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
