@@ -89,7 +89,7 @@ def generate_clash_config(yaml_file):
             'url': 'http://www.gstatic.com/generate_204',
             'interval': 10,
             'tolerance': 300,
-            'proxies': all_proxies
+            'proxies': ['♻️ 自动选择']
         },
         {   'name': '🚀 节点选择',
             'type': 'select',
