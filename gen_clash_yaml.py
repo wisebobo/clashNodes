@@ -71,7 +71,7 @@ def generate_clash_config(yaml_file):
             'type': 'url-test',
             'url': 'http://www.gstatic.com/generate_204',
             'interval': 10,
-            'tolerance': 300,
+            'tolerance': 120,
             'lazy': True,
             'proxies': all_proxies
         },
@@ -88,8 +88,8 @@ def generate_clash_config(yaml_file):
             'type': 'fallback',
             'url': 'http://www.gstatic.com/generate_204',
             'interval': 10,
-            'tolerance': 300,
-            'proxies': ['♻️ 自动选择']
+            'tolerance': 120,
+            'proxies': all_proxies
         },
         {   'name': '🚀 节点选择',
             'type': 'select',
