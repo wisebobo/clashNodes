@@ -16,7 +16,7 @@ DOWNLOAD_TIMEOUT = 30
 def test_download_speed(node, proxies):
     try:
         start_time = time.time()
-        response = requests.get(TEST_FILE_URL, proxies=proxies, stream=True)
+        response = requests.get(TEST_FILE_URL, proxies=proxies, stream=True, verify=False)
         if response.status_code == 200:
             total_size = 0
             for chunk in response.iter_content(chunk_size=1024):
@@ -45,6 +45,18 @@ def test_download_speed(node, proxies):
 
     return result
 
+def test_node(node, proxies, process=None):
+    response = requests.get("https://www.google.com", proxies=proxies, timeout=10, verify=False)
+    if process:
+        process.terminate()
+        process.wait()
+
+    if response.status_code == 200:
+        return test_download_speed(node, proxies)
+    else:
+        print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
+        return None
+
 # 测试 Shadowsocks 代理
 def test_ss(node):
     try:
@@ -63,13 +75,8 @@ def test_ss(node):
             "http": "socks5h://127.0.0.1:1080",
             "https": "socks5h://127.0.0.1:1080"
         }
-        response = requests.get("https://www.google.com", proxies=proxies, timeout=10)
-        if response.status_code == 200:
-            print(f"Valid node: {node['name']}")
-            result = test_download_speed(node, proxies)
-        else:
-            print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
-            result = None
+        
+        result = test_node(node, proxies)
     except Exception as e:
         print(f"{node['name']} - Error testing Shadowsocks proxy {node['server']}:{node['port']}: {e}")
         result = None
@@ -86,12 +93,7 @@ def test_trojan(node):
             "https": f"http://{node['password']}@{node['server']}:{node['port']}"
         }
         response = requests.get("https://www.google.com", proxies=proxies, timeout=10, verify=not node.get("skip-cert-verify", False))
-        if response.status_code == 200:
-            print(f"Valid node: {node['name']}")
-            return test_download_speed(node, proxies)
-        else:
-            print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
-            return None
+        return test_node(node, proxies)
     except Exception as e:
         print(f"{node['name']} - Error testing Trojan proxy {node['server']}:{node['port']}: {e}")
         return None
@@ -163,18 +165,8 @@ def test_vmess(node):
             "http": "socks5://127.0.0.1:1080",
             "https": "socks5://127.0.0.1:1080"
         }
-        response = requests.get("https://www.google.com", proxies=proxies, timeout=10)
-
-        # 停止 Xray
-        process.terminate()
-        process.wait()
-
-        if response.status_code == 200:
-            print(f"Valid node: {node['name']}")
-            return test_download_speed(node, proxies)
-        else:
-            print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
-            return None
+        
+        return test_node(node, proxies, process)
     except Exception as e:
         print(f"{node['name']} - Error testing Vmess proxy {node['server']}:{node['port']}: {e}")
         return None
