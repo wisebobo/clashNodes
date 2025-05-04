@@ -10,6 +10,8 @@ from concurrent.futures import ThreadPoolExecutor
 TEST_FILE_URL = "https://nbg1-speed.hetzner.com/100MB.bin"
 # 下载速度阈值，单位为 KB/s
 DOWNLOAD_SPEED_THRESHOLD = 500
+# 下载超时时间，单位为秒
+DOWNLOAD_TIMEOUT = 30
 
 def test_download_speed(node, proxies):
     try:
@@ -18,6 +20,9 @@ def test_download_speed(node, proxies):
         if response.status_code == 200:
             total_size = 0
             for chunk in response.iter_content(chunk_size=1024):
+                if time.time() - start_time > DOWNLOAD_TIMEOUT:
+                    print(f"{node['name']} download timed out after {DOWNLOAD_TIMEOUT} seconds.")
+                    return None
                 if chunk:
                     total_size += len(chunk)
             end_time = time.time()
