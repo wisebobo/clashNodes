@@ -5,6 +5,11 @@ import subprocess
 import time
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
+import urllib3
+
+# 禁用 InsecureRequestWarning 警告
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 # 用于测试下载速度的大文件 URL，可根据实际情况替换
 TEST_FILE_URL = "https://nbg1-speed.hetzner.com/100MB.bin"
