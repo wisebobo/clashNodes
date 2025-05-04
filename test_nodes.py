@@ -6,6 +6,40 @@ import time
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
 
+# 用于测试下载速度的大文件 URL，可根据实际情况替换
+TEST_FILE_URL = "https://nbg1-speed.hetzner.com/100MB.bin"
+# 下载速度阈值，单位为 KB/s
+DOWNLOAD_SPEED_THRESHOLD = 500
+
+def test_download_speed(node, proxies):
+    try:
+        start_time = time.time()
+        response = requests.get(TEST_FILE_URL, proxies=proxies, stream=True)
+        if response.status_code == 200:
+            total_size = 0
+            for chunk in response.iter_content(chunk_size=1024):
+                if chunk:
+                    total_size += len(chunk)
+            end_time = time.time()
+            download_time = end_time - start_time
+            download_speed = total_size / download_time / 1024  # 转换为 KB/s
+
+            if download_speed > DOWNLOAD_SPEED_THRESHOLD:
+                print(f"Valid node: {node['name']}, Download Speed: {download_speed:.2f} KB/s")
+                node['download_speed'] = download_speed
+                result = node
+            else:
+                print(f"Node {node['name']} download speed {download_speed:.2f} KB/s is below threshold.")
+                result = None
+        else:
+            print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
+            result = None
+    except Exception as e:
+        print(f"{node['name']} - Error testing proxy {node['server']}:{node['port']}: {e}")
+        result = None
+
+    return result
+
 # 测试 Shadowsocks 代理
 def test_ss(node):
     try:
@@ -27,7 +61,7 @@ def test_ss(node):
         response = requests.get("https://www.google.com", proxies=proxies, timeout=10)
         if response.status_code == 200:
             print(f"Valid node: {node['name']}")
-            result = node
+            result = test_download_speed(node, proxies)
         else:
             print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
             result = None
@@ -49,7 +83,7 @@ def test_trojan(node):
         response = requests.get("https://www.google.com", proxies=proxies, timeout=10, verify=not node.get("skip-cert-verify", False))
         if response.status_code == 200:
             print(f"Valid node: {node['name']}")
-            return node
+            return test_download_speed(node, proxies)
         else:
             print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
             return None
@@ -132,7 +166,7 @@ def test_vmess(node):
 
         if response.status_code == 200:
             print(f"Valid node: {node['name']}")
-            return node
+            return test_download_speed(node, proxies)
         else:
             print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
             return None
