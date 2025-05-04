@@ -70,16 +70,17 @@ def generate_clash_config(yaml_file):
             'name': '♻️ 自动选择',
             'type': 'url-test',
             'url': 'http://www.gstatic.com/generate_204',
-            'interval': 10,
-            'tolerance': 120,
-            'lazy': True,
+            'interval': 30,
+            'tolerance': 300,
+            'lazy': False,
+            'max-failed-times': 3,
             'proxies': all_proxies
         },
         {
             'name': '♻️ LOAD BALANCE',
             'type': 'load-balance',
             'url': 'http://www.gstatic.com/generate_204',
-            'interval': 120,
+            'interval': 30,
             'strategy': 'consistent-hashing',
             'proxies': all_proxies
         },
@@ -87,8 +88,8 @@ def generate_clash_config(yaml_file):
             'name': '♻️ Fallback',
             'type': 'fallback',
             'url': 'http://www.gstatic.com/generate_204',
-            'interval': 10,
-            'tolerance': 120,
+            'interval': 30,
+            'tolerance': 300,
             'proxies': all_proxies
         },
         {   'name': '🚀 节点选择',
