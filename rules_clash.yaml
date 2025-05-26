@@ -30,13 +30,51 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 10647.378946126555
+  name: 03-1068-CN
+  password: 3b0f0258-a382-46b5-811c-986ea0498258
+  port: 49104
+  server: ambnds00.dorabbb.top
+  type: ss
+- cipher: aes-128-gcm
+  download_speed: 8096.414565521125
+  name: 04-1508-HK
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: dde48109833.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 813
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  download_speed: 5192.563476760967
+  name: 04-1490-HK
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: dde48109833.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 821
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 03-1068-CN
+  - 04-1508-HK
+  - 04-1490-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
