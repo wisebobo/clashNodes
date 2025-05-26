@@ -30,13 +30,30 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 2
+  cipher: auto
+  download_speed: 4999.756408150441
+  name: 04-1645-CN
+  network: ws
+  port: 23613
+  server: 13.mamamajd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 79d7460b-67fd-31b5-9221-24271ef964f8
+  ws-opts:
+    headers:
+      host: 13.mamamajd.site
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 04-1645-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
