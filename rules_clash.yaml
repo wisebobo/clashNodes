@@ -30,13 +30,28 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-128-gcm
+  download_speed: 5274.806940902959
+  name: 04-1410-HK
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: dde48109833.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 813
+  server: 231103level2.unclemanco.com
+  type: ss
+  udp: true
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 04-1410-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
