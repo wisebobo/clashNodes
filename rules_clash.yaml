@@ -30,13 +30,45 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-128-gcm
+  download_speed: 5244.8785855704
+  name: 04-1538-HK
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: dde48109833.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 915
+  server: 231103level1.unclemanco.com
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  download_speed: 3846.2590256580656
+  name: 40-1664-CN
+  network: ws
+  port: 16645
+  server: t.cnmjcn.cyou
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e4af2638-bb12-4e4a-84f1-a032e23ca63f
+  ws-opts:
+    headers:
+      host: 50a814156b9c782acb481a7cc90dd3d3.mobgslb.tbcache.com
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 04-1538-HK
+  - 40-1664-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
