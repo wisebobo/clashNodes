@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-gcm
+  download_speed: 5115.936211424922
+  name: 04-1670-US
+  password: af72833f-e71f-44da-8432-7c2e6ec261b5
+  port: 51009
+  server: c.api.studyservice.top
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 04-1670-US
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
