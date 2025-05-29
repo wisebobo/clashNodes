@@ -31,20 +31,29 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 9339.344719186598
-  name: 03-1501-CN
-  password: eed71054-3dbb-40ad-937e-69c4366f6e4e
-  port: 34015
-  server: zz002.airport.lat
-  type: ss
+- alterId: 2
+  cipher: auto
+  download_speed: 7254.829237924299
+  name: 07-1817-CN
+  network: ws
+  port: 30835
+  server: v35.heduian.link
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    headers:
+      host: v35.heduian.link
+    path: /oooo
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 03-1501-CN
+  - 07-1817-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
