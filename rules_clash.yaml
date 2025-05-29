@@ -32,19 +32,34 @@ mode: rule
 port: 7890
 proxies:
 - cipher: chacha20-ietf-poly1305
-  download_speed: 7889.591057430378
-  name: 03-1176-CN
-  password: 84bc0bd6-d53b-4708-b6fe-b9902c9001b0
-  port: 16101
-  server: 59.42.247.53
+  download_speed: 8175.774855682198
+  name: 03-1540-CN
+  password: 6b35ca8d-549a-45df-902b-2fbcc16ab54f
+  port: 10201
+  server: zz001.airport.lat
   type: ss
+- cipher: aes-128-gcm
+  download_speed: 4812.571055715587
+  name: 04-1657-HK
+  password: QHPy2u
+  plugin: obfs
+  plugin-opts:
+    host: 485ee110100.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 914
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 03-1176-CN
+  - 03-1540-CN
+  - 04-1657-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
