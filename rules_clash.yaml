@@ -30,13 +30,30 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 2
+  cipher: auto
+  download_speed: 5127.868090695831
+  name: 07-1900-CN
+  network: ws
+  port: 30836
+  server: v36.heduian.link
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    headers:
+      host: v36.heduian.link
+    path: /oooo
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 07-1900-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
