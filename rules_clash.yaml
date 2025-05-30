@@ -31,28 +31,27 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 8174.623032334696
-  name: 03-0996-CN
-  password: c3ee63a5-b6e1-45e7-b0da-a082483350be
-  port: 34453
-  server: iii1ilili1lilil1ilili.tikshopiiiiiiiii.com
+- cipher: aes-128-gcm
+  download_speed: 5081.096870826142
+  name: 04-1706-HK
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: 485ee110100.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 812
+  server: 231103level1.unclemanco.com
   type: ss
-- cipher: chacha20-ietf-poly1305
-  download_speed: 8220.205215397236
-  name: 03-1529-CN
-  password: 8f54f46a-6522-4fc6-82fc-0124f3b15c14
-  port: 14037
-  server: zz002.airport.lat
-  type: ss
+  udp: true
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 03-0996-CN
-  - 03-1529-CN
+  - 04-1706-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
