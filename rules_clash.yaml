@@ -30,53 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: aes-256-gcm
-  download_speed: 8207.982370457368
-  name: 03-0598-CN
-  password: 323537df-dbdf-4f7e-a4c7-6c290d8e53ff
-  port: 18004
-  server: sg004.dogsvip.site
-  type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 8045.17503390285
-  name: 03-0615-RELAY
-  network: ws
-  port: 8080
-  server: 1748552542.tencentapp.cn
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: ffad2ef2-7b55-4f71-bc81-de5e0f769adc
-  ws-opts:
-    headers:
-      host: 1748552871.speed.sgsicb.cccp.uruu.cn
-    path: /
-- cipher: aes-128-gcm
-  download_speed: 5091.5660772413885
-  name: 04-1712-HK
-  password: ayucloud1
-  plugin: obfs
-  plugin-opts:
-    host: 485ee110100.download.windowsupdate.com
-    mode: http
-    skip-cert-verify: true
-    tls: true
-  port: 857
-  server: 231103level2.unclemanco.com
-  type: ss
-  udp: true
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 03-0598-CN
-  - 03-0615-RELAY
-  - 04-1712-HK
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
