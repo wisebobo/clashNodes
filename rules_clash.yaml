@@ -30,13 +30,68 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-128-gcm
+  download_speed: 7966.849226072671
+  name: 03-0591-HK
+  password: 85b17adf-2af5-4756-96c4-c4124c0797f5
+  port: 50019
+  server: api-wx-5.rancho.gay
+  type: ss
+- cipher: aes-128-gcm
+  download_speed: 9233.906889088776
+  name: 04-1788-HK
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: 485ee110100.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 915
+  server: 231103level1.unclemanco.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  download_speed: 3471.1459310602377
+  name: 04-1727-HK
+  password: ayucloud1
+  plugin: obfs
+  plugin-opts:
+    host: 485ee110100.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 819
+  server: 231103level3.unclemanco.com
+  type: ss
+  udp: true
+- alterId: 2
+  cipher: auto
+  download_speed: 4315.540556719019
+  name: 04-1824-CN
+  network: ws
+  port: 23614
+  server: 14.mamamajd.site
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 2d7894ae-7910-3abd-9ba3-82780b7c6777
+  ws-opts:
+    headers:
+      host: 14.mamamajd.site
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 03-0591-HK
+  - 04-1788-HK
+  - 04-1727-HK
+  - 04-1824-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
