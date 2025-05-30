@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 6388.897353601877
+  name: 03-1108-TH
+  password: 68bc2fd3-0db5-467e-b561-1d1789f1d8d3
+  port: 10050
+  server: 62.112.143.62
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 03-1108-TH
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
