@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-128-gcm
+  download_speed: 8001.594026543809
+  name: 03-1190-CN
+  password: 904d4c81-aebf-4882-bb2a-b4dcb8cb5d05
+  port: 12089
+  server: bit-tw.03ezhg0qsa.download
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 03-1190-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
