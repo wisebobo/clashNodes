@@ -31,18 +31,32 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 6911.058959618158
+  name: 03-0965-CN
+  password: 84bc0bd6-d53b-4708-b6fe-b9902c9001b0
+  port: 16105
+  server: 59.42.247.53
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 6013.944049451099
+  name: 03-1637-CN
+  password: eb69884a-47a0-4507-b08c-83b2a9298acb
+  port: 26002
+  server: diao.arken8379.com
+  type: ss
 - cipher: aes-128-gcm
-  download_speed: 5184.8247727140215
-  name: 04-1708-HK
-  password: ayucloud1
+  download_speed: 5214.104406710525
+  name: 04-1775-HK
+  password: aa2x2sa2/1a
   plugin: obfs
   plugin-opts:
     host: 485ee110100.download.windowsupdate.com
     mode: http
     skip-cert-verify: true
     tls: true
-  port: 9059
-  server: 231103level3.unclemanco.com
+  port: 10021
+  server: 231103level1.unclemanco.com
   type: ss
   udp: true
 proxy-groups:
@@ -51,7 +65,9 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 04-1708-HK
+  - 03-0965-CN
+  - 03-1637-CN
+  - 04-1775-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
