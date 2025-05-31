@@ -30,13 +30,89 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 21464.164497411886
+  name: 13-272-CN
+  password: e8211c89-b34c-4cba-9027-5b0d08390565
+  port: 26641
+  server: qqa813.198139.xyz
+  type: ss
+- alterId: 2
+  cipher: auto
+  download_speed: 15601.773508328322
+  name: 18-335-HK
+  network: ws
+  port: 80
+  server: 5e4eabfc-sv2sg0-t2lc1c-1mim2.hk.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6e3ee1de-381f-11ee-87f9-f23c91cfbbc9
+  ws-opts:
+    headers:
+      host: 5e4eabfc-sv2sg0-t2lc1c-1mim2.hk.p5pv.com
+    path: /
+- alterId: 2
+  cipher: auto
+  download_speed: 8890.583359810362
+  name: 18-320-HK
+  network: ws
+  port: 80
+  server: 0dee4e4a-sv2sg0-t0c4yu-1qc0q.hk.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 82fc0c0a-bc59-11ee-a737-f23c9164ca5d
+  ws-opts:
+    headers:
+      host: 0dee4e4a-sv2sg0-t0c4yu-1qc0q.hk.p5pv.com
+    path: /
+- alterId: 2
+  cipher: auto
+  download_speed: 8403.49186431116
+  name: 18-332-HK
+  network: ws
+  port: 80
+  server: 477bbb8e-sv2sg0-svc6zc-tf26.hk.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: baefe2f4-b41a-11ee-91e9-f23c913c8d2b
+  ws-opts:
+    headers:
+      host: 477bbb8e-sv2sg0-svc6zc-tf26.hk.p5pv.com
+    path: /
+- alterId: 2
+  cipher: auto
+  download_speed: 14672.960438698552
+  name: 18-367-HK
+  network: ws
+  port: 80
+  server: c62b5b59-sv2sg0-sx0ey8-1b8u2.hk.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 908111a6-f96b-11ed-9264-f23c913c8d2b
+  ws-opts:
+    headers:
+      host: c62b5b59-sv2sg0-sx0ey8-1b8u2.hk.p5pv.com
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 13-272-CN
+  - 18-335-HK
+  - 18-320-HK
+  - 18-332-HK
+  - 18-367-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
