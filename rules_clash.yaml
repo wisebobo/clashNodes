@@ -30,47 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- alterId: 2
-  cipher: auto
-  download_speed: 13595.431925413024
-  name: 07-224-CN
-  network: ws
-  port: 30836
-  server: v36.heduian.link
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    headers:
-      host: v36.heduian.link
-    path: /oooo
-- alterId: 2
-  cipher: auto
-  download_speed: 10040.43649090361
-  name: 18-336-HK
-  network: ws
-  port: 80
-  server: 7a8c402e-sv6hs0-tct1rd-1o0ch.hk.p5pv.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d49e545e-0daf-11ee-a91f-f23c913c8d2b
-  ws-opts:
-    headers:
-      host: 7a8c402e-sv6hs0-tct1rd-1o0ch.hk.p5pv.com
-    path: /
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 07-224-CN
-  - 18-336-HK
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
