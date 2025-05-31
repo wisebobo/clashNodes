@@ -30,47 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 5899.750046497802
-  name: 18-304-RELAY
-  network: ws
-  port: 80
-  server: FfFgTYY.7282728.XyZ
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 3d4ad187-b554-4300-bf71-d26c71962504
-  ws-opts:
-    headers:
-      host: fffgtyy.7282728.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  download_speed: 8028.599933856544
-  name: 18-334-RELAY
-  network: ws
-  port: 80
-  server: C1swEw.777159.XYZ
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cad5a49f-14e5-4a05-aae9-c5df8fad394f
-  ws-opts:
-    headers:
-      host: C1swEw.777159.XYZ
-    path: /
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 18-304-RELAY
-  - 18-334-RELAY
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
