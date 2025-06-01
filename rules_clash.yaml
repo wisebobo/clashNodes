@@ -30,13 +30,47 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 23506.23856490776
+  name: 08-234-RELAY
+  network: ws
+  port: 443
+  server: bevent.bilibili.tv
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: c7c79197-5e38-4115-af1a-8508c00d54dc
+  ws-opts:
+    headers:
+      host: hkt.xiaoqi555.xyz
+    path: /
+- alterId: 2
+  cipher: auto
+  download_speed: 8523.264424415205
+  name: 18-332-HK
+  network: ws
+  port: 80
+  server: 0a46ce00-sunz40-taz53d-1j0y6.hk.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1cce7df2-251c-11ee-9409-f23c9164ca5d
+  ws-opts:
+    headers:
+      host: 0a46ce00-sunz40-taz53d-1j0y6.hk.p5pv.com
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 08-234-RELAY
+  - 18-332-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
