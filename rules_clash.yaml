@@ -31,46 +31,29 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
+- alterId: 2
   cipher: auto
-  download_speed: 8754.696937805875
-  name: 18-323-HK
+  download_speed: 4376.019937278268
+  name: 18-357-HK
   network: ws
-  port: 8080
-  server: 1ec053e0-swd340-t4m86v-1s9pj.hgc1.tcpbbr.net
+  port: 80
+  server: e2cc3a1d-sv6hs0-t17ajj-1n7d9.hk.p5pv.com
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 57f70d4e-6428-11ef-8f5f-f23c913c8d2b
+  uuid: 48e51dfa-db8f-11ed-a23f-f23c91369f2d
   ws-opts:
     headers:
-      host: 1ec053e0-swd340-t4m86v-1s9pj.hgc1.tcpbbr.net
+      host: e2cc3a1d-sv6hs0-t17ajj-1n7d9.hk.p5pv.com
     path: /
-- alterId: 0
-  cipher: auto
-  download_speed: 5042.331246093631
-  name: 13-259-RELAY
-  network: ws
-  port: 443
-  server: vfast.jkjs.cloud
-  skip-cert-vertify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: e8211c89-b34c-4cba-9027-5b0d08390565
-  ws-opts:
-    headers:
-      host: us.dyvpn.cloud
-    path: /2365
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 18-323-HK
-  - 13-259-RELAY
+  - 18-357-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
