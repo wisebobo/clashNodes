@@ -30,47 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 7586.643879359114
-  name: 18-320-RELAY
-  network: ws
-  port: 80
-  server: FfFgTYY.7282728.XyZ
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 3d4ad187-b554-4300-bf71-d26c71962504
-  ws-opts:
-    headers:
-      host: FfFgTYY.7282728.XyZ
-    path: /
-- alterId: 2
-  cipher: auto
-  download_speed: 6418.712139491109
-  name: 18-352-HK
-  network: ws
-  port: 80
-  server: dc4b7b6c-sv0xs0-syu0n5-1hd7v.hk.p5pv.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f73c64bc-9e8c-11ec-bd7c-f23c913c8d2b
-  ws-opts:
-    headers:
-      host: dc4b7b6c-sv0xs0-syu0n5-1hd7v.hk.p5pv.com
-    path: /
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 18-320-RELAY
-  - 18-352-HK
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
