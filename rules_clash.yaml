@@ -31,76 +31,21 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 7881.515307450619
-  name: 13-251-CN
-  password: e8211c89-b34c-4cba-9027-5b0d08390565
-  port: 13642
-  server: gya.tangu.win
-  type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 12161.798331099737
-  name: 18-334-HK
+  download_speed: 5893.497279646599
+  name: 18-283-RELAY
   network: ws
-  port: 8080
-  server: 64f6e0b2-sw1z40-t51bp0-1nyy5.hgc1.tcpbbr.net
+  port: 443
+  server: 172.66.168.209
   skip-cert-vertify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 8f7cb770-1305-11ee-b107-f23c91cfbbc9
+  uuid: 5428dcc2-9950-4404-b8a5-9dac82acb210
   ws-opts:
     headers:
-      host: 64f6e0b2-sw1z40-t51bp0-1nyy5.hgc1.tcpbbr.net
-    path: /
-- alterId: 2
-  cipher: auto
-  download_speed: 14705.162653861425
-  name: 18-358-HK
-  network: ws
-  port: 80
-  server: c2b04e68-sva740-svxckp-1swry.hk.p5pv.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8a5d58a0-c50e-11ef-a46e-f23c913c8d2b
-  ws-opts:
-    headers:
-      host: c2b04e68-sva740-svxckp-1swry.hk.p5pv.com
-    path: /
-- alterId: 2
-  cipher: auto
-  download_speed: 8827.561241338442
-  name: 18-337-HK
-  network: ws
-  port: 80
-  server: c4201364-sv6hs0-tb224g-1h0r9.hk.p5pv.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9bfd0dde-957e-11ec-a8bf-f23c91cfbbc9
-  ws-opts:
-    headers:
-      host: c4201364-sv6hs0-tb224g-1h0r9.hk.p5pv.com
-    path: /
-- alterId: 2
-  cipher: auto
-  download_speed: 14340.558011220912
-  name: 18-361-HK
-  network: ws
-  port: 80
-  server: 272ffc58-sv2sg0-t4v3jz-1k8ga.hk3.p5pv.com
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f860f2da-5035-11ed-bb74-f23c9164ca5d
-  ws-opts:
-    headers:
-      host: 272ffc58-sv2sg0-t4v3jz-1k8ga.hk3.p5pv.com
+      host: maXNEtVIP-usA-VP3.nETKH3.SiTE
     path: /
 proxy-groups:
 - interval: 30
@@ -108,11 +53,7 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 13-251-CN
-  - 18-334-HK
-  - 18-358-HK
-  - 18-337-HK
-  - 18-361-HK
+  - 18-283-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
