@@ -30,13 +30,47 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 7176.940066997538
+  name: 07-207-US
+  network: ws
+  port: 1090
+  server: us-01.foxspirit018.top
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 3700cd71-fde6-436d-8687-51aa123bc681
+  ws-opts:
+    headers:
+      host: v2rsdaay.com
+    path: /dddaa
+- alterId: 0
+  cipher: auto
+  download_speed: 9680.604332160901
+  name: 18-311-RELAY
+  network: ws
+  port: 80
+  server: dcvfgt6.999182.xyz
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 90f357dd-79ac-47c6-b0b8-958e2d19de07
+  ws-opts:
+    headers:
+      host: dcvfgt6.999182.xyz
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 07-207-US
+  - 18-311-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
