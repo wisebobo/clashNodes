@@ -30,13 +30,30 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 13050.704564135054
+  name: 12-242-RELAY
+  network: ws
+  port: 8080
+  server: mugen22.6bnw.top
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7438853c-8d6e-41f1-9f49-28b71b893203
+  ws-opts:
+    headers:
+      host: shs.xiaoqi555.xyz
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 12-242-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
