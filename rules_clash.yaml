@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 6585.854164495005
+  name: 40-381-CN
+  password: 26270a5c-cc66-4bb5-b058-c75d09d615e5
+  port: 54322
+  server: cm55-zz.moonwang.xyz
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 40-381-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
