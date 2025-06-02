@@ -30,13 +30,64 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 2
+  cipher: auto
+  download_speed: 11118.339500240425
+  name: 07-217-CN
+  network: ws
+  port: 22641
+  server: 120.236.198.165
+  skip-cert-vertify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
+  ws-opts:
+    headers:
+      host: zxjp-a.tkong.cc
+    path: /
+- alterId: 2
+  cipher: auto
+  download_speed: 8574.654899954478
+  name: 18-375-HK
+  network: ws
+  port: 80
+  server: 7f346235-sv4n40-t76x2i-wj6v.hk3.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 847c03b2-0a9d-11eb-a8bf-f23c91cfbbc9
+  ws-opts:
+    headers:
+      host: 7f346235-sv4n40-t76x2i-wj6v.hk3.p5pv.com
+    path: /
+- alterId: 2
+  cipher: auto
+  download_speed: 5182.091073283663
+  name: 18-398-HK
+  network: ws
+  port: 80
+  server: 360de725-sv4n40-t2y63q-1jk6u.hk3.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 45bc25b2-1a10-11ed-91c0-f23c91cfbbc9
+  ws-opts:
+    headers:
+      host: 360de725-sv4n40-t2y63q-1jk6u.hk3.p5pv.com
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 07-217-CN
+  - 18-375-HK
+  - 18-398-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
