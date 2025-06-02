@@ -30,55 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 14440.781103258523
-  name: 18-342-KR
-  password: b25727df-15ea-453c-a006-13fe98fee1d2
-  port: 30936
-  server: 141.164.63.32
-  type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 6330.698572333322
-  name: 08-244-RELAY
-  network: ws
-  port: 8080
-  server: mugen11.6bnw.top
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e0b54811-e9b7-4e9d-9b27-df0d328f3496
-  ws-opts:
-    headers:
-      host: shs.xiaoqi555.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  download_speed: 5763.261420522853
-  name: 18-362-RELAY
-  network: ws
-  port: 80
-  server: 5tghyu8.999820.xyz
-  skip-cert-vertify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 90f357dd-79ac-47c6-b0b8-958e2d19de07
-  ws-opts:
-    headers:
-      host: 5tghyu8.999820.xyz
-    path: /
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 18-342-KR
-  - 08-244-RELAY
-  - 18-362-RELAY
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
