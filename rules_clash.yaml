@@ -31,21 +31,44 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 2
+- cipher: chacha20-ietf-poly1305
+  download_speed: 14440.781103258523
+  name: 18-342-KR
+  password: b25727df-15ea-453c-a006-13fe98fee1d2
+  port: 30936
+  server: 141.164.63.32
+  type: ss
+- alterId: 0
   cipher: auto
-  download_speed: 6509.899853636027
-  name: 18-386-HK
+  download_speed: 6330.698572333322
+  name: 08-244-RELAY
   network: ws
-  port: 80
-  server: e50495be-sv2sg0-t6qezp-up3z.hk.p5pv.com
+  port: 8080
+  server: mugen11.6bnw.top
   skip-cert-vertify: true
   tls: false
   type: vmess
   udp: true
-  uuid: db8cf8a2-dc88-11ea-87ad-f23c913c8d2b
+  uuid: e0b54811-e9b7-4e9d-9b27-df0d328f3496
   ws-opts:
     headers:
-      host: e50495be-sv2sg0-t6qezp-up3z.hk.p5pv.com
+      host: shs.xiaoqi555.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 5763.261420522853
+  name: 18-362-RELAY
+  network: ws
+  port: 80
+  server: 5tghyu8.999820.xyz
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 90f357dd-79ac-47c6-b0b8-958e2d19de07
+  ws-opts:
+    headers:
+      host: 5tghyu8.999820.xyz
     path: /
 proxy-groups:
 - interval: 30
@@ -53,7 +76,9 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 18-386-HK
+  - 18-342-KR
+  - 08-244-RELAY
+  - 18-362-RELAY
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
