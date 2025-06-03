@@ -31,28 +31,21 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-128-gcm
-  download_speed: 10432.495691067135
-  name: 13-271-GOOGLE
-  password: a8755962-c200-4858-9bc2-756f0f236b54
-  port: 443
-  server: www.google.com
-  type: ss
-- alterId: 2
+- alterId: 0
   cipher: auto
-  download_speed: 10953.819432091019
-  name: 18-344-HK
+  download_speed: 7496.235745720651
+  name: 18-316-FR
   network: ws
-  port: 80
-  server: e7f8ba18-sv2sg0-svgrek-1ok3j.hk.p5pv.com
+  port: 443
+  server: 146.19.168.161
   skip-cert-vertify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 84de144e-f418-11ef-8c3f-f23c913c8d2b
+  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
   ws-opts:
     headers:
-      host: e7f8ba18-sv2sg0-svgrek-1ok3j.hk.p5pv.com
+      host: az05.beyondy.cfd
     path: /
 proxy-groups:
 - interval: 30
@@ -60,8 +53,7 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 13-271-GOOGLE
-  - 18-344-HK
+  - 18-316-FR
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
