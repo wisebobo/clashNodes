@@ -30,13 +30,47 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 2
+  cipher: auto
+  download_speed: 6672.963220164454
+  name: 18-355-HK
+  network: ws
+  port: 80
+  server: 793f272d-sv0xs0-tb36ag-1jfq7.hk.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: baa46fd6-63c1-11ed-8ea9-f23c913c8d2b
+  ws-opts:
+    headers:
+      host: 793f272d-sv0xs0-tb36ag-1jfq7.hk.p5pv.com
+    path: /
+- alterId: 2
+  cipher: auto
+  download_speed: 6439.712134429227
+  name: 18-384-HK
+  network: ws
+  port: 80
+  server: e7f8ba18-sv2sg0-svgrek-1ok3j.hk.p5pv.com
+  skip-cert-vertify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 84de144e-f418-11ef-8c3f-f23c913c8d2b
+  ws-opts:
+    headers:
+      host: e7f8ba18-sv2sg0-svgrek-1ok3j.hk.p5pv.com
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 18-355-HK
+  - 18-384-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
