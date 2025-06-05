@@ -30,13 +30,37 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 11664.500491324994
+  name: 13-382-CN
+  password: e8211c89-b34c-4cba-9027-5b0d08390565
+  port: 45635
+  server: gya.tangu.win
+  type: ss
+- alterId: 2
+  cipher: auto
+  download_speed: 33436.003243823034
+  name: 18-640-HK
+  network: ws
+  port: 80
+  server: d473568d-sv0xs0-t3q3xd-1sai0.hk.p5pv.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 4551f124-65ca-11ef-8c8e-f23c91cfbbc9
+  ws-opts:
+    host: d473568d-sv0xs0-t3q3xd-1sai0.hk.p5pv.com
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 13-382-CN
+  - 18-640-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
