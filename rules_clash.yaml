@@ -31,44 +31,20 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 3473.7217146618286
-  name: 08-258-RU
-  network: ws
-  port: 20053
-  server: 45.147.201.231
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 4eb88c22-2913-4a4c-940b-e0f262ee7323
-  ws-opts:
-    host: 45.147.201.231
-    path: /
-- alterId: 0
-  cipher: auto
-  download_speed: 3454.5451120496873
-  name: 13-437-NOWHERE
-  network: ws
-  port: 45056
-  server: haa.dashuai.cyou
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 57a78155-f57c-4a3c-9d40-b5b1cb1ab53a
-  ws-opts:
-    host: haa.dashuai.cyou
-    path: /
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4241.962867065669
+  name: 09-300-NL
+  password: ojcP36n1SouDcnBg9EOZP8
+  port: 1490
+  server: 9.163.232.180
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 08-258-RU
-  - 13-437-NOWHERE
+  - 09-300-NL
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
