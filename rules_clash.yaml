@@ -31,35 +31,56 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 3515.943148002507
-  name: 08-260-NOWHERE
-  network: ws
-  port: 45072
-  server: haa.dashuai.cyou
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8e293da9-05a2-4f86-91f8-4cb3245526c7
-  ws-opts:
-    host: haa.dashuai.cyou
-    path: /
+- cipher: aes-128-gcm
+  download_speed: 16563.87395054333
+  name: 04-084-HK
+  password: ayucloud1
+  plugin: obfs
+  port: 926
+  server: 231103level2.unclemanco.com
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 16704.874756824567
+  name: 13-374-CN
+  password: e8211c89-b34c-4cba-9027-5b0d08390565
+  port: 11125
+  server: qqa813.198139.xyz
+  type: ss
+- cipher: aes-256-cfb
+  download_speed: 19058.176763339616
+  name: 18-517-RO
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 194.14.217.38
+  type: ss
+- cipher: aes-128-gcm
+  download_speed: 17014.104169893562
+  name: 18-502-CH
+  password: shadowsocks
+  port: 443
+  server: 156.146.62.163
+  type: ss
+- cipher: aes-256-cfb
+  download_speed: 17164.09057881271
+  name: 18-603-VN
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.19
+  type: ss
 - alterId: 2
   cipher: auto
-  download_speed: 15853.699017280958
-  name: 18-642-HK
+  download_speed: 7693.9634673501805
+  name: 18-564-HK
   network: ws
   port: 80
-  server: 6bcba1b3-sv2sg0-sywkhi-1o4kv.hk.p5pv.com
+  server: 09d8162a-sv6hs0-t5963m-1ex5a.hk.p5pv.com
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 87b31a02-172e-11ee-a11f-f23c913c8d2b
+  uuid: 98d2b660-7218-11ec-bd7c-f23c913c8d2b
   ws-opts:
-    host: 6bcba1b3-sv2sg0-sywkhi-1o4kv.hk.p5pv.com
+    host: 09d8162a-sv6hs0-t5963m-1ex5a.hk.p5pv.com
     path: /
 proxy-groups:
 - interval: 30
@@ -67,8 +88,12 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 08-260-NOWHERE
-  - 18-642-HK
+  - 04-084-HK
+  - 13-374-CN
+  - 18-517-RO
+  - 18-502-CH
+  - 18-603-VN
+  - 18-564-HK
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
