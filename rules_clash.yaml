@@ -30,53 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 23178.146300817934
-  name: 13-471-CN
-  network: ws
-  port: 20016
-  server: i.needss.top
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0db242c3-217e-4158-ac38-20448565d0b6
-  ws-opts:
-    host: i.needss.top
-    path: /
-- cipher: chacha20-ietf-poly1305
-  download_speed: 23521.529433516207
-  name: 13-517-CN
-  password: e8211c89-b34c-4cba-9027-5b0d08390565
-  port: 45628
-  server: gya.tangu.win
-  type: ss
-- cipher: rc4-md5
-  download_speed: 3443.8559966508947
-  name: 18-562-US
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 194.5.215.59
-  type: ss
-- cipher: aes-256-cfb
-  download_speed: 3429.6175482577014
-  name: 18-618-FI
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 37.143.129.230
-  type: ss
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 13-471-CN
-  - 13-517-CN
-  - 18-562-US
-  - 18-618-FI
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
