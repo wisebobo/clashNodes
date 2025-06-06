@@ -30,13 +30,77 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 16181.773510261432
+  name: 06-204-CN
+  network: ws
+  port: 45053
+  server: xdd.dashuai.cyou
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 739d8ec8-d5d1-4277-9d8a-8129b27d957b
+  ws-opts:
+    host: xdd.dashuai.cyou
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 3762.331174614781
+  name: 11-319-CN
+  network: ws
+  port: 45059
+  server: xdd.dashuai.cyou
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7c213f68-6639-4c9d-b454-7526690cfc4b
+  ws-opts:
+    host: xdd.dashuai.cyou
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 6792.291375356329
+  name: 12-357-RELAY
+  network: ws
+  port: 80
+  server: tci5.tiamoci.us.kg
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 617b5475-8112-43ee-8e74-abd842404666
+  ws-opts:
+    host: tci5.tiamoci.us.kg
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 6802.878860871039
+  name: 13-406-NOWHERE
+  network: ws
+  port: 45052
+  server: haa.dashuai.cyou
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 57a78155-f57c-4a3c-9d40-b5b1cb1ab53a
+  ws-opts:
+    host: haa.dashuai.cyou
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 06-204-CN
+  - 11-319-CN
+  - 12-357-RELAY
+  - 13-406-NOWHERE
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
