@@ -31,60 +31,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 29721.85046674387
-  name: 09-366-US
-  password: 46e67f5a-63e4-4566-870c-76eaa9cf76fe
-  port: 31444
-  server: 149.28.106.134
+- cipher: aes-256-gcm
+  download_speed: 4489.9275846002365
+  name: 05-237-DE
+  password: e61085be-4330-467a-a9e2-83ffb47be5e5
+  port: 8443
+  server: 167.172.177.240
   type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 3836.0896488919643
-  name: 08-344-NOWHERE
+  download_speed: 16795.961868066188
+  name: 12-422-NOWHERE
   network: ws
-  port: 45066
+  port: 45054
   server: haa.dashuai.cyou
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 2c4eb7c8-86fa-4b0d-bbf1-9ceae3e08949
+  uuid: 9ff1df7d-f72e-43fe-b05d-e795ed409b0e
   ws-opts:
     host: haa.dashuai.cyou
     path: /
-- cipher: aes-256-cfb
-  download_speed: 16596.38798021309
-  name: 18-626-FI
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 37.143.129.230
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  download_speed: 4612.068150757382
-  name: 18-623-NL
-  password: uQS5ntVqC00sSKkeNzUiD3
-  port: 42090
-  server: 89.23.103.125
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  download_speed: 4945.419420933149
-  name: 18-628-AT
-  password: pV5BAzqLZosOfuIrkyoadT
-  port: 18660
-  server: 5.181.21.194
-  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 09-366-US
-  - 08-344-NOWHERE
-  - 18-626-FI
-  - 18-623-NL
-  - 18-628-AT
+  - 05-237-DE
+  - 12-422-NOWHERE
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
