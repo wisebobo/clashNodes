@@ -31,102 +31,60 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 3938.9793941385356
-  name: 09-0327-CH
-  password: oXGp1+ihlfKg826H
-  port: 1866
-  server: 204.136.10.115
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
-  download_speed: 3448.5345583691924
-  name: 12-0419-CN
+  download_speed: 4579.2113056097205
+  name: 11-0370-NOWHERE
   network: ws
-  port: 45075
-  server: xdd.dashuai.cyou
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 915d21d2-4eef-41f7-8f36-4c4bf37587b1
-  ws-opts:
-    host: xdd.dashuai.cyou
-    path: /
-- alterId: 0
-  cipher: auto
-  download_speed: 7778.12246139482
-  name: 16-0542-NOWHERE
-  network: ws
-  port: 45056
+  port: 45072
   server: haa.dashuai.cyou
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: e27a8d12-953e-4109-801a-7537942ca14c
+  uuid: 12cfb540-5df6-481a-b5c5-17d0bbc7f6b6
   ws-opts:
     host: haa.dashuai.cyou
     path: /
 - alterId: 0
   cipher: auto
-  download_speed: 4587.094383491102
-  name: 17-0583-CN
-  network: ws
-  port: 45067
-  server: xdd.dashuai.cyou
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: fcf62b60-ac0d-45ed-95a1-631fb2f360ae
-  ws-opts:
-    host: xdd.dashuai.cyou
-    path: /
-- alterId: 2
-  cipher: auto
-  download_speed: 3972.4253093495427
-  name: 18-0790-HK
+  download_speed: 4299.03801210328
+  name: 16-0533-RELAY
   network: ws
   port: 80
-  server: 60ca4aee-sv4n40-t8x4vo-12ujz.hk3.p5pv.com
+  server: cf.090227.xyz
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: e5b57156-3c81-11ec-a8bf-f23c91cfbbc9
+  uuid: 81cf95a5-1b81-47ae-bbbf-77e1034003aa
   ws-opts:
-    host: 60ca4aee-sv4n40-t8x4vo-12ujz.hk3.p5pv.com
+    host: cf.090227.xyz
     path: /
 - alterId: 0
   cipher: auto
-  download_speed: 16429.358350827195
-  name: 24-1031-CN
-  network: tcp
-  port: 45073
-  server: xdd.dashuai.cyou
+  download_speed: 3731.602037520619
+  name: 21-0875-NOWHERE
+  network: ws
+  port: 45052
+  server: haa.dashuai.cyou
   skip-cert-verify: true
-  tcp-opts:
-    headers:
-      host: None
-    path: None
   tls: false
   type: vmess
   udp: true
-  uuid: 71279c9a-64e3-4147-83d1-e8b6efe7f45d
+  uuid: 4048c269-9b88-4261-b968-27a1f3fb8087
+  ws-opts:
+    host: haa.dashuai.cyou
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 09-0327-CH
-  - 12-0419-CN
-  - 16-0542-NOWHERE
-  - 17-0583-CN
-  - 18-0790-HK
-  - 24-1031-CN
+  - 11-0370-NOWHERE
+  - 16-0533-RELAY
+  - 21-0875-NOWHERE
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
