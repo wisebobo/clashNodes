@@ -33,51 +33,59 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  download_speed: 24239.170911328656
-  name: 08-0295-CN
+  download_speed: 3436.8922568964567
+  name: 18-0624-RELAY
   network: ws
-  port: 45051
-  server: xdd.dashuai.cyou
+  port: 443
+  server: 172.67.200.13
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: be3d0d28-557c-4c66-8abe-a5d649d7ba3e
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
   ws-opts:
-    host: xdd.dashuai.cyou
+    host: 172.67.200.13
     path: /
-- cipher: chacha20-ietf-poly1305
-  download_speed: 6323.70166017794
-  name: 18-0609-LT
-  password: 1RWwXhwfAB5gAEozU4G2Pg
-  port: 8080
-  server: 45.87.175.181
-  type: ss
-  udp: true
 - alterId: 2
   cipher: auto
-  download_speed: 18954.895020857606
-  name: 20-0738-HK
+  download_speed: 4215.974769059021
+  name: 20-0732-HK
   network: ws
   port: 80
-  server: 547393ea-sv2sg0-t8tsp0-1szmi.hk3.p5pv.com
+  server: af4e4239-sv2sg0-svpmdc-nx3b.hk.p5pv.com
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: ba151628-b3a2-11ef-bdb9-f23c91cfbbc9
+  uuid: 32315324-cf6b-11ed-979b-f23c9164ca5d
   ws-opts:
-    host: 547393ea-sv2sg0-t8tsp0-1szmi.hk3.p5pv.com
+    host: af4e4239-sv2sg0-svpmdc-nx3b.hk.p5pv.com
     path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 11572.399872112557
+  name: 24-0925-NOWHERE
+  network: tcp
+  port: 45060
+  server: haa.dashuai.cyou
+  skip-cert-verify: true
+  tcp-opts:
+    headers:
+      host: None
+    path: None
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 40d84a6c-01d8-4816-9ba6-77bfc467cb80
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 08-0295-CN
-  - 18-0609-LT
-  - 20-0738-HK
+  - 18-0624-RELAY
+  - 20-0732-HK
+  - 24-0925-NOWHERE
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
