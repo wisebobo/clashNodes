@@ -31,27 +31,58 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
+- alterId: 2
   cipher: auto
-  download_speed: 7435.680134375795
-  name: 🏁RELAY-104.21.47.75-0745
+  download_speed: 4074.8619953750203
+  name: 🇭🇰HK-42.2.113.136-0376
   network: ws
-  port: 443
-  server: buyvm.imkcp.eu.org
+  port: 80
+  server: 67d2e62f-sv2sg0-sxx3hh-1m7j8.hk.p5pv.com
+  servername: broadcastlv.chat.bilibili.com
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vmess
-  uuid: 6fb9a750-55b8-4e6e-857b-242b795399dc
+  uuid: 91acf762-a4ea-11ef-b090-f23c91cfbbc9
   ws-opts:
     headers:
-      Host: buyvm.imkcp.eu.org
-    path: /imkcpyyds
-- cipher: chacha20-ietf-poly1305
-  download_speed: 9227.573979925286
-  name: 🇨🇦CA-51.161.118.38-1486
-  password: G!yBwPWH3Vao
-  port: 802
-  server: 51.161.118.38
+      Host: 67d2e62f-sv2sg0-sxx3hh-1m7j8.hk.p5pv.com
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 6457.981841400111
+  name: 🇺🇸US-170.130.92.65-0473
+  network: ws
+  port: 80
+  server: fr2.v2rayserv.com
+  servername: fr2.v2rayserv.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 720e5c4e-4e44-40f6-8e73-7c32e18b61d0
+  ws-opts:
+    headers:
+      Host: fr2.v2rayserv.com
+    path: /sshocean
+- cipher: aes-256-gcm
+  download_speed: 3554.846275233921
+  name: 🇨🇳CN-120.198.71.135-1024
+  password: 449ddcc8-28b6-4dda-bbbc-d473dc243b0b
+  port: 61129
+  server: zf2.10101251.xyz
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 5688.743538508339
+  name: 🇺🇸US-38.68.134.85-6370
+  password: Y6R9pAtvxxzmGC
+  port: 5601
+  server: 38.68.134.85
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 5898.547879069976
+  name: 🇺🇸US-38.91.107.16-6653
+  password: kDWvXYZoTBcGkC4
+  port: 8881
+  server: 38.91.107.16
   type: ss
 proxy-groups:
 - interval: 30
@@ -59,8 +90,11 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🏁RELAY-104.21.47.75-0745
-  - 🇨🇦CA-51.161.118.38-1486
+  - 🇭🇰HK-42.2.113.136-0376
+  - 🇺🇸US-170.130.92.65-0473
+  - 🇨🇳CN-120.198.71.135-1024
+  - 🇺🇸US-38.68.134.85-6370
+  - 🇺🇸US-38.91.107.16-6653
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
