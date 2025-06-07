@@ -31,36 +31,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 5878.559205220408
-  name: 🇳🇱NL-9.163.232.180-0162
-  password: ojcP36n1SouDcnBg9EOZP8
-  port: 1490
-  server: 9.163.232.180
+- cipher: aes-256-cfb
+  download_speed: 5336.137271393697
+  name: 🇻🇳VN-103.186.154.25-0186
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.25
   type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 7586.345047227963
-  name: 🏁RELAY-172.64.155.200-0570
-  network: ws
+- cipher: aes-128-gcm
+  download_speed: 4231.392610777593
+  name: 🇺🇸US-37.19.198.243-0189
+  password: shadowsocks
   port: 443
-  server: 172.64.155.200
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: a8030afd-812a-4afe-a766-9c76ff3eddd4
-  ws-opts:
-    headers:
-      Host: lg4.zhujicn2.com
-    path: /
+  server: 37.19.198.243
+  type: ss
+- cipher: aes-128-gcm
+  download_speed: 3513.490372742201
+  name: 🇯🇵JP-149.22.87.204-0272
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.204
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇳🇱NL-9.163.232.180-0162
-  - 🏁RELAY-172.64.155.200-0570
+  - 🇻🇳VN-103.186.154.25-0186
+  - 🇺🇸US-37.19.198.243-0189
+  - 🇯🇵JP-149.22.87.204-0272
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
