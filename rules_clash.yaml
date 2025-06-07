@@ -30,33 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: aes-256-gcm
-  download_speed: 3880.269997656733
-  name: 🇨🇦CA-134.195.196.149-5768
-  password: cdBIDV42DCwnfIN
-  port: 8119
-  server: 134.195.196.149
-  type: ss
-- cipher: rc4-md5
-  download_speed: 6109.824318096805
-  name: 🇨🇳CN-111.6.86.119-7314
-  password: Paofu
-  plugin: obfs
-  plugin-opts:
-    host: e61b761245.microsoft.com
-    mode: http
-  port: 1173
-  server: 111.6.86.119
-  type: ss
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🇨🇦CA-134.195.196.149-5768
-  - 🇨🇳CN-111.6.86.119-7314
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
