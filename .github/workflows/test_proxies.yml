@@ -2,7 +2,7 @@ name: Test Proxies
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # 每 30 分钟运行一次
+    - cron: '*/30 * * * *'  # 每 30 分钟运行一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
@@ -32,7 +32,8 @@ jobs:
 
     - name: Download nodes.yaml
       run: |
-        curl -o nodes.yaml https://raw.githubusercontent.com/HeFung/V2RaySub/refs/heads/master/sub/sub_merge_yaml.yml
+        # curl -o nodes.yaml https://raw.githubusercontent.com/HeFung/V2RaySub/refs/heads/master/sub/sub_merge_yaml.yml
+        curl -o nodes.yaml https://raw.githubusercontent.com/imyaoxp/clashnode/refs/heads/main/sub/sub_merge_yaml.yml
 
     - name: Download Xray
       run: |
