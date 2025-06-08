@@ -12,7 +12,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 # 用于测试下载速度的大文件 URL，可根据实际情况替换
-TEST_FILE_URL = "https://nbg1-speed.hetzner.com/100MB.bin"
+# TEST_FILE_URL = "https://nbg1-speed.hetzner.com/100MB.bin"
+TEST_FILE_URL = "https://freetestdata.com/wp-content/uploads/2022/02/Free_Test_Data_10MB_MP4.mp4"
 # 下载速度阈值，单位为 KB/s
 DOWNLOAD_SPEED_THRESHOLD = 500
 # 下载超时时间，单位为秒
