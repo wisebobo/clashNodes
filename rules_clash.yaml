@@ -33,26 +33,68 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  download_speed: 15087.205046408175
-  name: 11-0414-NOWHERE
+  download_speed: 22076.036493225485
+  name: 13-0504-RELAY
   network: ws
-  port: 45078
+  port: 443
+  server: bookmyshow.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 648dd621-e9ee-4766-8a57-71f6ff27a7b4
+  ws-opts:
+    host: bookmyshow.com
+    path: /
+- cipher: aes-256-cfb
+  download_speed: 16822.2753845858
+  name: 18-0652-FI
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 37.143.129.230
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  download_speed: 13757.319409303933
+  name: 21-0879-NOWHERE
+  network: ws
+  port: 45060
   server: haa.dashuai.cyou
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 53a37804-9561-4eca-9800-6df9335b0a68
+  uuid: 4048c269-9b88-4261-b968-27a1f3fb8087
   ws-opts:
     host: haa.dashuai.cyou
     path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 16797.1337262263
+  name: 24-0939-NOWHERE
+  network: tcp
+  port: 45078
+  server: haa.dashuai.cyou
+  skip-cert-verify: true
+  tcp-opts:
+    headers:
+      host: None
+    path: None
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 71279c9a-64e3-4147-83d1-e8b6efe7f45d
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 11-0414-NOWHERE
+  - 13-0504-RELAY
+  - 18-0652-FI
+  - 21-0879-NOWHERE
+  - 24-0939-NOWHERE
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
