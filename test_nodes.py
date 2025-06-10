@@ -43,10 +43,10 @@ def test_download_speed(node, proxies):
                 print(f"Node {node['name']} download speed {download_speed:.2f} KB/s is below threshold.")
                 result = None
         else:
-            print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
+            # print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
             result = None
     except Exception as e:
-        print(f"{node['name']} - Error testing proxy {node['server']}:{node['port']}: {e}")
+        # print(f"{node['name']} - Error testing proxy {node['server']}:{node['port']}: {e}")
         result = None
 
     return result
