@@ -31,44 +31,126 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4176.68641854056
+  name: 🇸🇬SG-81.90.189.184-0098
+  password: G!yBwPWH3Vao
+  port: 809
+  server: 81.90.189.184
+  type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 4677.570789065697
-  name: 08-272-RU
+  download_speed: 3702.5435547221527
+  name: 🇩🇪DE-78.47.131.39-1593
   network: ws
-  port: 23096
-  server: 45.147.201.231
-  skip-cert-verify: true
+  port: 8081
+  server: 78.47.131.39
+  skip-cert-verify: false
   tls: false
   type: vmess
-  udp: true
-  uuid: 013bd6d8-a967-41fc-8e45-af59377a18f7
+  uuid: 822a646e-6f69-4758-9008-494e137e26ac
   ws-opts:
-    Host: 45.147.201.231
+    path: /@hashmakvpn 🇩🇪
+- alterId: 0
+  cipher: auto
+  download_speed: 7926.542731505209
+  name: 🇷🇺RU-45.129.2.237-1679
+  network: ws
+  port: 10258
+  server: 45.129.2.237
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: add194d6-192c-4ea3-a5af-eea994390831
+  ws-opts:
     path: /
-- cipher: chacha20-ietf-poly1305
-  download_speed: 6485.003102482326
-  name: 🇬🇧GB-131.145.20.31-1871
-  password: WstuSnlu4ieA9M0L
+- alterId: 0
+  cipher: auto
+  download_speed: 5085.866294813395
+  name: 🇺🇸US-157.254.227.163-1851
+  network: ws
   port: 443
-  server: 131.145.20.31
+  server: xcmg19.dtkj0328.com
+  servername: xcmg19.dtkj0328.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: bc94f742-0e7b-4cf8-e897-6214f9bec8da
+  ws-opts:
+    headers:
+      Host: xcmg19.dtkj0328.com
+    path: /xcmg1234
+- alterId: 0
+  cipher: auto
+  download_speed: 8262.957148458901
+  name: 🏁RELAY-104.29.64.24-4386
+  network: ws
+  port: 80
+  server: 104.29.64.24
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 3f421e27-5bf8-40c9-86cb-7b8c41dddea2
+  ws-opts:
+    path: /lXvA0Vse/
+- cipher: aes-256-gcm
+  download_speed: 15240.132545808125
+  name: 🇺🇸US-38.64.138.145-5922
+  password: PCnnH6SQSnfoS27
+  port: 8091
+  server: 38.64.138.145
   type: ss
 - cipher: aes-256-gcm
-  download_speed: 7364.394607603464
-  name: 🇺🇸US-167.88.63.59-6701
-  password: KixLvKzwjekG00rm
-  port: 5500
-  server: 167.88.63.59
+  download_speed: 3751.7965594968664
+  name: 🇺🇸US-38.68.134.9-6411
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 38.68.134.9
   type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 6497.201758696234
+  name: 🇳🇱NL-5.45.94.28-7035
+  network: ws
+  port: 80
+  server: 5.45.94.28
+  servername: 5.45.94.28
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: bd3d81c6-9d40-4e75-8a23-7c55d69bf801
+  ws-opts:
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  download_speed: 4716.731378444328
+  name: 🏁RELAY-104.17.139.69-7221
+  network: ws
+  port: 80
+  server: 104.17.139.69
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 4bf074f4-7e9c-4e4b-a10d-156e26199729
+  ws-opts:
+    headers:
+      Host: us03s.5d8ecf82.cfd
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 08-272-RU
-  - 🇬🇧GB-131.145.20.31-1871
-  - 🇺🇸US-167.88.63.59-6701
+  - 🇸🇬SG-81.90.189.184-0098
+  - 🇩🇪DE-78.47.131.39-1593
+  - 🇷🇺RU-45.129.2.237-1679
+  - 🇺🇸US-157.254.227.163-1851
+  - 🏁RELAY-104.29.64.24-4386
+  - 🇺🇸US-38.64.138.145-5922
+  - 🇺🇸US-38.68.134.9-6411
+  - 🇳🇱NL-5.45.94.28-7035
+  - 🏁RELAY-104.17.139.69-7221
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
