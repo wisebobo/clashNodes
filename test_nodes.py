@@ -12,8 +12,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 # 用于测试下载速度的大文件 URL，可根据实际情况替换
-# TEST_FILE_URL = "https://nbg1-speed.hetzner.com/100MB.bin"
-TEST_FILE_URL = "https://freetestdata.com/wp-content/uploads/2022/02/Free_Test_Data_10MB_MP4.mp4"
+TEST_FILE_URL = "https://nbg1-speed.hetzner.com/100MB.bin"
+# TEST_FILE_URL = "https://freetestdata.com/wp-content/uploads/2022/02/Free_Test_Data_10MB_MP4.mp4"
 # 下载速度阈值，单位为 KB/s
 DOWNLOAD_SPEED_THRESHOLD = 500
 # 下载超时时间，单位为秒
@@ -84,7 +84,7 @@ def test_ss(node):
         
         result = test_node(node, proxies)
     except Exception as e:
-        print(f"{node['name']} - Error testing Shadowsocks proxy {node['server']}:{node['port']}: {e}")
+        # print(f"{node['name']} - Error testing Shadowsocks proxy {node['server']}:{node['port']}: {e}")
         result = None
     finally:
         # Kill any running ss-local process
@@ -101,7 +101,7 @@ def test_trojan(node):
         response = requests.get("https://www.google.com", proxies=proxies, timeout=10, verify=not node.get("skip-cert-verify", False))
         return test_node(node, proxies)
     except Exception as e:
-        print(f"{node['name']} - Error testing Trojan proxy {node['server']}:{node['port']}: {e}")
+        # print(f"{node['name']} - Error testing Trojan proxy {node['server']}:{node['port']}: {e}")
         return None
 
 # 测试 Vmess 代理
@@ -174,7 +174,7 @@ def test_vmess(node):
         
         return test_node(node, proxies, process)
     except Exception as e:
-        print(f"{node['name']} - Error testing Vmess proxy {node['server']}:{node['port']}: {e}")
+        # print(f"{node['name']} - Error testing Vmess proxy {node['server']}:{node['port']}: {e}")
         return None
 
 # 下载 nodes.yaml 文件
