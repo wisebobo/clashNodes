@@ -30,13 +30,45 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-128-gcm
+  download_speed: 13036.085939267767
+  name: 18-0697-US
+  password: shadowsocks
+  port: 443
+  server: 212.102.47.131
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  download_speed: 16499.2329277257
+  name: 🇨🇦CA-196.247.59.154-0439
+  password: G!yBwPWH3Vao
+  port: 800
+  server: 196.247.59.154
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 14080.775997965797
+  name: 🏁RELAY-190.93.246.4-0475
+  network: ws
+  port: 443
+  server: 190.93.246.4
+  servername: lg10.cfcdn1.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    path: /A2DJOPFT
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 18-0697-US
+  - 🇨🇦CA-196.247.59.154-0439
+  - 🏁RELAY-190.93.246.4-0475
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
