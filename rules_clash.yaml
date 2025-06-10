@@ -31,29 +31,53 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 2
+- cipher: chacha20-ietf-poly1305
+  download_speed: 11835.273931636568
+  name: 18-634-ES
+  password: f8f7aCzcPKbsF8p3
+  port: 990
+  server: 45.154.206.192
+  type: ss
+  udp: true
+- alterId: 0
   cipher: auto
-  download_speed: 14152.689791074721
-  name: 🇭🇰HK-1.65.202.165-0376
+  download_speed: 7442.4007874068
+  name: 🏁RELAY-23.227.38.25-0839
   network: ws
-  port: 80
-  server: 07d2e2cb-sv0xs0-svv72o-1e0ty.hk3.p5pv.com
-  servername: broadcastlv.chat.bilibili.com
+  port: 443
+  server: 23.227.38.25
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
-  uuid: ccd9704a-f980-11eb-a0fc-f23c913c8d2b
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
   ws-opts:
     headers:
-      Host: 07d2e2cb-sv0xs0-svv72o-1e0ty.hk3.p5pv.com
-    path: /
+      Host: oplg1.cfcdn2.xyz
+    path: /AUIKN8AU
+- cipher: aes-256-gcm
+  download_speed: 12589.166258456056
+  name: 🇺🇸US-167.88.63.82-6509
+  password: Y6R9pAtvxxzmGC
+  port: 5600
+  server: 167.88.63.82
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4384.049337231829
+  name: 🇩🇪DE-46.4.162.18-8281
+  password: f8f7aCzcPKbsF8p3
+  port: 30696
+  server: 46.4.162.18
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇭🇰HK-1.65.202.165-0376
+  - 18-634-ES
+  - 🏁RELAY-23.227.38.25-0839
+  - 🇺🇸US-167.88.63.82-6509
+  - 🇩🇪DE-46.4.162.18-8281
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
