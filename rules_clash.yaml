@@ -31,32 +31,53 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 3414.3661707207057
-  name: 🇰🇷KR-13.125.24.112-3750
-  network: ws
-  port: 42517
-  server: 13.125.24.112
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-opts:
-    path: /
 - cipher: aes-256-gcm
-  download_speed: 4674.049998089556
-  name: 🇺🇸US-38.68.135.19-5922
-  password: KixLvKzwjekG00rm
-  port: 8080
-  server: 38.68.135.19
+  download_speed: 13982.26226978087
+  name: 18-735-US
+  password: PCnnH6SQSnfoS27
+  port: 8090
+  server: 38.121.43.71
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  download_speed: 17104.240390519662
+  name: 25-828-NL
+  password: rtigVwrcq9NNWgXBjjfzjx
+  port: 52461
+  server: 62.60.247.40
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  download_speed: 3901.6765445544647
+  name: 🇨🇳CN-183.240.211.96-0195
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    host: 202506070920094-RCFIknio7m.download.microsoft.com
+    mode: http
+  port: 8766
+  server: cn01.efan8867801.xyz
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 13555.59276454706
+  name: 🇬🇧GB-185.5.38.111-5122
+  password: iZDJs2CDckHKqJ5W7cpvCq2veqsqWn95iqs6Kr6F3YNnyMsk2uPdRrChQfShvH1v56Br1qWEW44qJna5QcMcZF7RCJmdvwuq
+  port: 55988
+  server: 185.5.38.111
   type: ss
 - cipher: aes-256-gcm
-  download_speed: 14828.21510086543
-  name: 🇺🇸US-38.68.135.123-6656
-  password: FoOiGlkAA9yPEGP
-  port: 7306
-  server: 38.68.135.123
+  download_speed: 4401.4311370000805
+  name: 🇺🇸US-38.91.107.16-6386
+  password: XKFKl2rULjIp74
+  port: 8009
+  server: 38.91.107.16
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 11705.308549104648
+  name: 🇺🇸US-167.88.61.175-6585
+  password: Y6R9pAtvxxzmGC
+  port: 5600
+  server: 167.88.61.175
   type: ss
 proxy-groups:
 - interval: 30
@@ -64,9 +85,12 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇰🇷KR-13.125.24.112-3750
-  - 🇺🇸US-38.68.135.19-5922
-  - 🇺🇸US-38.68.135.123-6656
+  - 18-735-US
+  - 25-828-NL
+  - 🇨🇳CN-183.240.211.96-0195
+  - 🇬🇧GB-185.5.38.111-5122
+  - 🇺🇸US-38.91.107.16-6386
+  - 🇺🇸US-167.88.61.175-6585
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
