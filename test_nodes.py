@@ -3,6 +3,7 @@ import yaml
 import json
 import subprocess
 import time
+import glob
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
 import urllib3
@@ -189,14 +190,39 @@ def download_nodes_yaml(url):
         exit(1)
 
 # 读取节点文件
-def read_nodes_yaml(file_path):
-    with open(file_path, "r", encoding="utf-8") as file:
-        return yaml.safe_load(file)
+def read_nodes_yaml(*file_patterns):
+    all_data = []
+    unique_nodes = set()
+    for pattern in file_patterns:
+        # 根据文件通配符模式获取所有匹配的文件路径
+        file_paths = glob.glob(pattern)
+        for file_path in file_paths:
+            try:
+                with open(file_path, "r", encoding="utf-8") as file:
+                    data = yaml.safe_load(file)
+                    if data and "proxies" in data:
+                        for node in data["proxies"]:
+                            # 选择能唯一标识节点的关键信息
+                            node_key = (
+                                node.get("type"),
+                                node.get("server"),
+                                node.get("port"),
+                                node.get("cipher"),
+                                node.get("password"),
+                                node.get("uuid")
+                            )
+                            if node_key not in unique_nodes:
+                                unique_nodes.add(node_key)
+                                all_data.append(node)
+            except Exception as e:
+                print(f"Error reading {file_path}: {e}")
+
+    return {"proxies": all_data}
 
 # 主函数
 def main():
     # 读取节点文件
-    data = read_nodes_yaml("nodes.yaml")
+    data = read_nodes_yaml("nodes_*.yaml")
 
     # 提取代理列表
     proxies = data.get("proxies", [])
