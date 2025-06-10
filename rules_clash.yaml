@@ -30,46 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: aes-256-cfb
-  download_speed: 12819.268387589696
-  name: 18-599-TR
-  password: p9z5BVADH2YFs3MN
-  port: 9040
-  server: 45.89.52.66
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  download_speed: 13822.266047596073
-  name: 🏁RELAY-141.101.114.25-0705
-  network: ws
-  port: 443
-  server: 141.101.114.25
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- cipher: aes-256-gcm
-  download_speed: 11912.815874393198
-  name: 🇺🇸US-38.86.135.27-5480
-  password: g5MeD6Ft3CWlJId
-  port: 5003
-  server: 38.86.135.27
-  type: ss
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 18-599-TR
-  - 🏁RELAY-141.101.114.25-0705
-  - 🇺🇸US-38.86.135.27-5480
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
