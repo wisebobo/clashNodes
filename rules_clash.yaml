@@ -31,53 +31,134 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 11835.273931636568
-  name: 18-634-ES
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 45.154.206.192
+- alterId: 0
+  cipher: auto
+  download_speed: 6491.632721995729
+  name: 08-254-NOWHERE
+  network: ws
+  port: 45060
+  server: haa.dashuai.cyou
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e92b95a7-5cf3-4a03-b85d-7577ebf54e8a
+  ws-opts:
+    Host: haa.dashuai.cyou
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 15385.214112765558
+  name: 12-370-CN
+  network: ws
+  port: 45065
+  server: xdd.dashuai.cyou
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ff4f5dd4-02e9-41de-ad73-69a0f8acd489
+  ws-opts:
+    Host: xdd.dashuai.cyou
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 16044.98014124397
+  name: 18-636-RELAY
+  network: ws
+  port: 80
+  server: www.hdmoli.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 2f38f848-a899-4c87-9807-207a41615e3c
+  ws-opts:
+    Host: www.hdmoli.com
+    path: /
+- cipher: aes-256-gcm
+  download_speed: 14461.008668927248
+  name: 18-697-US
+  password: faBAoD54k87UJG7
+  port: 2375
+  server: 38.121.43.71
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  download_speed: 5810.871006137314
+  name: 18-607-GB
+  password: shadowsocks
+  port: 443
+  server: 212.102.53.78
   type: ss
   udp: true
 - alterId: 0
   cipher: auto
-  download_speed: 7442.4007874068
-  name: 🏁RELAY-23.227.38.25-0839
+  download_speed: 4161.756181071358
+  name: 21-793-NOWHERE
+  network: ws
+  port: 45066
+  server: haa.dashuai.cyou
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 3c5d95d7-7e0e-41b6-a8ad-a6d2632916f3
+  ws-opts:
+    Host: haa.dashuai.cyou
+    path: /
+- cipher: aes-256-gcm
+  download_speed: 6029.305618886753
+  name: 🇿🇦ZA-129.232.133.62-0203
+  password: MI87OC78BE5ED5MX
+  port: 20015
+  server: 129.232.133.62
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 3950.0795319391423
+  name: 🇷🇺RU-185.143.220.25-0506
   network: ws
   port: 443
-  server: 23.227.38.25
+  server: 185.143.220.25
+  servername: dengxin.one
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+  ws-opts:
+    path: /6e9EtZ2dL
+- alterId: 0
+  cipher: auto
+  download_speed: 8799.884705265953
+  name: 🇨🇳CN-14.215.40.185-1446
+  network: ws
+  port: 5100
+  server: st-2.dnspro.icu
+  servername: lg-hkg-b.gcorelabs.info
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
   ws-opts:
     headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- cipher: aes-256-gcm
-  download_speed: 12589.166258456056
-  name: 🇺🇸US-167.88.63.82-6509
-  password: Y6R9pAtvxxzmGC
-  port: 5600
-  server: 167.88.63.82
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  download_speed: 4384.049337231829
-  name: 🇩🇪DE-46.4.162.18-8281
-  password: f8f7aCzcPKbsF8p3
-  port: 30696
-  server: 46.4.162.18
-  type: ss
+      Host: st-2.dnspro.icu
+    path: /iso
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 18-634-ES
-  - 🏁RELAY-23.227.38.25-0839
-  - 🇺🇸US-167.88.63.82-6509
-  - 🇩🇪DE-46.4.162.18-8281
+  - 08-254-NOWHERE
+  - 12-370-CN
+  - 18-636-RELAY
+  - 18-697-US
+  - 18-607-GB
+  - 21-793-NOWHERE
+  - 🇿🇦ZA-129.232.133.62-0203
+  - 🇷🇺RU-185.143.220.25-0506
+  - 🇨🇳CN-14.215.40.185-1446
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
