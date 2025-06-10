@@ -33,40 +33,59 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  download_speed: 7272.229204123377
-  name: 🏁RELAY-172.67.218.162-0596
+  download_speed: 9263.49638289525
+  name: 21-782-HK
   network: ws
-  port: 443
-  server: 172.67.218.162
-  skip-cert-verify: false
-  tls: true
+  port: 19901
+  server: xg.dashuai.cyou
+  skip-cert-verify: true
+  tls: false
   type: vmess
-  uuid: 70d9bf20-3e6b-4cd3-ff28-b62567ff5a23
+  udp: true
+  uuid: 3c5d95d7-7e0e-41b6-a8ad-a6d2632916f3
   ws-opts:
-    headers:
-      Host: eu.ptuu.tk
+    Host: xg.dashuai.cyou
     path: /
+- cipher: chacha20-ietf-poly1305
+  download_speed: 14024.089474568058
+  name: 🇸🇬SG-217.197.161.166-0088
+  password: G!yBwPWH3Vao
+  port: 809
+  server: 217.197.161.166
+  type: ss
+- cipher: aes-128-cfb
+  download_speed: 9009.981742847918
+  name: 🇨🇳CN-14.29.124.168-1646
+  password: QazEdcTgb159@$*
+  port: 25233
+  server: 14.29.124.168
+  type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 16571.975961770342
-  name: 🇫🇮FI-65.109.137.157-3802
-  network: ws
-  port: 80
-  server: 65.109.137.157
+  download_speed: 4020.045847778621
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: 🇭🇰HK-47.242.61.125-7079
+  network: http
+  port: 51784
+  server: 47.242.61.125
+  servername: 47.242.61.125
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
-  ws-opts:
-    path: /telegram-id-@privatevpns
+  uuid: 431c4c01-b596-4d12-a9e6-4f7f21fe82ba
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🏁RELAY-172.67.218.162-0596
-  - 🇫🇮FI-65.109.137.157-3802
+  - 21-782-HK
+  - 🇸🇬SG-217.197.161.166-0088
+  - 🇨🇳CN-14.29.124.168-1646
+  - 🇭🇰HK-47.242.61.125-7079
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
