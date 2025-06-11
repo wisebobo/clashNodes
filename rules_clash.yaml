@@ -30,37 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: aes-256-cfb
-  download_speed: 8275.401637008294
-  name: 🇹🇷TR-45.89.52.66-165
-  password: dU3DSNS8wYPXzEKw
-  port: 9029
-  server: 45.89.52.66
-  type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 7234.465342916184
-  name: 🏁RELAY-104.21.96.1-135
-  network: ws
-  port: 80
-  server: 2sdfre3.999820.xyz
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 90f357dd-79ac-47c6-b0b8-958e2d19de07
-  ws-opts:
-    headers:
-      Host: 2sdfre3.999820.xyz
-    path: /
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🇹🇷TR-45.89.52.66-165
-  - 🏁RELAY-104.21.96.1-135
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
