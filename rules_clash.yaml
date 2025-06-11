@@ -30,35 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 7831.910022831423
-  name: 🇸🇬SG-217.197.161.138-0098
-  password: G!yBwPWH3Vao
-  port: 810
-  server: 217.197.161.138
-  type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 11980.87490789022
-  name: 🇷🇺RU-45.147.201.231-0183
-  network: ws
-  port: 20056
-  server: 45.147.201.231
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: bf1152b2-76ed-422b-9b1c-2ba90fba44d5
-  ws-opts:
-    path: /
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🇸🇬SG-217.197.161.138-0098
-  - 🇷🇺RU-45.147.201.231-0183
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
