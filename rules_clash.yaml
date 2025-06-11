@@ -31,36 +31,20 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 5594.401981227936
-  name: 🇩🇪DE-52.58.249.78-0442
-  password: pryhyxya
-  port: 57824
-  server: 52.58.249.78
-  type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 5348.91932201539
-  name: 🇦🇺AU-103.224.212.211-0734
-  network: ws
+- cipher: aes-256-cfb
+  download_speed: 3469.6740312156066
+  name: 🇺🇸US-45.79.111.214-0535
+  password: 9d6cceaa373bf2c8acb22e60b6a58be6
   port: 443
-  server: 55.72img.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-opts:
-    headers:
-      Host: 55.72img.xyz
-    path: /
+  server: 45.79.111.214
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇩🇪DE-52.58.249.78-0442
-  - 🇦🇺AU-103.224.212.211-0734
+  - 🇺🇸US-45.79.111.214-0535
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
