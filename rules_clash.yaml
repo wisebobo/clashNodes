@@ -30,46 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 4814.8866532298725
-  name: 🇸🇬SG-139.99.61.154-1168
-  network: ws
-  port: 80
-  server: 139.99.61.154
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 932a1f0d-f5ce-418d-8560-c88f53c534b9
-  ws-opts:
-    headers:
-      Host: 139.99.61.154
-    path: /vmess
-- alterId: 1
-  cipher: auto
-  download_speed: 10946.58894554822
-  name: 🇹🇷TR-103.215.218.222-7476
-  network: ws
-  port: 443
-  server: 103.215.218.222
-  servername: 103.215.218.222
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: 103.215.218.222
-    path: linkvws
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🇸🇬SG-139.99.61.154-1168
-  - 🇹🇷TR-103.215.218.222-7476
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
