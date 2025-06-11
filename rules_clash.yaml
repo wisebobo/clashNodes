@@ -30,13 +30,45 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-gcm
+  download_speed: 3708.7541590281508
+  name: 🇺🇸US-167.88.63.79-0431
+  password: Y6R9pAtvxxzmGC
+  port: 3306
+  server: 167.88.63.79
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 3919.145001211112
+  name: 🇨🇦CA-196.247.59.154-0445
+  password: G!yBwPWH3Vao
+  port: 800
+  server: 196.247.59.154
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 7502.2515589954655
+  name: 🏁RELAY-172.67.42.232-0620
+  network: ws
+  port: 80
+  server: 172.67.42.232
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 4bf074f4-7e9c-4e4b-a10d-156e26199729
+  ws-opts:
+    headers:
+      Host: us03s.5d8ecf82.cfd
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇺🇸US-167.88.63.79-0431
+  - 🇨🇦CA-196.247.59.154-0445
+  - 🏁RELAY-172.67.42.232-0620
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
