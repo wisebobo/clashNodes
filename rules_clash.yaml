@@ -31,34 +31,83 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: aes-256-cfb
+  download_speed: 6277.025461738293
+  name: 🇪🇸ES-5.188.181.201-201
+  password: ZET59LF6DvCC8KVt
+  port: 9005
+  server: 5.188.181.201
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4202.230621659739
+  name: 🇫🇷FR-51.195.119.47-210
+  password: qXvO7zYU7KeaB0Md7DQLow
+  port: 1080
+  server: 51.195.119.47
+  type: ss
 - cipher: aes-256-gcm
-  download_speed: 16053.113957793632
-  name: 🇺🇸US-38.114.114.19-0420
-  password: pKEW8JPByTVTLtM
-  port: 443
-  server: 38.114.114.19
+  download_speed: 13766.177171440277
+  name: 🇫🇷FR-195.154.200.150-0432
+  password: faBAoD54k87UJG7
+  port: 2376
+  server: 195.154.200.150
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 3543.7841128431965
+  name: 🇺🇸US-38.75.136.34-0052
+  password: KixLvKzwjekG00rm
+  port: 8080
+  server: 38.75.136.34
+  type: ss
+- cipher: aes-256-cfb
+  download_speed: 13324.926402101626
+  name: 🇧🇬BG-213.183.63.221-0450
+  password: UkXRsXvR6buDMG2Y
+  port: 9001
+  server: 213.183.63.221
   type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 5938.849511504822
-  name: 🇫🇷FR-146.59.43.129-0602
+  download_speed: 8462.165705952339
+  name: 🇻🇳VN-103.166.183.226-0483
+  network: ws
+  port: 80
+  server: 103.166.183.226
+  servername: dl.kgvn.garenanow.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: ef919c67-6638-4416-91af-9a13ffe5b9ca
+  ws-opts:
+    path: /tandung288.click
+- alterId: 64
+  cipher: auto
+  download_speed: 14334.480532158708
+  name: 🏁RELAY-172.67.196.0-0608
   network: ws
   port: 443
-  server: 146.59.43.129
+  server: 172.67.196.0
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 54c6c823-4957-4c6c-b10c-359bc51f7cc3
+  uuid: 4db99e96-3ee3-419c-b1fb-856975801380
   ws-opts:
-    path: /
+    headers:
+      Host: localhoster.ml
+    path: /ray
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-38.114.114.19-0420
-  - 🇫🇷FR-146.59.43.129-0602
+  - 🇪🇸ES-5.188.181.201-201
+  - 🇫🇷FR-51.195.119.47-210
+  - 🇫🇷FR-195.154.200.150-0432
+  - 🇺🇸US-38.75.136.34-0052
+  - 🇧🇬BG-213.183.63.221-0450
+  - 🇻🇳VN-103.166.183.226-0483
+  - 🏁RELAY-172.67.196.0-0608
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
