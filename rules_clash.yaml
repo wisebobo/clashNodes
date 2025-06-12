@@ -31,36 +31,26 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
+- alterId: 64
   cipher: auto
-  download_speed: 11808.915868106136
-  name: 🇭🇰HK-1.36.223.103-0162
+  download_speed: 11340.349466025216
+  name: 🇳🇴NO-46.29.218.84-0609
   network: ws
-  port: 8080
-  server: 9af862d5-sxsxs0-tgl02u-1jr1u.hgc1.tcpbbr.net
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 2c01eae6-0b6a-11ee-a058-f23c91369f2d
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
-- cipher: aes-256-gcm
-  download_speed: 9184.02472174385
-  name: 🇺🇸US-38.114.114.19-0424
-  password: pKEW8JPByTVTLtM
   port: 443
-  server: 38.114.114.19
-  type: ss
+  server: 46.29.218.84
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: f7a456da-9886-4dd7-b193-4c59a726219c
+  ws-opts:
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇭🇰HK-1.36.223.103-0162
-  - 🇺🇸US-38.114.114.19-0424
+  - 🇳🇴NO-46.29.218.84-0609
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
