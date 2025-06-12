@@ -31,19 +31,27 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-cfb
-  download_speed: 5167.402181083827
-  name: 🇩🇪DE-80.92.204.106-236
-  password: a3GFYt36Sm82Vys9
-  port: 9000
-  server: 80.92.204.106
-  type: ss
-- cipher: aes-256-cfb
-  download_speed: 5251.987248493622
-  name: 🇻🇳VN-103.186.154.22-244
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.22
+- alterId: 0
+  cipher: auto
+  download_speed: 11808.915868106136
+  name: 🇭🇰HK-1.36.223.103-0162
+  network: ws
+  port: 8080
+  server: 9af862d5-sxsxs0-tgl02u-1jr1u.hgc1.tcpbbr.net
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 2c01eae6-0b6a-11ee-a058-f23c91369f2d
+  ws-opts:
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+    path: /
+- cipher: aes-256-gcm
+  download_speed: 9184.02472174385
+  name: 🇺🇸US-38.114.114.19-0424
+  password: pKEW8JPByTVTLtM
+  port: 443
+  server: 38.114.114.19
   type: ss
 proxy-groups:
 - interval: 30
@@ -51,8 +59,8 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇩🇪DE-80.92.204.106-236
-  - 🇻🇳VN-103.186.154.22-244
+  - 🇭🇰HK-1.36.223.103-0162
+  - 🇺🇸US-38.114.114.19-0424
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
