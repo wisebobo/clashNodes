@@ -31,35 +31,12 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 9634.75411258517
-  name: 🏁RELAY-104.18.149.76-208
-  network: ws
-  port: 443
-  server: 104.18.149.76
-  servername: us.kkp.me.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-  ws-opts:
-    headers:
-      Host: us.kkp.me.eu.org
-    path: /
-- cipher: aes-128-cfb
-  download_speed: 9749.845428019771
-  name: 🇨🇳CN-14.29.124.174-0104
-  password: QazEdcTgb159@$*
-  port: 11040
-  server: 14.29.124.174
-  type: ss
-- cipher: aes-256-gcm
-  download_speed: 7576.600893273053
-  name: 🇺🇸US-142.202.48.34-7058
-  password: faBAoD54k87UJG7
-  port: 2376
-  server: 142.202.48.34
+- cipher: chacha20-ietf-poly1305
+  download_speed: 11244.940644064836
+  name: 🇨🇳CN-120.232.218.106-0728
+  password: b0c621cf-8041-4029-ad31-b19173bb57e0
+  port: 31541
+  server: freem.vidalith.com
   type: ss
 proxy-groups:
 - interval: 30
@@ -67,9 +44,7 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🏁RELAY-104.18.149.76-208
-  - 🇨🇳CN-14.29.124.174-0104
-  - 🇺🇸US-142.202.48.34-7058
+  - 🇨🇳CN-120.232.218.106-0728
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
