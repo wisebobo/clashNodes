@@ -31,29 +31,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: aes-256-gcm
+  download_speed: 10399.670985319306
+  name: 🇩🇪DE-145.239.1.100-0468
+  password: KixLvKzwjekG00rm
+  port: 8080
+  server: 145.239.1.100
+  type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 11478.384703437972
-  name: 🏁RELAY-104.21.112.1-181
+  download_speed: 10353.753185762018
+  name: 🏁RELAY-172.67.145.166-0959
   network: ws
-  port: 2096
-  server: 104.21.112.1
-  servername: de01.sh-cloudflare.sbs
+  port: 443
+  server: 172.67.145.166
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: b3928f8d-ea81-4d75-bcec-4016a072adff
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
   ws-opts:
     headers:
-      Host: de01.sh-cloudflare.sbs
-    path: /
+      Host: oplg1.cfcdn2.xyz
+    path: /AUIKN8AU
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🏁RELAY-104.21.112.1-181
+  - 🇩🇪DE-145.239.1.100-0468
+  - 🏁RELAY-172.67.145.166-0959
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
