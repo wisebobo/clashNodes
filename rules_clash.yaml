@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 11701.098797393046
+  name: 🇨🇳CN-120.241.236.204-0039
+  password: f65324a4-f64b-4f22-bf88-8a151db0909c
+  port: 33400
+  server: 120.241.236.204
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇨🇳CN-120.241.236.204-0039
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
