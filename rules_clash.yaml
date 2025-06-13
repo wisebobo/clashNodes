@@ -30,13 +30,30 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 11478.384703437972
+  name: 🏁RELAY-104.21.112.1-181
+  network: ws
+  port: 2096
+  server: 104.21.112.1
+  servername: de01.sh-cloudflare.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: b3928f8d-ea81-4d75-bcec-4016a072adff
+  ws-opts:
+    headers:
+      Host: de01.sh-cloudflare.sbs
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🏁RELAY-104.21.112.1-181
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
