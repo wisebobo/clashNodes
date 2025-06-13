@@ -30,13 +30,29 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 11957.600825406478
+  name: 🇨🇳CN-36.133.220.204-0000
+  password: f65324a4-f64b-4f22-bf88-8a151db0909c
+  port: 17207
+  server: 36.133.220.204
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 11890.166953610831
+  name: 🇯🇵JP-45.66.134.176-0124
+  password: G!yBwPWH3Vao
+  port: 803
+  server: 45.66.134.176
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇨🇳CN-36.133.220.204-0000
+  - 🇯🇵JP-45.66.134.176-0124
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
