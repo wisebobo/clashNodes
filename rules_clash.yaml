@@ -30,13 +30,45 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-cfb
+  download_speed: 8288.786564320828
+  name: 🇻🇳VN-103.186.154.33-210
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.33
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 6667.004075006369
+  name: 🇺🇸US-38.110.1.88-248
+  password: faBAoD54k87UJG7
+  port: 2376
+  server: 38.110.1.88
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 11664.530586519606
+  name: 🇫🇷FR-195.154.200.150-0467
+  password: faBAoD54k87UJG7
+  port: 2376
+  server: 195.154.200.150
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 8792.469118136269
+  name: 🇺🇸US-38.75.136.135-6410
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 38.75.136.135
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇻🇳VN-103.186.154.33-210
+  - 🇺🇸US-38.110.1.88-248
+  - 🇫🇷FR-195.154.200.150-0467
+  - 🇺🇸US-38.75.136.135-6410
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
