@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-gcm
+  download_speed: 8619.208181129734
+  name: 🇺🇸US-38.121.43.71-250
+  password: TEzjfAYq2IjtuoS
+  port: 6697
+  server: 38.121.43.71
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇺🇸US-38.121.43.71-250
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
