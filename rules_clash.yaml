@@ -31,28 +31,20 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 11495.542976769299
-  name: 🇫🇷FR-141.94.141.20-4750
-  network: ws
-  port: 80
-  server: 141.94.141.20
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: e20d4b49-06e4-4923-ae85-b2e78344b603
-  ws-opts:
-    headers:
-      Host: tms.dingtalk.com
-    path: /
+- cipher: aes-256-gcm
+  download_speed: 10072.393968074559
+  name: 🇺🇸US-38.121.43.71-279
+  password: Y6R9pAtvxxzmGC
+  port: 5601
+  server: 38.121.43.71
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇫🇷FR-141.94.141.20-4750
+  - 🇺🇸US-38.121.43.71-279
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
