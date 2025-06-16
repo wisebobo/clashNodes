@@ -30,13 +30,37 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-cfb
+  download_speed: 6449.074627322858
+  name: 🇲🇰MK-46.183.185.15-265
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 46.183.185.15
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 4795.582465609159
+  name: 🇨🇦CA-85.208.108.20-0027
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  server: 85.208.108.20
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 4737.897979979884
+  name: 🇨🇳CN-112.5.37.214-0029
+  password: 4b5d7ed5-e1a3-4947-b955-58a39a29cc29
+  port: 38087
+  server: zh01lv5in04.feiguayun.xyz
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇲🇰MK-46.183.185.15-265
+  - 🇨🇦CA-85.208.108.20-0027
+  - 🇨🇳CN-112.5.37.214-0029
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
