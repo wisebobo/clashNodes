@@ -31,28 +31,58 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 9979.669425289814
-  name: 🇨🇴CO-181.119.30.20-208
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 181.119.30.20
+- alterId: 0
+  cipher: auto
+  download_speed: 11911.131290702511
+  name: 🏁RELAY-104.21.112.1-184
+  network: ws
+  port: 2096
+  server: 104.21.112.1
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: b3928f8d-ea81-4d75-bcec-4016a072adff
+  ws-opts:
+    headers:
+      Host: de01.sh-cloudflare.sbs
+    path: /
+- cipher: aes-256-gcm
+  download_speed: 12226.137198116368
+  name: 🇺🇸US-169.197.143.232-0072
+  password: FoOiGlkAA9yPEGP
+  port: 7307
+  server: 169.197.143.232
   type: ss
 - cipher: aes-256-gcm
-  download_speed: 4109.856994355731
-  name: 🇺🇸US-38.114.114.19-6570
-  password: PCnnH6SQSnfoS27
-  port: 8090
-  server: 38.114.114.19
+  download_speed: 12119.841612922497
+  name: 🇺🇸US-38.68.134.85-0454
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  server: 38.68.134.85
   type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 4262.520013279315
+  name: 🏁RELAY-162.159.138.46-9047
+  network: ws
+  port: 2095
+  server: 162.159.138.46
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+  ws-opts:
+    path: /hgcefomn
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇨🇴CO-181.119.30.20-208
-  - 🇺🇸US-38.114.114.19-6570
+  - 🏁RELAY-104.21.112.1-184
+  - 🇺🇸US-169.197.143.232-0072
+  - 🇺🇸US-38.68.134.85-0454
+  - 🏁RELAY-162.159.138.46-9047
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
