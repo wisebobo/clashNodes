@@ -30,13 +30,29 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4840.323658397445
+  name: 🇸🇬SG-217.197.161.138-0174
+  password: G!yBwPWH3Vao
+  port: 807
+  server: 217.197.161.138
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 6331.265314555576
+  name: 🇩🇪DE-52.58.249.78-0504
+  password: pryhyxya
+  port: 57824
+  server: 52.58.249.78
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇸🇬SG-217.197.161.138-0174
+  - 🇩🇪DE-52.58.249.78-0504
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
