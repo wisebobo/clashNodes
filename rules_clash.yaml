@@ -30,13 +30,38 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4197.053890035061
+  name: 🇸🇬SG-217.197.161.136-0162
+  password: G!yBwPWH3Vao
+  port: 807
+  server: 217.197.161.136
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 4233.079921531998
+  name: 🏁RELAY-104.18.43.21-0240
+  network: ws
+  port: 8443
+  server: 104.18.43.21
+  servername: mailman-backing-facilitate-cents.trycloudflare.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: b3b28da5-a27d-4d33-ee13-dcdf5c7fc45b
+  ws-opts:
+    headers:
+      Host: mailman-backing-facilitate-cents.trycloudflare.com
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇸🇬SG-217.197.161.136-0162
+  - 🏁RELAY-104.18.43.21-0240
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
