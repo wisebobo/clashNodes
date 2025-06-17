@@ -31,60 +31,20 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-cfb
-  download_speed: 4261.426376050851
-  name: 🇻🇳VN-103.186.154.27-217
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.27
+- cipher: aes-256-gcm
+  download_speed: 4125.313093717637
+  name: 🇺🇸US-38.121.43.71-239
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 38.121.43.71
   type: ss
-- cipher: aes-256-cfb
-  download_speed: 3961.2992924502983
-  name: 🇷🇸RS-194.71.126.31-223
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 194.71.126.31
-  type: ss
-- cipher: aes-256-cfb
-  download_speed: 3864.5500228554556
-  name: 🇹🇷TR-45.89.52.66-271
-  password: PeHSHm5SqEjBuEXE
-  port: 9065
-  server: 45.89.52.66
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  download_speed: 6503.1785356105265
-  name: 🇸🇬SG-217.197.161.164-0189
-  password: G!yBwPWH3Vao
-  port: 806
-  server: 217.197.161.164
-  type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 19305.451955084074
-  name: 🇫🇷FR-194.9.172.65-7610
-  network: ws
-  port: 443
-  server: 194.9.172.65
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 8d90c129-4156-4d6c-9115-24df25f26a02
-  ws-opts:
-    headers:
-      Host: beyonddbc.sbs
-    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇻🇳VN-103.186.154.27-217
-  - 🇷🇸RS-194.71.126.31-223
-  - 🇹🇷TR-45.89.52.66-271
-  - 🇸🇬SG-217.197.161.164-0189
-  - 🇫🇷FR-194.9.172.65-7610
+  - 🇺🇸US-38.121.43.71-239
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
