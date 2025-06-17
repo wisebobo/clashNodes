@@ -30,13 +30,37 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 3644.1624777357583
+  name: 🇸🇬SG-217.197.161.138-0169
+  password: G!yBwPWH3Vao
+  port: 802
+  server: 217.197.161.138
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 13234.562877239912
+  name: 🇦🇹AT-212.183.88.24-7849
+  network: ws
+  port: 443
+  server: 212.183.88.24
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    headers:
+      Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇸🇬SG-217.197.161.138-0169
+  - 🇦🇹AT-212.183.88.24-7849
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
