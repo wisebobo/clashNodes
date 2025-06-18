@@ -30,13 +30,37 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 11006.643491462035
+  name: 🏁RELAY-172.67.155.172-194
+  network: ws
+  port: 80
+  server: cloudflare-ip.mofashi.ltd
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 2f38f848-a899-4c87-9807-207a41615e3c
+  ws-opts:
+    headers:
+      Host: us.freeyyds.dpdns.org
+    path: /
+- cipher: chacha20-ietf-poly1305
+  download_speed: 12236.423566158017
+  name: 🇸🇬SG-217.197.161.164-0151
+  password: G!yBwPWH3Vao
+  port: 806
+  server: 217.197.161.164
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🏁RELAY-172.67.155.172-194
+  - 🇸🇬SG-217.197.161.164-0151
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
