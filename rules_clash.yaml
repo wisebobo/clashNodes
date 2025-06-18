@@ -31,28 +31,21 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 9609.211525190365
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: 🇭🇰HK-8.210.248.210-1984
-  network: http
-  port: 54570
-  server: 8.210.248.210
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: aa1d02a4-60e6-4671-8107-4d5e6bacd265
+- cipher: aes-128-gcm
+  download_speed: 9802.958790580935
+  name: 07-207-CN
+  password: 3946ff88-2d5c-4cb4-b06b-3375d90a6a6b
+  port: '12045'
+  server: mdss-other.04z3susick.download
+  type: ss
+  udp: 'true'
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇭🇰HK-8.210.248.210-1984
+  - 07-207-CN
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
