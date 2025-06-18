@@ -31,20 +31,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-cfb
-  download_speed: 9594.218852745624
-  name: 🇻🇳VN-103.186.155.20-206
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.20
+- cipher: chacha20-ietf-poly1305
+  download_speed: 12172.211595742328
+  name: 🇸🇬SG-217.197.161.136-0149
+  password: G!yBwPWH3Vao
+  port: 806
+  server: 217.197.161.136
   type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 10164.265474176653
+  name: 🏁RELAY-104.19.47.203-8111
+  network: ws
+  port: 8443
+  server: 104.19.47.203
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 39135a39-e6ca-43df-a360-d859eea58d86
+  ws-opts:
+    headers:
+      Host: hk01.linkitnow.net
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇻🇳VN-103.186.155.20-206
+  - 🇸🇬SG-217.197.161.136-0149
+  - 🏁RELAY-104.19.47.203-8111
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
