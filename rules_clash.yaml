@@ -30,13 +30,45 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-cfb
+  download_speed: 4235.461685307672
+  name: 🇹🇷TR-45.89.52.66-201
+  password: PeHSHm5SqEjBuEXE
+  port: 9065
+  server: 45.89.52.66
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 4021.3621025485295
+  name: 🇸🇬SG-159.223.32.230-0074
+  network: ws
+  port: 8080
+  server: 159.223.32.230
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 7002330d-fe27-4b56-b22f-d7e3eb825fdb
+  ws-opts:
+    headers:
+      Host: 159.223.32.230
+    path: /cctv13/hd.m3u8
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4090.8363615277635
+  name: 🇸🇬SG-217.197.161.166-0145
+  password: G!yBwPWH3Vao
+  port: 801
+  server: 217.197.161.166
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇹🇷TR-45.89.52.66-201
+  - 🇸🇬SG-159.223.32.230-0074
+  - 🇸🇬SG-217.197.161.166-0145
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
