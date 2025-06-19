@@ -30,45 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 10239.643811218248
-  name: 🇨🇭CH-204.136.10.115-177
-  password: oXGp1+ihlfKg826H
-  port: 1866
-  server: 204.136.10.115
-  type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 8031.471820959832
-  name: 🏁RELAY-172.64.146.66-156
-  network: ws
-  port: 80
-  server: www.hdmoli.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 2f38f848-a899-4c87-9807-207a41615e3c
-  ws-opts:
-    headers:
-      Host: fr.freeyyds.dpdns.org
-    path: /
-- cipher: aes-256-gcm
-  download_speed: 5917.2676415275155
-  name: 🇺🇸US-167.88.61.60-6314
-  password: PCnnH6SQSnfoS27
-  port: 8090
-  server: 167.88.61.60
-  type: ss
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🇨🇭CH-204.136.10.115-177
-  - 🏁RELAY-172.64.146.66-156
-  - 🇺🇸US-167.88.61.60-6314
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
