@@ -30,13 +30,37 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 21298.705767718562
+  name: 🏁RELAY-170.114.45.52-0198
+  network: ws
+  port: 2086
+  server: 170.114.45.52
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 9199bf78-8762-4ec5-9b7f-07396b71e9d4
+  ws-opts:
+    headers:
+      Host: ustoucjjnid18sj6us.lovebaipiao.com
+    path: /
+- cipher: aes-256-cfb
+  download_speed: 16504.573342578526
+  name: 🇦🇺AU-185.167.116.24-0454
+  password: Sn5B7jTqr76aCJT8
+  port: 9097
+  server: 185.167.116.24
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🏁RELAY-170.114.45.52-0198
+  - 🇦🇺AU-185.167.116.24-0454
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
