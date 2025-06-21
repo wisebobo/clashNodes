@@ -30,13 +30,29 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-cfb
+  download_speed: 5133.334258416214
+  name: 🇦🇺AU-185.167.116.253-0462
+  password: KnJGad3FqTvjqbaX
+  port: 9014
+  server: 185.167.116.253
+  type: ss
+- cipher: aes-256-cfb
+  download_speed: 16666.057303890233
+  name: 🇵🇹PT-185.231.233.112-5141
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 185.231.233.112
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇦🇺AU-185.167.116.253-0462
+  - 🇵🇹PT-185.231.233.112-5141
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
