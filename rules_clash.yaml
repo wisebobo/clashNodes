@@ -30,13 +30,107 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-cfb
+  download_speed: 5959.687776587296
+  name: 🇷🇸RS-194.71.126.31-195
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 194.71.126.31
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 5375.533157761284
+  name: 🇺🇸US-38.121.43.71-214
+  password: kDWvXYZoTBcGkC4
+  port: 8881
+  server: 38.121.43.71
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 19334.128864143015
+  name: 🇳🇱NL-77.246.102.112-0240
+  password: Y1hjiUmSgucgzYYJ0WtqwW
+  port: 60117
+  server: 77.246.102.112
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 11476.377296672385
+  name: 🇮🇷IR-37.32.23.122-0561
+  network: ws
+  port: 443
+  server: 37.32.23.122
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: d12bc882-43c7-415e-87c5-2a7fdc8371c0
+  ws-opts:
+    path: /websocket/
+- alterId: 4
+  cipher: auto
+  download_speed: 4718.810008791996
+  name: 🇸🇬SG-103.253.26.20-0191
+  network: ws
+  port: 443
+  server: 103.253.26.20
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: zecjk.com
+    path: /ws
+- cipher: aes-256-gcm
+  download_speed: 4247.757254618868
+  name: 🇺🇸US-38.68.134.85-0487
+  password: Y6R9pAtvxxzmGC
+  port: 5600
+  server: 38.68.134.85
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 14229.548706177957
+  name: 🇬🇧GB-172.99.190.61-5974
+  password: TEzjfAYq2IjtuoS
+  port: 6697
+  server: 172.99.190.61
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 4911.68246910088
+  name: 08-247-RU
+  network: ws
+  port: 23107
+  server: 45.147.201.231
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 52444cef-604c-4488-86d5-e357a091e90b
+  ws-opts:
+    host: 45.147.201.231
+    path: /
+- cipher: aes-256-gcm
+  download_speed: 3597.904916056386
+  name: 🇫🇷FR-141.94.115.231-9766
+  password: 1cc7ad5f-c9bc-4138-849a-02aeec8e37a7
+  port: 8443
+  server: 141.94.115.231
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇷🇸RS-194.71.126.31-195
+  - 🇺🇸US-38.121.43.71-214
+  - 🇳🇱NL-77.246.102.112-0240
+  - 🇮🇷IR-37.32.23.122-0561
+  - 🇸🇬SG-103.253.26.20-0191
+  - 🇺🇸US-38.68.134.85-0487
+  - 🇬🇧GB-172.99.190.61-5974
+  - 08-247-RU
+  - 🇫🇷FR-141.94.115.231-9766
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
