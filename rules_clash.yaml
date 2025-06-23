@@ -31,12 +31,32 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: aes-256-cfb
+  download_speed: 11338.87946307106
+  name: 🇦🇺AU-185.167.116.24-0486
+  password: Sn5B7jTqr76aCJT8
+  port: 9097
+  server: 185.167.116.24
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 6644.838059422075
+  name: 🇷🇺RU-45.147.201.231-0239
+  network: ws
+  port: 22069
+  server: 45.147.201.231
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 57159348-4d98-4311-a990-e62f8c70fd43
+  ws-opts:
+    path: /
 - cipher: chacha20-ietf-poly1305
-  download_speed: 3678.941934067822
-  name: 🇨🇦CA-51.161.118.38-1545
-  password: G!yBwPWH3Vao
-  port: 802
-  server: 51.161.118.38
+  download_speed: 5276.946321559531
+  name: 🇨🇳CN-120.232.218.106-0265
+  password: 928bf8c0-040d-4d50-a460-3092bee19f61
+  port: 36571
+  server: freea.glyphara.com
   type: ss
 proxy-groups:
 - interval: 30
@@ -44,7 +64,9 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇨🇦CA-51.161.118.38-1545
+  - 🇦🇺AU-185.167.116.24-0486
+  - 🇷🇺RU-45.147.201.231-0239
+  - 🇨🇳CN-120.232.218.106-0265
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
