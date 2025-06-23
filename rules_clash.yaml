@@ -31,20 +31,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 10442.215248590071
-  name: 🇬🇧GB-185.5.38.111-196
-  password: 4ju873evpjeaAi8Zq12YoRHWp63o5exdnZ71aUg1YEChiPTc2HkasYhUBxRz7UGi4K6cLrsGaU6b44H4Qa6f4cJn3zBp2cnX
-  port: 55988
-  server: 185.5.38.111
+- cipher: aes-256-gcm
+  download_speed: 5362.14618819978
+  name: 🇺🇸US-38.143.66.99-0482
+  password: cdBIDV42DCwnfIN
+  port: 8118
+  server: 38.143.66.99
   type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 10895.572928848704
+  name: 🏁RELAY-172.67.172.168-0683
+  network: ws
+  port: 80
+  server: 172.67.172.168
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 4bf074f4-7e9c-4e4b-a10d-156e26199729
+  ws-opts:
+    headers:
+      Host: us03s.5d8ecf82.cfd
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇬🇧GB-185.5.38.111-196
+  - 🇺🇸US-38.143.66.99-0482
+  - 🏁RELAY-172.67.172.168-0683
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
