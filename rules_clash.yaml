@@ -32,41 +32,36 @@ mode: rule
 port: 7890
 proxies:
 - cipher: aes-256-gcm
-  download_speed: 12314.213927995219
-  name: 🇺🇸US-38.68.134.85-6209
+  download_speed: 9336.587061239565
+  name: 🇺🇸US-38.68.134.85-5972
   password: Y6R9pAtvxxzmGC
-  port: 5000
+  port: 5601
   server: 38.68.134.85
   type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 7915.631399246957
-  name: 🏁RELAY-154.92.9.86-8694
+  download_speed: 8574.236536779004
+  name: 🇰🇷KR-211.248.216.119-7465
   network: ws
-  port: 80
-  server: 154.92.9.86
+  port: 17443
+  server: 211.248.216.119
+  servername: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
-  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
   ws-opts:
-    path: /blue
-- cipher: aes-256-gcm
-  download_speed: 4539.503878441074
-  name: 🇮🇷IR-94.101.177.223-9176
-  password: fd107c6d-ebf7-2c6d-3fc9-2c179db7690e
-  port: 11302
-  server: 94.101.177.223
-  type: ss
+    headers:
+      Host: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
+    path: /obdii.cfd:443/linkws
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-38.68.134.85-6209
-  - 🏁RELAY-154.92.9.86-8694
-  - 🇮🇷IR-94.101.177.223-9176
+  - 🇺🇸US-38.68.134.85-5972
+  - 🇰🇷KR-211.248.216.119-7465
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
