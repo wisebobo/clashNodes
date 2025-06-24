@@ -31,28 +31,36 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 1
+- alterId: 0
   cipher: auto
-  download_speed: 6605.852620813928
-  name: 🇨🇭CH-186.190.215.75-7445
+  download_speed: 10876.020615318526
+  name: 🏁RELAY-203.30.191.18-0829
   network: ws
   port: 443
-  server: 186.190.215.75
+  server: 203.30.191.18
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   ws-opts:
     headers:
-      Host: 186.190.215.75
-    path: linkvws
+      Host: clash6.ssr-free.xyz
+    path: /dongtaiwang.com
+- cipher: aes-256-gcm
+  download_speed: 11897.164877096919
+  name: 🇺🇸US-38.86.135.36-6441
+  password: g5MeD6Ft3CWlJId
+  port: 5003
+  server: 38.86.135.36
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇨🇭CH-186.190.215.75-7445
+  - 🏁RELAY-203.30.191.18-0829
+  - 🇺🇸US-38.86.135.36-6441
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
