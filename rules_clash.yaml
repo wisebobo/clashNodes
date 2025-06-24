@@ -32,35 +32,60 @@ mode: rule
 port: 7890
 proxies:
 - cipher: chacha20-ietf-poly1305
-  download_speed: 10527.40441742567
-  name: 🇪🇸ES-45.154.206.192-138
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 45.154.206.192
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  download_speed: 10937.21434999933
-  name: 🇸🇬SG-217.197.161.166-0118
+  download_speed: 5539.783449699337
+  name: 🇸🇬SG-217.197.161.138-0116
   password: G!yBwPWH3Vao
-  port: 807
-  server: 217.197.161.166
+  port: 800
+  server: 217.197.161.138
   type: ss
-- cipher: aes-256-gcm
-  download_speed: 10240.201664127697
-  name: 🇺🇸US-38.75.136.135-6053
-  password: zDNVedRFPQexG9v
-  port: 6379
-  server: 38.75.136.135
+- cipher: aes-256-cfb
+  download_speed: 4059.8505129917767
+  name: 🇦🇺AU-185.167.116.24-0453
+  password: Sn5B7jTqr76aCJT8
+  port: 9097
+  server: 185.167.116.24
   type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 9994.086331925286
+  name: 🏁RELAY-185.174.138.196-7043
+  network: ws
+  port: 2082
+  server: 185.174.138.196
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
+  ws-opts:
+    headers:
+      Host: yellow-paper-029c.yvonna.workers.dev
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 9313.99163464899
+  name: 🏁RELAY-172.67.220.83-7067
+  network: ws
+  port: 443
+  server: 172.67.220.83
+  servername: linja05.hwcar.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+  ws-opts:
+    headers:
+      Host: linja05.hwcar.sbs
+    path: /linkws
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇪🇸ES-45.154.206.192-138
-  - 🇸🇬SG-217.197.161.166-0118
-  - 🇺🇸US-38.75.136.135-6053
+  - 🇸🇬SG-217.197.161.138-0116
+  - 🇦🇺AU-185.167.116.24-0453
+  - 🏁RELAY-185.174.138.196-7043
+  - 🏁RELAY-172.67.220.83-7067
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
