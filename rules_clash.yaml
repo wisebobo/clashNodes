@@ -31,53 +31,52 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  download_speed: 11490.559800525574
-  name: 🇺🇸US-142.202.48.52-5402
-  password: FoOiGlkAA9yPEGP
-  port: 7307
-  server: 142.202.48.52
+- cipher: aes-256-cfb
+  download_speed: 5314.743414670315
+  name: 🇻🇳VN-103.186.154.37-168
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.37
+  type: ss
+- cipher: aes-256-cfb
+  download_speed: 4385.533429256248
+  name: 🇵🇾PY-38.165.233.93-176
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 38.165.233.93
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 6765.946190043847
+  name: 🇸🇬SG-217.197.161.136-0114
+  password: G!yBwPWH3Vao
+  port: 807
+  server: 217.197.161.136
   type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 11646.4710151296
-  name: 🏁RELAY-104.21.24.170-7188
+  download_speed: 10104.26123348914
+  name: 🏁RELAY-66.235.200.22-0888
   network: ws
   port: 443
-  server: 104.21.24.170
-  servername: denc36.xtooltech.cfd
+  server: 66.235.200.22
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
   ws-opts:
     headers:
-      Host: adenc36v.xtooltech.cfd
-    path: /
-- alterId: 64
-  cipher: auto
-  download_speed: 17406.31701331101
-  name: 🇺🇸US-104.160.166.253-7633
-  network: ws
-  port: 30000
-  server: 104.160.166.253
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.20670670.xyz
-    path: /path/181721272114
+      Host: lg10.cfcdn1.xyz
+    path: /A2DJOPFT
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-142.202.48.52-5402
-  - 🏁RELAY-104.21.24.170-7188
-  - 🇺🇸US-104.160.166.253-7633
+  - 🇻🇳VN-103.186.154.37-168
+  - 🇵🇾PY-38.165.233.93-176
+  - 🇸🇬SG-217.197.161.136-0114
+  - 🏁RELAY-66.235.200.22-0888
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
