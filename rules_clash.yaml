@@ -30,29 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 8454.407897087322
-  name: 🇪🇸ES-45.154.206.192-138
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 45.154.206.192
-  type: ss
-- cipher: aes-256-gcm
-  download_speed: 6788.695671883512
-  name: 🇬🇧GB-172.99.190.149-6501
-  password: FoOiGlkAA9yPEGP
-  port: 7307
-  server: 172.99.190.149
-  type: ss
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🇪🇸ES-45.154.206.192-138
-  - 🇬🇧GB-172.99.190.149-6501
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
