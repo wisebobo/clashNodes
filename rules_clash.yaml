@@ -30,13 +30,29 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 64
+  cipher: auto
+  download_speed: 7275.490988003446
+  name: 🇺🇸US-38.11.69.49-7223
+  network: ws
+  port: 30003
+  server: 38.11.69.49
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.52140341.xyz
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇺🇸US-38.11.69.49-7223
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
