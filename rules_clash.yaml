@@ -31,12 +31,27 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 5219.841777187479
-  name: 🇺🇸US-154.83.90.11-9708
-  password: 835ab5d2-df2e-4be5-8ef5-fefd932c2c46
-  port: 52101
-  server: 154.83.90.11
+- alterId: 0
+  cipher: auto
+  download_speed: 8206.110669998787
+  name: 🏁RELAY-104.21.64.1-160
+  network: ws
+  port: 2096
+  server: 104.21.64.1
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: b3928f8d-ea81-4d75-bcec-4016a072adff
+  ws-opts:
+    headers:
+      Host: de01.sh-cloudflare.sbs
+    path: /
+- cipher: aes-256-gcm
+  download_speed: 5385.51590143044
+  name: 🇺🇸US-38.68.135.18-0474
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 38.68.135.18
   type: ss
 proxy-groups:
 - interval: 30
@@ -44,7 +59,8 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-154.83.90.11-9708
+  - 🏁RELAY-104.21.64.1-160
+  - 🇺🇸US-38.68.135.18-0474
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
