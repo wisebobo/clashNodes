@@ -31,29 +31,20 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 10146.356210213786
-  name: 🏁RELAY-104.19.47.20-7783
-  network: ws
-  port: 8443
-  server: 104.19.47.20
-  servername: hk01.linkitnow.net
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 39135a39-e6ca-43df-a360-d859eea58d86
-  ws-opts:
-    headers:
-      Host: hk01.linkitnow.net
-    path: /
+- cipher: aes-256-gcm
+  download_speed: 4562.098995349109
+  name: 🇺🇸US-167.88.62.68-4848
+  password: cdBIDV42DCwnfIN
+  port: 8119
+  server: 167.88.62.68
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🏁RELAY-104.19.47.20-7783
+  - 🇺🇸US-167.88.62.68-4848
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
