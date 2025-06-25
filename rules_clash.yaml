@@ -30,13 +30,27 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 12172.573133206204
+  name: 🇿🇦ZA-129.151.164.152-1484
+  network: ws
+  port: 55600
+  server: 129.151.164.152
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: e30f8588-2555-48b8-c354-c8e63f57232d
+  ws-opts:
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇿🇦ZA-129.151.164.152-1484
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
