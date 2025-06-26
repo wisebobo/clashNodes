@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 10768.910842868885
+  name: 🇳🇱NL-193.29.139.251-211
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.251
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇳🇱NL-193.29.139.251-211
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
