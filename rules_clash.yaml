@@ -30,13 +30,27 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 4
+  cipher: auto
+  download_speed: 11069.220618617705
+  name: 🇮🇳IN-139.59.85.231-4817
+  network: ws
+  port: 8080
+  server: 139.59.85.231
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 7002330d-fe27-4b56-b22f-d7e3eb825fdb
+  ws-opts:
+    path: /cctv13/hd.m3u8
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇮🇳IN-139.59.85.231-4817
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
