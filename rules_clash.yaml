@@ -31,20 +31,37 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 3513.1886359203854
-  name: 🇺🇦UA-88.151.192.57-9331
-  password: 9CJz3J1GYljQ
-  port: 443
-  server: 88.151.192.57
+- cipher: aes-256-gcm
+  download_speed: 4575.841556673306
+  name: 🇨🇦CA-85.208.108.60-2397
+  password: Y6R9pAtvxxzmGC
+  port: 8888
+  server: 85.208.108.60
   type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 6377.313541782747
+  name: 🏁RELAY-172.67.149.202-0435
+  network: ws
+  port: 80
+  server: LllLLLllllLKJh.222560.xyZ
+  servername: lllllllllllkjh.222560.xyz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: ce921385-2b31-45fe-84c5-1843e8ae845b
+  ws-opts:
+    headers:
+      Host: LllLLLllllLKJh.222560.xyZ
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇦UA-88.151.192.57-9331
+  - 🇨🇦CA-85.208.108.60-2397
+  - 🏁RELAY-172.67.149.202-0435
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
