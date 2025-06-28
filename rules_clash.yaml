@@ -30,13 +30,45 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 11947.269541326783
+  name: 🏁RELAY-104.17.176.171-133
+  network: ws
+  port: 8080
+  server: npmjs.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 6cbc9c78-1cb1-57d4-a999-e2f4e34c1e03
+  ws-opts:
+    headers:
+      Host: ke7hz36ewz-4515017473.mashallahbet.com
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 23626.48902198793
+  name: 🏁RELAY-198.41.212.12-0890
+  network: ws
+  port: 443
+  server: 198.41.212.12
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  ws-opts:
+    headers:
+      Host: oplg1.cfcdn2.xyz
+    path: /AUIKN8AU
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🏁RELAY-104.17.176.171-133
+  - 🏁RELAY-198.41.212.12-0890
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
