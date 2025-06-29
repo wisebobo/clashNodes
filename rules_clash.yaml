@@ -31,29 +31,28 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 5167.984349467466
-  name: 🇨🇳CN-120.233.44.141-1495
-  network: ws
-  port: 20025
-  server: sh-cn-1.dnspro.icu
-  servername: sh-cn-1.dnspro.icu
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
-  ws-opts:
-    headers:
-      Host: sh-cn-1.dnspro.icu
-    path: /iso
+- cipher: chacha20-ietf-poly1305
+  download_speed: 10335.846569915508
+  name: 🇸🇬SG-81.90.189.152-0121
+  password: G!yBwPWH3Vao
+  port: 801
+  server: 81.90.189.152
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 3926.8145685436098
+  name: 🇱🇹LT-45.87.175.154-0296
+  password: 1RWwXhwfAB5gAEozU4G2Pg
+  port: 8080
+  server: beesyar.org
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇨🇳CN-120.233.44.141-1495
+  - 🇸🇬SG-81.90.189.152-0121
+  - 🇱🇹LT-45.87.175.154-0296
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
