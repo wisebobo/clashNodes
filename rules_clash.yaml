@@ -30,43 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 13803.633053894679
-  name: 🏁RELAY-104.16.9.95-7501
-  network: ws
-  port: 2052
-  server: 104.16.9.95
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: af0bfcce-8730-4133-bdaa-f6b1da70fc1c
-  ws-opts:
-    headers:
-      Host: us2FchmwQky.inivtrak.xyz
-    path: /video/BgpiHrui/
-- alterId: 0
-  cipher: auto
-  download_speed: 11995.808881038347
-  name: 🏁RELAY-154.92.9.186-8583
-  network: ws
-  port: 80
-  server: 154.92.9.186
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
-  ws-opts:
-    path: /blue
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🏁RELAY-104.16.9.95-7501
-  - 🏁RELAY-154.92.9.186-8583
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
