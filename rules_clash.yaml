@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-cfb
+  download_speed: 21315.638502281858
+  name: 🇳🇱NL-213.183.59.190-4513
+  password: Sn5B7jTqr76aCJT8
+  port: 9097
+  server: 213.183.59.190
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇳🇱NL-213.183.59.190-4513
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
