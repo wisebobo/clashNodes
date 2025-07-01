@@ -31,42 +31,49 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 6944.383145312122
-  name: 🇦🇪AE-109.169.72.249-5645
-  password: G!yBwPWH3Vao
-  port: 805
-  server: 109.169.72.249
-  type: ss
-- cipher: aes-256-gcm
-  download_speed: 17877.637673010646
-  name: 🇺🇸US-169.197.143.232-5834
-  password: zDNVedRFPQexG9v
-  port: 6379
-  server: 169.197.143.232
-  type: ss
-- alterId: 64
+- alterId: 2
   cipher: auto
-  download_speed: 12868.174290875804
-  name: 🇺🇸US-74.217.182.116-8194
+  download_speed: 10828.890418812227
+  name: 🇭🇰HK-1.65.209.14-5143
   network: ws
-  port: 443
-  server: 74.217.182.116
+  port: 80
+  server: a1d35d30-sv2sg0-t66zs1-1pq44.hk.p5pv.com
+  servername: broadcastlv.chat.bilibili.com
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 3f194e88-8eac-11ee-be7f-f23c9164ca5d
   ws-opts:
-    path: /path/1689673828070
+    headers:
+      Host: a1d35d30-sv2sg0-t66zs1-1pq44.hk.p5pv.com
+    path: /
+- cipher: chacha20-ietf-poly1305
+  download_speed: 12797.394710681776
+  name: 🇨🇦CA-51.161.118.38-5868
+  password: G!yBwPWH3Vao
+  port: 806
+  server: 51.161.118.38
+  type: ss
+- cipher: rc4-md5
+  download_speed: 4088.123573637351
+  name: 🇨🇳CN-120.195.181.111-6985
+  password: Paofu
+  plugin: obfs
+  plugin-opts:
+    host: e61b761245.microsoft.com
+    mode: http
+  port: 5981
+  server: 120.195.181.111
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇦🇪AE-109.169.72.249-5645
-  - 🇺🇸US-169.197.143.232-5834
-  - 🇺🇸US-74.217.182.116-8194
+  - 🇭🇰HK-1.65.209.14-5143
+  - 🇨🇦CA-51.161.118.38-5868
+  - 🇨🇳CN-120.195.181.111-6985
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
