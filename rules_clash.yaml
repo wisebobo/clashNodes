@@ -33,47 +33,58 @@ port: 7890
 proxies:
 - alterId: 2
   cipher: auto
-  download_speed: 10828.890418812227
-  name: 🇭🇰HK-1.65.209.14-5143
+  download_speed: 13773.841220683984
+  name: 🇭🇰HK-1.65.209.14-4895
   network: ws
   port: 80
-  server: a1d35d30-sv2sg0-t66zs1-1pq44.hk.p5pv.com
+  server: e4fac854-sum4g0-sx1cxx-1tfjk.hk.p5pv.com
   servername: broadcastlv.chat.bilibili.com
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 3f194e88-8eac-11ee-be7f-f23c9164ca5d
+  uuid: 49396d98-f4b4-11ef-8c3f-f23c913c8d2b
   ws-opts:
     headers:
-      Host: a1d35d30-sv2sg0-t66zs1-1pq44.hk.p5pv.com
+      Host: e4fac854-sum4g0-sx1cxx-1tfjk.hk.p5pv.com
     path: /
-- cipher: chacha20-ietf-poly1305
-  download_speed: 12797.394710681776
-  name: 🇨🇦CA-51.161.118.38-5868
-  password: G!yBwPWH3Vao
-  port: 806
-  server: 51.161.118.38
-  type: ss
-- cipher: rc4-md5
-  download_speed: 4088.123573637351
-  name: 🇨🇳CN-120.195.181.111-6985
-  password: Paofu
-  plugin: obfs
-  plugin-opts:
-    host: e61b761245.microsoft.com
-    mode: http
-  port: 5981
-  server: 120.195.181.111
-  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 9805.735588506832
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: 🇭🇰HK-8.210.234.189-7042
+  network: http
+  port: 46644
+  server: 8.210.234.189
+  servername: 8.210.234.189
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c25a1c9a-1c71-4c58-afba-66eed738b22b
+- alterId: 0
+  cipher: auto
+  download_speed: 3418.8462921012238
+  name: 🏁RELAY-147.185.161.169-8833
+  network: ws
+  port: 443
+  server: 147.185.161.169
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 824c58b1-65ba-4680-a609-663a000dbb92
+  ws-opts:
+    path: /wss13889
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇭🇰HK-1.65.209.14-5143
-  - 🇨🇦CA-51.161.118.38-5868
-  - 🇨🇳CN-120.195.181.111-6985
+  - 🇭🇰HK-1.65.209.14-4895
+  - 🇭🇰HK-8.210.234.189-7042
+  - 🏁RELAY-147.185.161.169-8833
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
