@@ -31,28 +31,62 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 64
+- alterId: 2
   cipher: auto
-  download_speed: 4044.5208195578057
-  name: 🇺🇸US-142.171.24.42-7366
+  download_speed: 10467.618257995195
+  name: 🇭🇰HK-1.65.208.140-4990
   network: ws
-  port: 31005
-  server: 142.171.24.42
+  port: 80
+  server: c25c61db-sv2sg0-tbpu76-1thmd.hk3.p5pv.com
+  servername: broadcastlv.chat.bilibili.com
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 2d8c38cc-fc12-11ef-94aa-f23c913c8d2b
   ws-opts:
     headers:
-      Host: www.77632849.xyz
+      Host: c25c61db-sv2sg0-tbpu76-1thmd.hk3.p5pv.com
     path: /
+- alterId: 2
+  cipher: auto
+  download_speed: 10394.324457182222
+  name: 🇭🇰HK-1.65.208.140-5089
+  network: ws
+  port: 80
+  server: 36a88ce8-sv4n40-t2whio-1jcwu.hk3.p5pv.com
+  servername: broadcastlv.chat.bilibili.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: f93486ce-cc84-11ed-9e98-f23c913c8d2b
+  ws-opts:
+    headers:
+      Host: 36a88ce8-sv4n40-t2whio-1jcwu.hk3.p5pv.com
+    path: /
+- cipher: aes-256-gcm
+  download_speed: 9302.976682794042
+  name: 🇺🇸US-167.88.61.14-5779
+  password: KixLvKzwjekG00rm
+  port: 8080
+  server: 167.88.61.14
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 15022.297162117808
+  name: 🇬🇧GB-172.99.190.61-6361
+  password: Y6R9pAtvxxzmGC
+  port: 5600
+  server: 172.99.190.61
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-142.171.24.42-7366
+  - 🇭🇰HK-1.65.208.140-4990
+  - 🇭🇰HK-1.65.208.140-5089
+  - 🇺🇸US-167.88.61.14-5779
+  - 🇬🇧GB-172.99.190.61-6361
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
