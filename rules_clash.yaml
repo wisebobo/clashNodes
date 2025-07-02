@@ -31,77 +31,91 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
+- cipher: aes-128-gcm
+  download_speed: 12165.397460015618
+  name: 🇯🇵JP-149.22.87.204-143
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.204
+  type: ss
+- alterId: 2
   cipher: auto
-  download_speed: 10983.542681591885
-  name: 🏁RELAY-172.67.188.188-154
+  download_speed: 11581.252939321457
+  name: 🇭🇰HK-1.65.208.140-237
   network: ws
   port: 80
-  server: 33DEFRTy6.444652.XYZ
+  server: 34013157-sunz40-taz53d-1j0y6.hk3.p5pv.com
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
+  uuid: 1cce7df2-251c-11ee-9409-f23c9164ca5d
   ws-opts:
     headers:
-      Host: 33DEFRTy6.444652.XYZ
+      Host: 34013157-sunz40-taz53d-1j0y6.hk3.p5pv.com
+    path: /
+- alterId: 0
+  cipher: auto
+  download_speed: 9529.304879063437
+  name: 🏁RELAY-104.26.5.10-0025
+  network: ws
+  port: 443
+  server: api.qiscus.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 47e37af6-06b0-f5d8-0e1d-b601474c1351
+  ws-opts:
+    headers:
+      Host: sgazure-d.solusihost.my.id
+    path: /726f5dd4/
+- cipher: chacha20-ietf-poly1305
+  download_speed: 12591.320518271494
+  name: 🇸🇬SG-81.90.189.152-0104
+  password: G!yBwPWH3Vao
+  port: 801
+  server: 81.90.189.152
+  type: ss
+- alterId: 64
+  cipher: auto
+  download_speed: 8499.239714956086
+  name: 🇳🇴NO-46.29.218.84-0729
+  network: ws
+  port: 443
+  server: 46.29.218.84
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: f7a456da-9886-4dd7-b193-4c59a726219c
+  ws-opts:
     path: /
 - alterId: 2
   cipher: auto
-  download_speed: 13534.81430014598
-  name: 🇭🇰HK-1.65.208.140-221
+  download_speed: 10389.336507003482
+  name: 🇭🇰HK-1.65.209.14-5198
   network: ws
   port: 80
-  server: ac1aede0-sv2sg0-t5qfe2-1khwf.hk3.p5pv.com
+  server: 92b1e00e-sv0xs0-tb224g-1h0r9.hk.p5pv.com
   servername: broadcastlv.chat.bilibili.com
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
+  uuid: 9bfd0dde-957e-11ec-a8bf-f23c91cfbbc9
   ws-opts:
     headers:
-      Host: ac1aede0-sv2sg0-t5qfe2-1khwf.hk3.p5pv.com
+      Host: 92b1e00e-sv0xs0-tb224g-1h0r9.hk.p5pv.com
     path: /
-- alterId: 0
-  cipher: auto
-  download_speed: 9052.795517164854
-  name: 🇩🇪DE-57.129.24.125-165
-  network: ws
-  port: 443
-  server: 57.129.24.125
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /
-- cipher: chacha20-ietf-poly1305
-  download_speed: 9522.13863319578
-  name: 🇸🇬SG-217.197.161.138-0097
-  password: G!yBwPWH3Vao
-  port: 803
-  server: 217.197.161.138
-  type: ss
-- cipher: aes-256-cfb
-  download_speed: 10412.98831256203
-  name: 🇯🇵JP-172.104.123.158-0513
-  password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D
-  port: 8097
-  server: 172.104.123.158
-  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🏁RELAY-172.67.188.188-154
-  - 🇭🇰HK-1.65.208.140-221
-  - 🇩🇪DE-57.129.24.125-165
-  - 🇸🇬SG-217.197.161.138-0097
-  - 🇯🇵JP-172.104.123.158-0513
+  - 🇯🇵JP-149.22.87.204-143
+  - 🇭🇰HK-1.65.208.140-237
+  - 🏁RELAY-104.26.5.10-0025
+  - 🇸🇬SG-81.90.189.152-0104
+  - 🇳🇴NO-46.29.218.84-0729
+  - 🇭🇰HK-1.65.209.14-5198
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
