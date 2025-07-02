@@ -31,49 +31,59 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 2
-  cipher: auto
-  download_speed: 9358.942418815404
-  name: 🇭🇰HK-1.65.208.140-229
-  network: ws
-  port: 80
-  server: 80aec38c-sv0xs0-sx16xo-1j3zm.hk3.p5pv.com
-  servername: broadcastlv.chat.bilibili.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 6ce63b80-8b5b-11ef-b635-f23c9164ca5d
-  ws-opts:
-    headers:
-      Host: 80aec38c-sv0xs0-sx16xo-1j3zm.hk3.p5pv.com
-    path: /
-- cipher: chacha20-ietf-poly1305
-  download_speed: 9037.235072330835
-  name: 🇸🇬SG-217.197.161.164-0117
-  password: G!yBwPWH3Vao
-  port: 807
-  server: 217.197.161.164
+- cipher: aes-128-cfb
+  download_speed: 9822.04917497246
+  name: 🇨🇳CN-14.29.124.174-0064
+  password: QazEdcTgb159@$*
+  port: 11016
+  server: 14.29.124.174
   type: ss
 - cipher: chacha20-ietf-poly1305
-  download_speed: 7686.834675007909
-  name: 🇸🇬SG-217.197.161.166-0127
+  download_speed: 10030.952311999137
+  name: 🇸🇬SG-217.197.161.166-0091
   password: G!yBwPWH3Vao
-  port: 800
+  port: 808
   server: 217.197.161.166
   type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 15975.719162052084
+  name: 🇺🇸US-134.195.101.84-0170
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: (TG @WangCai2)32cf132:178330
+    mode: tls
+  port: 2377
+  server: 134.195.101.84
+  type: ss
 - cipher: aes-256-cfb
-  download_speed: 10903.195328207972
+  download_speed: 12043.09812081655
   name: 🇷🇺RU-213.183.53.222-0559
   password: KnJGad3FqTvjqbaX
   port: 9014
   server: 213.183.53.222
   type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 12692.890316663576
+  name: 🇦🇺AU-103.224.212.215-0983
+  network: ws
+  port: 443
+  server: vus3.0bad.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-opts:
+    headers:
+      Host: vus3.0bad.com
+    path: /chat
 - cipher: aes-256-gcm
-  download_speed: 12972.000308551722
-  name: 🇩🇪DE-145.239.1.100-0560
-  password: kDWvXYZoTBcGkC4
-  port: 8882
-  server: 145.239.1.100
+  download_speed: 11310.330594922127
+  name: 🇺🇸US-142.202.48.83-6940
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 142.202.48.83
   type: ss
 proxy-groups:
 - interval: 30
@@ -81,11 +91,12 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇭🇰HK-1.65.208.140-229
-  - 🇸🇬SG-217.197.161.164-0117
-  - 🇸🇬SG-217.197.161.166-0127
+  - 🇨🇳CN-14.29.124.174-0064
+  - 🇸🇬SG-217.197.161.166-0091
+  - 🇺🇸US-134.195.101.84-0170
   - 🇷🇺RU-213.183.53.222-0559
-  - 🇩🇪DE-145.239.1.100-0560
+  - 🇦🇺AU-103.224.212.215-0983
+  - 🇺🇸US-142.202.48.83-6940
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
