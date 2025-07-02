@@ -30,13 +30,45 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: aes-256-cfb
+  download_speed: 12158.636039202005
+  name: 🇹🇼TW-185.189.160.98-190
+  password: qwerREWQ@@
+  port: 64759
+  server: 185.189.160.98
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 9101.644133939331
+  name: 🏁RELAY-172.65.190.172-0000
+  network: ws
+  port: 443
+  server: v2.tgfaka.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 2df8cb33-de40-438c-840a-5f1d05fe7518
+  ws-opts:
+    headers:
+      Host: v2.tgfaka.com
+    path: /api/v3/download.getFile
+- cipher: chacha20-ietf-poly1305
+  download_speed: 11313.75893955106
+  name: 🇸🇬SG-81.90.189.18-0095
+  password: G!yBwPWH3Vao
+  port: 808
+  server: 81.90.189.18
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇹🇼TW-185.189.160.98-190
+  - 🏁RELAY-172.65.190.172-0000
+  - 🇸🇬SG-81.90.189.18-0095
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
