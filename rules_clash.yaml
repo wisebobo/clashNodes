@@ -33,32 +33,56 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  download_speed: 6923.492465740098
-  name: 🏁RELAY-198.41.208.172-2651
+  download_speed: 3518.6465774748917
+  name: 🏁RELAY-141.101.115.136-0884
   network: ws
   port: 443
-  server: 198.41.208.172
+  server: 141.101.115.136
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
+  uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
   ws-opts:
-    path: /shirker
-- cipher: chacha20-ietf-poly1305
-  download_speed: 7519.56378844636
-  name: 🇩🇪DE-185.104.184.78-4165
-  password: G!yBwPWH3Vao
-  port: 802
-  server: 185.104.184.78
-  type: ss
+    headers:
+      Host: lg1.cfcdn1.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  download_speed: 4002.7214761798796
+  name: 🇺🇸US-199.59.243.228-0958
+  network: ws
+  port: 443
+  server: six.r33.fun
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 9bb0e2e3-c5b9-4606-9cbb-a3c36f2d01d7
+  ws-opts:
+    headers:
+      Host: fr2-full.privateip.net
+    path: /racevpn
+- alterId: 64
+  cipher: auto
+  download_speed: 9080.830101174537
+  name: 🇺🇸US-38.11.50.81-7393
+  network: ws
+  port: 31005
+  server: 38.11.50.81
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🏁RELAY-198.41.208.172-2651
-  - 🇩🇪DE-185.104.184.78-4165
+  - 🏁RELAY-141.101.115.136-0884
+  - 🇺🇸US-199.59.243.228-0958
+  - 🇺🇸US-38.11.50.81-7393
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
