@@ -31,29 +31,40 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 2
-  cipher: auto
-  download_speed: 3988.152576532395
-  name: 🇭🇰HK-1.65.208.140-5163
-  network: ws
-  port: 80
-  server: 8546e833-sv4n40-t4v3jz-1k8ga.hk3.p5pv.com
-  servername: broadcastlv.chat.bilibili.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: f860f2da-5035-11ed-bb74-f23c9164ca5d
-  ws-opts:
-    headers:
-      Host: 8546e833-sv4n40-t4v3jz-1k8ga.hk3.p5pv.com
-    path: /
+- cipher: aes-256-gcm
+  download_speed: 9121.597676032832
+  name: 🇬🇧GB-172.99.190.87-5833
+  password: Y6R9pAtvxxzmGC
+  port: 3389
+  server: 172.99.190.87
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 9718.060504720763
+  name: 🇺🇸US-167.88.61.175-6288
+  password: cdBIDV42DCwnfIN
+  port: 8119
+  server: 167.88.61.175
+  type: ss
+- cipher: rc4-md5
+  download_speed: 10702.695751740024
+  name: 🇨🇳CN-111.6.86.80-7081
+  password: Paofu
+  plugin: obfs
+  plugin-opts:
+    host: e61b761245.microsoft.com
+    mode: http
+  port: 1185
+  server: 111.6.86.80
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇭🇰HK-1.65.208.140-5163
+  - 🇬🇧GB-172.99.190.87-5833
+  - 🇺🇸US-167.88.61.175-6288
+  - 🇨🇳CN-111.6.86.80-7081
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
