@@ -31,42 +31,35 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  download_speed: 5800.764880229973
-  name: 🇺🇸US-38.143.66.87-6074
-  password: zDNVedRFPQexG9v
-  port: 6379
-  server: 38.143.66.87
-  type: ss
-- cipher: aes-256-gcm
-  download_speed: 3714.9814240864794
-  name: 🇺🇸US-142.202.48.34-6018
-  password: g5MeD6Ft3CWlJId
-  port: 5003
-  server: 142.202.48.34
-  type: ss
-- alterId: 64
+- alterId: 0
   cipher: auto
-  download_speed: 5135.558549334638
-  name: 🇺🇸US-38.11.50.81-7230
+  download_speed: 3829.0712200991056
+  name: 🏁RELAY-190.93.246.4-0552
   network: ws
-  port: 31005
-  server: 38.11.50.81
+  port: 443
+  server: 190.93.246.4
+  servername: lg10.cfcdn1.xyz
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
   ws-opts:
-    path: /
+    path: /A2DJOPFT
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4148.712766335502
+  name: 🇨🇦CA-196.247.59.154-5340
+  password: G!yBwPWH3Vao
+  port: 801
+  server: 196.247.59.154
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-38.143.66.87-6074
-  - 🇺🇸US-142.202.48.34-6018
-  - 🇺🇸US-38.11.50.81-7230
+  - 🏁RELAY-190.93.246.4-0552
+  - 🇨🇦CA-196.247.59.154-5340
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
