@@ -31,12 +31,35 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- alterId: 2
+  cipher: auto
+  download_speed: 4812.769455931151
+  name: 🇭🇰HK-1.65.208.140-250
+  network: ws
+  port: 80
+  server: 76d9dbf9-sva740-szegoe-12hj8.hk3.p5pv.com
+  servername: broadcastlv.chat.bilibili.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 5acc7a7c-d7ea-11eb-8673-f23c9164ca5d
+  ws-opts:
+    headers:
+      Host: 76d9dbf9-sva740-szegoe-12hj8.hk3.p5pv.com
+    path: /
+- cipher: chacha20-ietf-poly1305
+  download_speed: 4126.072699168582
+  name: 🇸🇬SG-217.197.161.136-0176
+  password: G!yBwPWH3Vao
+  port: 805
+  server: 217.197.161.136
+  type: ss
 - cipher: aes-256-gcm
-  download_speed: 7090.02223725234
-  name: 🇺🇸US-38.68.134.48-6791
-  password: e4FCWrgpkji3QY
-  port: 9101
-  server: 38.68.134.48
+  download_speed: 8386.243963688908
+  name: 🇫🇷FR-149.202.82.172-5559
+  password: XKFKl2rULjIp74
+  port: 8009
+  server: 149.202.82.172
   type: ss
 proxy-groups:
 - interval: 30
@@ -44,7 +67,9 @@ proxy-groups:
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-38.68.134.48-6791
+  - 🇭🇰HK-1.65.208.140-250
+  - 🇸🇬SG-217.197.161.136-0176
+  - 🇫🇷FR-149.202.82.172-5559
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
