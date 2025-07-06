@@ -33,27 +33,34 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  download_speed: 3738.2944978587984
-  name: 🇫🇷FR-45.145.167.103-7274
+  download_speed: 5338.573539690142
+  name: 🇫🇷FR-162.19.224.175-1321
   network: ws
-  port: 443
-  server: indiavideo.sbs
-  servername: indiavideo.sbs
+  port: 80
+  server: 162.19.224.175
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vmess
-  uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162
+  uuid: 42ba278d-65e0-4743-8707-e18ed98cfed5
   ws-opts:
     headers:
-      Host: indiavideo.sbs
-    path: /linkws
+      Host: 162.19.224.175
+    path: /vmess
+- cipher: aes-256-gcm
+  download_speed: 7875.621112517059
+  name: 🇺🇸US-38.114.114.67-6769
+  password: Y6R9pAtvxxzmGC
+  port: 5000
+  server: 38.114.114.67
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇫🇷FR-45.145.167.103-7274
+  - 🇫🇷FR-162.19.224.175-1321
+  - 🇺🇸US-38.114.114.67-6769
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
