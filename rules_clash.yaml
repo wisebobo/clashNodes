@@ -30,13 +30,21 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  download_speed: 3438.1000679011922
+  name: 🇹🇷TR-62.133.63.212-175
+  password: c40641c1f89e7acb
+  port: 57456
+  server: tr.vpnsparta.pro
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇹🇷TR-62.133.63.212-175
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
