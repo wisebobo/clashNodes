@@ -30,13 +30,61 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 3867.436778993314
+  name: 🏁RELAY-172.64.147.71-0017
+  network: ws
+  port: 443
+  server: 172.64.147.71
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 3eadc957-f6d5-3a3b-9289-c985ef4c8322
+  ws-opts:
+    headers:
+      Host: testgroup2.091.se
+    path: /xxX2
+- cipher: chacha20-ietf-poly1305
+  download_speed: 3919.9872361688176
+  name: 🇸🇬SG-81.90.189.18-0134
+  password: G!yBwPWH3Vao
+  port: 805
+  server: 81.90.189.18
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  download_speed: 3477.2943587549557
+  name: 🇸🇬SG-217.197.161.164-0149
+  password: G!yBwPWH3Vao
+  port: 811
+  server: 217.197.161.164
+  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 3529.6508842159187
+  name: 🇦🇺AU-103.224.212.215-0161
+  network: ws
+  port: 443
+  server: vjp3.0bad.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-opts:
+    headers:
+      Host: vjp3.0bad.com
+    path: /chat
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🏁RELAY-172.64.147.71-0017
+  - 🇸🇬SG-81.90.189.18-0134
+  - 🇸🇬SG-217.197.161.164-0149
+  - 🇦🇺AU-103.224.212.215-0161
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
