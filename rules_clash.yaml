@@ -30,13 +30,27 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 10740.287776386656
+  name: 🇯🇵JP-140.83.84.209-1394
+  network: ws
+  port: 1234
+  server: 140.83.84.209
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: e94247e0-d3e5-4f96-d8f3-b2144b383292
+  ws-opts:
+    path: /1234
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇯🇵JP-140.83.84.209-1394
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
