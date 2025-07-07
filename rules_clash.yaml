@@ -33,24 +33,27 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  download_speed: 10740.287776386656
-  name: 🇯🇵JP-140.83.84.209-1394
-  network: ws
-  port: 1234
-  server: 140.83.84.209
+  download_speed: 5036.94719318173
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: 🇭🇰HK-47.243.36.34-6890
+  network: http
+  port: 55986
+  server: 47.243.36.34
+  servername: 47.243.36.34
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: e94247e0-d3e5-4f96-d8f3-b2144b383292
-  ws-opts:
-    path: /1234
+  uuid: 87ed289f-cae3-49b4-bbe3-23da298c0e81
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇯🇵JP-140.83.84.209-1394
+  - 🇭🇰HK-47.243.36.34-6890
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
