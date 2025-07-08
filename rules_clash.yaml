@@ -30,13 +30,29 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 19460.31622099258
+  name: 🏁RELAY-104.19.47.48-7615
+  network: ws
+  port: 8443
+  server: 104.19.47.48
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 39135a39-e6ca-43df-a360-d859eea58d86
+  ws-opts:
+    headers:
+      Host: hk01.linkitnow.net
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🏁RELAY-104.19.47.48-7615
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
