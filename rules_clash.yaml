@@ -30,51 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 13231.89551288681
-  name: 🇰🇷KR-52.78.213.224-1456
-  network: ws
-  port: 80
-  server: 52.78.213.224
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 6f442823-6b73-4b31-f1f5-aa1e907b051e
-  ws-opts:
-    path: /
-- cipher: aes-256-gcm
-  download_speed: 20064.972210853022
-  name: 🇺🇸US-38.68.135.239-5552
-  password: faBAoD54k87UJG7
-  port: 2375
-  server: 38.68.135.239
-  type: ss
-- alterId: 64
-  cipher: auto
-  download_speed: 15798.161940669082
-  name: 🇺🇸US-107.167.20.189-7544
-  network: ws
-  port: 30000
-  server: 107.167.20.189
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.15314695.xyz
-    path: /path/191019072927
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🇰🇷KR-52.78.213.224-1456
-  - 🇺🇸US-38.68.135.239-5552
-  - 🇺🇸US-107.167.20.189-7544
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
