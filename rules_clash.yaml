@@ -30,13 +30,27 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 8418.264955529074
+  name: 🏁RELAY-154.92.9.99-8517
+  network: ws
+  port: 80
+  server: 154.92.9.99
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
+  ws-opts:
+    path: /blue
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🏁RELAY-154.92.9.99-8517
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
