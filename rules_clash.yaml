@@ -30,13 +30,69 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 7190.234264973249
+  name: 🏁RELAY-188.114.99.10-0868
+  network: ws
+  port: 443
+  server: 188.114.99.10
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  ws-opts:
+    headers:
+      Host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- cipher: aes-256-gcm
+  download_speed: 8195.014233674663
+  name: 🇨🇦CA-85.208.108.60-2468
+  password: e4FCWrgpkji3QY
+  port: 9101
+  server: 85.208.108.60
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 6570.37452628501
+  name: 🇺🇸US-38.64.138.145-5946
+  password: e4FCWrgpkji3QY
+  port: 9101
+  server: 38.64.138.145
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 10960.225373551313
+  name: 🇺🇸US-142.202.48.83-6304
+  password: KixLvKzwjekG00rm
+  port: 8080
+  server: 142.202.48.83
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 10791.78645075492
+  name: 🇺🇸US-38.68.134.85-6656
+  password: XKFKl2rULjIp74
+  port: 8009
+  server: 38.68.134.85
+  type: ss
+- cipher: aes-256-gcm
+  download_speed: 7709.543018608304
+  name: 🇺🇸US-38.64.138.145-6866
+  password: Y6R9pAtvxxzmGC
+  port: 5600
+  server: 38.64.138.145
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🏁RELAY-188.114.99.10-0868
+  - 🇨🇦CA-85.208.108.60-2468
+  - 🇺🇸US-38.64.138.145-5946
+  - 🇺🇸US-142.202.48.83-6304
+  - 🇺🇸US-38.68.134.85-6656
+  - 🇺🇸US-38.64.138.145-6866
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
