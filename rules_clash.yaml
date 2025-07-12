@@ -31,60 +31,42 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+- cipher: aes-128-cfb
+  download_speed: 9011.477827315523
+  name: 🇨🇳CN-14.29.124.174-1947
+  password: QazEdcTgb159@$*
+  port: 11048
+  server: 14.29.124.174
+  type: ss
 - alterId: 0
   cipher: auto
-  download_speed: 3632.8161796156487
-  name: 🇫🇷FR-162.19.224.175-1288
+  download_speed: 16521.18220556269
+  name: 🇫🇷FR-51.159.2.152-2506
   network: ws
   port: 80
-  server: 162.19.224.175
+  server: 51.159.2.152
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 42ba278d-65e0-4743-8707-e18ed98cfed5
+  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
   ws-opts:
-    headers:
-      Host: 162.19.224.175
-    path: /vmess
-- cipher: aes-256-gcm
-  download_speed: 7597.5130912603945
-  name: 🇺🇸US-38.114.114.69-5279
-  password: pKEW8JPByTVTLtM
-  port: 443
-  server: 38.114.114.69
-  type: ss
-- cipher: aes-256-gcm
-  download_speed: 9064.988773363868
-  name: 🇺🇸US-38.86.135.36-6751
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 38.86.135.36
-  type: ss
-- alterId: 64
-  cipher: auto
-  download_speed: 13177.205108548322
-  name: 🇺🇸US-38.11.71.67-7133
-  network: ws
-  port: 37002
-  server: 38.11.71.67
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.64786755.xyz
     path: /
+- cipher: aes-256-gcm
+  download_speed: 9876.963592683062
+  name: 🇺🇸US-38.75.136.135-6040
+  password: Y6R9pAtvxxzmGC
+  port: 5001
+  server: 38.75.136.135
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇫🇷FR-162.19.224.175-1288
-  - 🇺🇸US-38.114.114.69-5279
-  - 🇺🇸US-38.86.135.36-6751
-  - 🇺🇸US-38.11.71.67-7133
+  - 🇨🇳CN-14.29.124.174-1947
+  - 🇫🇷FR-51.159.2.152-2506
+  - 🇺🇸US-38.75.136.135-6040
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
