@@ -31,42 +31,60 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-128-cfb
-  download_speed: 9011.477827315523
-  name: 🇨🇳CN-14.29.124.174-1947
-  password: QazEdcTgb159@$*
-  port: 11048
-  server: 14.29.124.174
-  type: ss
-- alterId: 0
+- alterId: 2
   cipher: auto
-  download_speed: 16521.18220556269
-  name: 🇫🇷FR-51.159.2.152-2506
+  download_speed: 6623.530416709288
+  name: 🇨🇳CN-111.26.109.84-1923
   network: ws
-  port: 80
-  server: 51.159.2.152
+  port: 30807
+  server: v7.heduian.link
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   ws-opts:
+    headers:
+      Host: v7.heduian.link
     path: /
-- cipher: aes-256-gcm
-  download_speed: 9876.963592683062
-  name: 🇺🇸US-38.75.136.135-6040
-  password: Y6R9pAtvxxzmGC
-  port: 5001
-  server: 38.75.136.135
-  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 6050.434830946394
+  name: 🇩🇪DE-139.162.178.95-6943
+  network: ws
+  port: 443
+  server: 139.162.178.95
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 9072d339-3885-4fe1-b0bc-29fa7505410e
+  ws-opts:
+    headers:
+      Host: fixedfloati.cfd
+    path: /
+- alterId: 64
+  cipher: auto
+  download_speed: 8737.503156561483
+  name: 🇺🇸US-142.4.99.23-7163
+  network: ws
+  port: 37008
+  server: 142.4.99.23
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.94759802.xyz
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇨🇳CN-14.29.124.174-1947
-  - 🇫🇷FR-51.159.2.152-2506
-  - 🇺🇸US-38.75.136.135-6040
+  - 🇨🇳CN-111.26.109.84-1923
+  - 🇩🇪DE-139.162.178.95-6943
+  - 🇺🇸US-142.4.99.23-7163
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
