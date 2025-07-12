@@ -31,20 +31,29 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  download_speed: 3576.815198817142
-  name: 🇵🇱PL-51.77.53.200-1992
-  password: PCnnH6SQSnfoS27
-  port: 8091
-  server: 51.77.53.200
-  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 10662.718962897576
+  name: 🇭🇰HK-207.46.147.148-1691
+  network: ws
+  port: 443
+  server: fullaccesstohongkongnet.azurewebsites.net
+  servername: fullaccesstohongkongnet.azurewebsites.net
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstohongkongnet.azurewebsites.net
+    path: /ws
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇵🇱PL-51.77.53.200-1992
+  - 🇭🇰HK-207.46.147.148-1691
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
