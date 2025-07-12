@@ -30,60 +30,13 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies:
-- cipher: chacha20-ietf-poly1305
-  download_speed: 5934.155512810275
-  name: 🇨🇦CA-51.161.118.38-1463
-  password: G!yBwPWH3Vao
-  port: 802
-  server: 51.161.118.38
-  type: ss
-- cipher: aes-128-cfb
-  download_speed: 8537.520873105414
-  name: 🇨🇳CN-14.29.124.168-1779
-  password: QazEdcTgb159@$*
-  port: 25284
-  server: 14.29.124.168
-  type: ss
-- alterId: 0
-  cipher: auto
-  download_speed: 6018.963644005594
-  name: 🇩🇪DE-91.107.166.231-1726
-  network: ws
-  port: 8081
-  server: 91.107.166.231
-  servername: snapp.ir
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 822a646e-6f69-4758-9008-494e137e26ac
-  ws-opts:
-    path: /@hashmakvpn 🇩🇪
-- cipher: aes-256-cfb
-  download_speed: 5710.220415122757
-  name: 🇸🇬SG-13.250.54.18-3780
-  password: amazonskr05
-  port: 443
-  server: 13.250.54.18
-  type: ss
-- cipher: aes-256-gcm
-  download_speed: 4431.7380901471715
-  name: 🇺🇸US-167.88.62.68-4757
-  password: kDWvXYZoTBcGkC4
-  port: 8881
-  server: 167.88.62.68
-  type: ss
+proxies: []
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001
-  - 🇨🇦CA-51.161.118.38-1463
-  - 🇨🇳CN-14.29.124.168-1779
-  - 🇩🇪DE-91.107.166.231-1726
-  - 🇸🇬SG-13.250.54.18-3780
-  - 🇺🇸US-167.88.62.68-4757
+  proxies: &id001 []
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
