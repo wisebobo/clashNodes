@@ -31,42 +31,20 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  download_speed: 4044.2746415787274
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: 🇭🇰HK-8.210.153.242-2050
-  network: http
-  port: 48577
-  server: 8.210.153.242
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: dd3c5ce4-6741-4cdb-a54d-bf43475969e5
-- alterId: 0
-  cipher: auto
-  download_speed: 3637.59982577331
-  name: 🏁RELAY-104.20.224.95-8869
-  network: ws
-  port: 443
-  server: 104.20.224.95
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 824c58b1-65ba-4680-a609-663a000dbb92
-  ws-opts:
-    path: /wss13889
+- cipher: aes-256-gcm
+  download_speed: 11803.287890649552
+  name: 🇺🇸US-167.88.61.175-6763
+  password: Y6R9pAtvxxzmGC
+  port: 8888
+  server: 167.88.61.175
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇭🇰HK-8.210.153.242-2050
-  - 🏁RELAY-104.20.224.95-8869
+  - 🇺🇸US-167.88.61.175-6763
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
