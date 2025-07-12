@@ -30,13 +30,36 @@ ipv6: false
 log-level: info
 mode: rule
 port: 7890
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  download_speed: 6467.686336177476
+  name: 🇩🇪DE-91.107.166.231-1726
+  network: ws
+  port: 8081
+  server: 91.107.166.231
+  servername: snapp.ir
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 822a646e-6f69-4758-9008-494e137e26ac
+  ws-opts:
+    path: /@hashmakvpn 🇩🇪
+- cipher: aes-256-gcm
+  download_speed: 7854.080166283206
+  name: 🇺🇸US-142.202.48.83-6255
+  password: pKEW8JPByTVTLtM
+  port: 443
+  server: 142.202.48.83
+  type: ss
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
-  proxies: &id001 []
+  proxies: &id001
+  - 🇩🇪DE-91.107.166.231-1726
+  - 🇺🇸US-142.202.48.83-6255
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
