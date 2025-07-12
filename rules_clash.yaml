@@ -31,20 +31,26 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  download_speed: 11803.287890649552
-  name: 🇺🇸US-167.88.61.175-6763
-  password: Y6R9pAtvxxzmGC
-  port: 8888
-  server: 167.88.61.175
-  type: ss
+- alterId: 0
+  cipher: auto
+  download_speed: 7346.477709145892
+  name: 🇷🇺RU-45.89.230.196-1484
+  network: ws
+  port: 80
+  server: 45.89.230.196
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 8f9f526b-cab6-41d2-9424-cbdde94ea14f
+  ws-opts:
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-167.88.61.175-6763
+  - 🇷🇺RU-45.89.230.196-1484
   tolerance: 300
   type: url-test
   url: http://www.gstatic.com/generate_204
