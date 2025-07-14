@@ -203,6 +203,8 @@ def read_nodes_yaml(*file_patterns):
                     data = yaml.safe_load(file)
                     if data and "proxies" in data:
                         for node in data["proxies"]:
+                            if not isinstance(node.get("port"), int):
+                                continue
                             # 选择能唯一标识节点的关键信息
                             node_key = (
                                 node.get("type"),
