@@ -1,372 +1,364 @@
-allow-lan: false
+allow-lan: true
+clash-for-android:
+  append-system-dns: false
 dns:
   default-nameserver:
+  - 119.29.29.29
   - 233.5.5.5
   - 114.114.114.114
+  - 180.184.1.1
   enable: true
-  enhanced-mode: fake-ip
   fake-ip-filter:
   - '*.lan'
-  - '*.local'
   - '*.localdomain'
   - '*.example'
   - '*.invalid'
   - '*.localhost'
   - '*.test'
+  - '*.local'
   - '*.home.arpa'
-  - router.asus.com
-  - localhost.sec.qq.com
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - '*.time.edu.cn'
+  - '*.ntp.org.cn'
+  - +.pool.ntp.org
+  - time1.cloud.tencent.com
+  - stun.*.*
+  - stun.*.*.*
+  - swscan.apple.com
+  - mesu.apple.com
+  - music.163.com
+  - '*.music.163.com'
+  - '*.126.net'
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - '*.kuwo.cn'
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - y.qq.com
+  - '*.y.qq.com'
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
   - localhost.ptlogin2.qq.com
-  - +.msftconnecttest.com
-  fake-ip-range: 198.18.0.1/16
+  - '*.msftconnecttest.com'
+  - '*.msftncsi.com'
+  - '*.xiami.com'
+  - '*.music.migu.cn'
+  - music.migu.cn
+  - +.wotgame.cn
+  - +.wggames.cn
+  - +.wowsgame.cn
+  - +.wargaming.net
+  - '*.*.*.srv.nintendo.net'
+  - '*.*.stun.playstation.net'
+  - xbox.*.*.microsoft.com
+  - '*.*.xboxlive.com'
+  - '*.ipv6.microsoft.com'
+  - teredo.*.*.*
+  - teredo.*.*
+  - speedtest.cros.wr.pvp.net
+  - +.jjvip8.com
+  - www.douyu.com
+  - activityapi.huya.com
+  - activityapi.huya.com.w.cdngslb.com
+  - www.bilibili.com
+  - api.bilibili.com
+  - a.w.bilicdn1.com
+  fake-ip-range: 198.18.0.1/15
   ipv6: false
-  listen: 0.0.0.0:53
+  listen: 0.0.0.0:1053
   nameserver:
-  - 233.5.5.5
-  - 114.114.114.114
-  - 119.29.29.29
-  - 180.76.76.76
+  - 119.28.28.28
+  - 233.6.6.6
+  - https://1.12.12.12/dns-query
+  - https://dns.alidns.com/dns-query
+  - tls://223.6.6.6:853
+  use-hosts: true
+experimental:
+  sniff-tls-sni: true
+external-controller: 127.0.0.1:9090
 ipv6: false
 log-level: info
-mode: rule
+mode: Rule
 port: 7890
 proxies:
+- cipher: aes-256-gcm
+  name: 🇺🇸US-38.75.136.21-0414
+  password: g5MeD6Ft3CWlJId
+  port: 5003
+  server: 38.75.136.21
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇷🇺RU-213.183.53.222-0430
+  password: KnJGad3FqTvjqbaX
+  port: 9014
+  server: 213.183.53.222
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-104.21.16.1-0352
-  network: ws
-  port: 8443
-  server: us01.sh-cloudflare.sbs
-  servername: us01.sh-cloudflare.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 2bd0c9d7-f239-437e-a1e1-6cf830af2a1a
-  ws-opts:
-    headers:
-      Host: us01.sh-cloudflare.sbs
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-172.67.42.232-0611
+  name: 🏁RELAY-104.21.73.59-0605
   network: ws
   port: 80
-  server: 172.67.42.232
+  server: www.xinjuc.com
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 4bf074f4-7e9c-4e4b-a10d-156e26199729
+  uuid: 2f38f848-a899-4c87-9807-207a41615e3c
   ws-opts:
     headers:
-      Host: us03s.5d8ecf82.cfd
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 🇯🇵JP-57.180.63.92-0670
-  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  port: 9898
-  server: 57.180.63.92
-  type: ss
+      Host: hk.freeyyds.dpdns.org
+    path: /rongseven?ed=2048
 - alterId: 0
   cipher: auto
-  name: 🇺🇸US-103.224.182.210-0701
+  name: 🇰🇷KR-130.162.141.104-0778
   network: ws
-  port: 80
-  server: hk80.sanfen001.pics
+  port: 443
+  server: 130.162.141.104
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+  ws-opts:
+    path: /reffs7y26g0ua
+- alterId: 0
+  cipher: auto
+  name: 🏁RELAY-141.101.114.32-1205
+  network: ws
+  port: 443
+  server: 141.101.114.32
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    headers:
+      Host: 141.101.114.32
+    path: /A2DJOPFT
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦CA-132.145.99.228-1503
+  network: ws
+  port: 13724
+  server: 132.145.99.228
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d
+  uuid: 52768552-c2b2-4460-89f1-e740cc145b99
   ws-opts:
-    headers:
-      Host: hk80.sanfen001.pics
-    path: /zh-cn/download
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-198.41.212.145-0735
-  network: ws
-  port: 443
-  server: 198.41.212.145
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-  ws-opts:
-    headers:
-      Host: lg1.cfcdn3.xyz
-    path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: 🇦🇺AU-103.224.212.211-0773
-  network: ws
-  port: 443
-  server: 20.72img.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-opts:
-    headers:
-      Host: 20.72img.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-104.29.64.2-0736
-  network: ws
-  port: 443
-  server: 104.29.64.2
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
-  ws-opts:
-    headers:
-      Host: fr2.cfcdn4.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-188.114.99.9-0780
-  network: ws
-  port: 443
-  server: 188.114.99.9
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      Host: lg1.trump2023.us
-    path: /ECTCJ0DF
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-172.64.154.222-0743
-  network: ws
-  port: 443
-  server: 172.64.154.222
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
-  ws-opts:
-    headers:
-      Host: lg1.cfcdn1.xyz
-    path: /ray
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE-45.150.32.13-0917
-  password: DKyRdoqQIebdKZVYs5GzW8
-  port: 14628
-  server: 45.150.32.13
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-203.30.188.189-0884
-  network: ws
-  port: 443
-  server: 203.30.188.189
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      Host: oplg1.zhujicn2.com
-    path: /5QNROSRV
-- alterId: 1
-  cipher: auto
-  name: 🏁RELAY-104.19.110.34-1133
-  network: ws
-  port: 443
-  server: 104.19.110.34
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 4cdb016f-f14e-30b3-97d6-453c741a5c80
-  ws-opts:
-    headers:
-      Host: free.frli.xyz
-    path: /y475
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-103.21.244.95-1545
-  network: ws
-  port: 443
-  server: 103.21.244.95
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: aa586ced-9c6b-4882-aae5-f4fa3919c73c
-  ws-opts:
-    path: /233blog
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: 🇺🇸US-5.161.106.72-2163
-  network: http
-  port: 50978
-  server: 5.161.106.72
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 89e6248b-0152-4317-a6ed-b6a0cf41f2cb
-- cipher: aes-256-cfb
-  name: 🇸🇬SG-18.141.183.204-3735
-  password: amazonskr05
-  port: 443
-  server: 18.141.183.204
+    path: /ws-path
+- cipher: aes-128-cfb
+  name: 🇨🇳CN-14.29.124.168-1760
+  password: QazEdcTgb159@$*
+  port: 25256
+  server: 14.29.124.168
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.68.134.85-4344
+  name: 🇨🇦CA-85.208.108.60-2395
+  password: e4FCWrgpkji3QY
+  port: 9101
+  server: 85.208.108.60
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇺🇸US-38.114.114.19-5821
+  password: TEzjfAYq2IjtuoS
+  port: 6697
+  server: 38.114.114.19
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇺🇸US-38.75.136.135-6321
+  password: Y6R9pAtvxxzmGC
+  port: 3389
+  server: 38.75.136.135
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇺🇸US-38.75.136.135-6360
+  password: XKFKl2rULjIp74
+  port: 8009
+  server: 38.75.136.135
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇺🇸US-167.88.63.44-6471
   password: Y6R9pAtvxxzmGC
   port: 3306
-  server: 38.68.134.85
+  server: 167.88.63.44
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇹🇼TW-165.154.253.35-4416
+  name: 🏁RELAY-104.21.15.36-6963
   network: ws
   port: 443
-  server: tw-1.qwqjsq.top
+  server: 104.21.15.36
+  servername: linde06.indiavideo.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+  ws-opts:
+    headers:
+      Host: linde06.indiavideo.sbs
+    path: /linkws
+- alterId: 0
+  cipher: auto
+  grpc-opts:
+    grpc-service-name: /
+  name: 🏁RELAY-188.114.97.8-6997
+  network: grpc
+  port: 2087
+  server: 188.114.97.8
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: e3a464d7-ad51-42ee-8059-220154797b50
+- alterId: 64
+  cipher: auto
+  name: 🇺🇸US-38.33.56.53-7207
+  network: ws
+  port: 37000
+  server: 38.33.56.53
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.24006857.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🏁RELAY-172.67.216.97-8384
+  network: ws
+  port: 2095
+  server: 172.67.216.97
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: b0543a3b-d690-3ed9-9a81-f24f852e74f7
+  uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
   ws-opts:
-    headers:
-      Host: tw-1.qwqjsq.top
-    path: /
-- cipher: aes-256-cfb
-  name: 🇻🇳VN-103.186.154.36-5032
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.36
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇺🇸US-167.88.61.14-5895
-  password: Y6R9pAtvxxzmGC
-  port: 3306
-  server: 167.88.61.14
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇺🇸US-167.88.63.59-6474
-  password: KixLvKzwjekG00rm
-  port: 5500
-  server: 167.88.63.59
-  type: ss
+    path: /hgcefomn
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-211.177.40.235-6791
+  name: 🏁RELAY-172.64.193.102-8454
   network: ws
-  port: 30001
-  server: 211.177.40.235
-  servername: p3.chigua.tk
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  ws-opts:
-    path: /vmess
-- alterId: 64
-  cipher: auto
-  name: 🇺🇸US-38.11.69.35-7052
-  network: ws
-  port: 30003
-  server: 38.11.69.35
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.52140341.xyz
-    path: /
-- alterId: 64
-  cipher: auto
-  name: 🇺🇸US-38.33.44.20-7205
-  network: ws
-  port: 38003
-  server: 38.33.44.20
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.59433543.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-104.19.47.3-7556
-  network: ws
-  port: 8080
-  server: 104.19.47.3
+  port: 2095
+  server: 172.64.193.102
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
+  uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
   ws-opts:
-    headers:
-      Host: oiictw.yydsii.com
-    path: /?ed=2048&Telegram🇨🇳 @WangCai2
-- alterId: 64
+    path: /hgcefomn
+- cipher: aes-128-gcm
+  name: 04-030-HK
+  password: a12cloud1
+  plugin: obfs
+  plugin-opts:
+    host: fca50111319.download.windowsupdate.com
+    mode: http
+    skip-cert-verify: true
+    tls: true
+  port: 904
+  server: canvas.unclemanco.com
+  type: ss
+  udp: true
+- alterId: 0
   cipher: auto
-  name: 🇺🇸US-23.224.110.184-8168
+  name: 24-481-RELAY
   network: ws
   port: 443
-  server: 23.224.110.184
-  skip-cert-verify: false
+  server: ddDFvg.859885.XYZ
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  udp: true
+  uuid: f69b7304-9bea-4740-a555-797514012a53
   ws-opts:
-    path: /path/080712342310
+    host: ddDFvg.859885.XYZ
+    path: /9AYJ8jsARg3AJC29auSeckWI9
+- cipher: aes-256-gcm
+  name: 🇭🇰HK-103.103.245.158-062
+  password: 9bfdde71b4c0
+  port: 636/?plugin=v2ray-plugin%3Bmode%3Dwebsocket%3Bmux%3D8%3Bpath%3D%2Fcauejypbltqt%3Bhost%3Dnewroot2v1.dsjsapp.com%3Btls
+  server: 103.103.245.158
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-120.26.55.225-095
+  network: tcp
+  port: 50002
+  server: 120.26.55.225
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-headers:
+    Host: 120.26.55.225
+  ws-path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🏁RELAY-104.21.16.1-0352
-  - 🏁RELAY-172.67.42.232-0611
-  - 🇯🇵JP-57.180.63.92-0670
-  - 🇺🇸US-103.224.182.210-0701
-  - 🏁RELAY-198.41.212.145-0735
-  - 🇦🇺AU-103.224.212.211-0773
-  - 🇹🇼TW-104.29.64.2-0736
-  - 🏁RELAY-188.114.99.9-0780
-  - 🏁RELAY-172.64.154.222-0743
-  - 🇩🇪DE-45.150.32.13-0917
-  - 🏁RELAY-203.30.188.189-0884
-  - 🏁RELAY-104.19.110.34-1133
-  - 🏁RELAY-103.21.244.95-1545
-  - 🇺🇸US-5.161.106.72-2163
-  - 🇸🇬SG-18.141.183.204-3735
-  - 🇺🇸US-38.68.134.85-4344
-  - 🇹🇼TW-165.154.253.35-4416
-  - 🇻🇳VN-103.186.154.36-5032
-  - 🇺🇸US-167.88.61.14-5895
-  - 🇺🇸US-167.88.63.59-6474
-  - 🇰🇷KR-211.177.40.235-6791
-  - 🇺🇸US-38.11.69.35-7052
-  - 🇺🇸US-38.33.44.20-7205
-  - 🏁RELAY-104.19.47.3-7556
-  - 🇺🇸US-23.224.110.184-8168
+  - 🇺🇸US-38.75.136.21-0414
+  - 🇷🇺RU-213.183.53.222-0430
+  - 🏁RELAY-104.21.73.59-0605
+  - 🇰🇷KR-130.162.141.104-0778
+  - 🏁RELAY-141.101.114.32-1205
+  - 🇨🇦CA-132.145.99.228-1503
+  - 🇨🇳CN-14.29.124.168-1760
+  - 🇨🇦CA-85.208.108.60-2395
+  - 🇺🇸US-38.114.114.19-5821
+  - 🇺🇸US-38.75.136.135-6321
+  - 🇺🇸US-38.75.136.135-6360
+  - 🇺🇸US-167.88.63.44-6471
+  - 🏁RELAY-104.21.15.36-6963
+  - 🏁RELAY-188.114.97.8-6997
+  - 🇺🇸US-38.33.56.53-7207
+  - 🏁RELAY-172.67.216.97-8384
+  - 🏁RELAY-172.64.193.102-8454
+  - 04-030-HK
+  - 24-481-RELAY
+  - 🇭🇰HK-103.103.245.158-062
+  - 🇨🇳CN-120.26.55.225-095
   tolerance: 300
   type: url-test
-  url: http://www.gstatic.com/generate_204
+  url: http://cp.cloudflare.com/
 - interval: 30
   name: ♻️ LOAD BALANCE
   proxies: *id001
   strategy: consistent-hashing
   type: load-balance
-  url: http://www.gstatic.com/generate_204
+  url: http://cp.cloudflare.com/
 - interval: 30
   name: ♻️ Fallback
   proxies: *id001
   tolerance: 300
   type: fallback
-  url: http://www.gstatic.com/generate_204
+  url: http://cp.cloudflare.com/
 - name: 🚀 节点选择
   proxies:
   - DIRECT
@@ -374,48 +366,57 @@ proxy-groups:
   - ♻️ LOAD BALANCE
   - ♻️ Fallback
   type: select
+  url: http://cp.cloudflare.com/
 - name: 🌍 国外媒体
   proxies:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
   type: select
+  url: http://cp.cloudflare.com/
 - name: 📲 电报信息
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
   type: select
+  url: http://cp.cloudflare.com/
 - name: Ⓜ️ 微软服务
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
   type: select
+  url: http://cp.cloudflare.com/
 - name: 🍎 苹果服务
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
   type: select
+  url: http://cp.cloudflare.com/
 - name: 🎯 全球直连
   proxies:
   - 🚀 节点选择
   - ♻️ 自动选择
   type: select
+  url: http://cp.cloudflare.com/
 - name: 🛑 全球拦截
   proxies:
   - REJECT
   - DIRECT
   type: select
+  url: http://cp.cloudflare.com/
 - name: 🍃 应用净化
   proxies:
   - REJECT
   - DIRECT
   type: select
+  url: http://cp.cloudflare.com/
 - name: 🐟 漏网之鱼
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
   type: select
+  url: http://cp.cloudflare.com/
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
 - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -3806,17 +3807,4 @@ rules:
 - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
 - GEOIP,CN,🎯 全球直连
 - MATCH,🐟 漏网之鱼
-tun:
-  auto-detect-interface: true
-  auto-route: true
-  dns-hijack:
-  - 114.114.114.114
-  - 180.76.76.76
-  - 119.29.29.29
-  - 233.5.5.5
-  - 1.1.1.1
-  - 1.0.0.1
-  - 8.8.8.8
-  - 8.8.4.4
-  enable: false
-  stack: system
+unified-delay: true
