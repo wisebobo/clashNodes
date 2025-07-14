@@ -26,50 +26,60 @@ def generate_clash_config(yaml_file):
             other_proxies.append(proxy['name'])
 
     data['port'] = 7890
-    data['allow-lan'] = False
-    data['mode'] = 'rule'
-    data['ipv6'] = False
+    data['allow-lan'] = True
+    data['mode'] = 'Rule'
     data['log-level'] = 'info'
-    data['tun'] = {
-        'enable': False,
-        'stack': 'system',
-        'dns-hijack': ['114.114.114.114', '180.76.76.76', '119.29.29.29', '233.5.5.5', '1.1.1.1', '1.0.0.1', '8.8.8.8', '8.8.4.4'],
-        'auto-route': True,
-        'auto-detect-interface': True
+    data['external-controller'] = '127.0.0.1:9090'
+    data['clash-for-android'] = {
+        'append-system-dns': False
     }
+    data['experimental'] = {
+        'sniff-tls-sni': True
+    }
+    data['unified-delay'] = True
+    data['ipv6'] = False
+    # data['tun'] = {
+    #     'enable': False,
+    #     'stack': 'system',
+    #     'dns-hijack': ['114.114.114.114', '180.76.76.76', '119.29.29.29', '233.5.5.5', '1.1.1.1', '1.0.0.1', '8.8.8.8', '8.8.4.4'],
+    #     'auto-route': True,
+    #     'auto-detect-interface': True
+    # }
     data['dns'] = {
         'enable': True,
-        'listen': '0.0.0.0:53',
         'ipv6': False,
-        'default-nameserver': ['233.5.5.5', '114.114.114.114'],
+        'listen': '0.0.0.0:1053',
+        'use-hosts': True,
+        'default-nameserver': ['119.29.29.29', '233.5.5.5', '114.114.114.114', '180.184.1.1'],
         'nameserver': [
-            '233.5.5.5',
-            '114.114.114.114',
-            '119.29.29.29',
-            '180.76.76.76'
+            '119.28.28.28',
+            '233.6.6.6',
+            'https://1.12.12.12/dns-query', 
+            'https://dns.alidns.com/dns-query', 
+            'tls://223.6.6.6:853'
         ],
-        'enhanced-mode': 'fake-ip',
-        'fake-ip-range': '198.18.0.1/16',
+        'fake-ip-range': '198.18.0.1/15',
         'fake-ip-filter': [
-            '*.lan',
-            '*.local',
-            '*.localdomain',
-            '*.example',
-            '*.invalid',
-            '*.localhost',
-            '*.test',
-            '*.home.arpa',
-            'router.asus.com',
-            'localhost.sec.qq.com',
-            'localhost.ptlogin2.qq.com',
-            '+.msftconnecttest.com'
-        ]
+            '*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 
+            'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 
+            'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 
+            'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', '+.pool.ntp.org', 
+            'time1.cloud.tencent.com', 'stun.*.*', 'stun.*.*.*', 'swscan.apple.com', 'mesu.apple.com', 'music.163.com', 
+            '*.music.163.com', '*.126.net', 'musicapi.taihe.com', 'music.taihe.com', 'songsearch.kugou.com', 'trackercdn.kugou.com', 
+            '*.kuwo.cn', 'api-jooxtt.sanook.com', 'api.joox.com', 'y.qq.com', '*.y.qq.com', 'streamoc.music.tc.qq.com', 
+            'mobileoc.music.tc.qq.com', 'isure.stream.qqmusic.qq.com', 'dl.stream.qqmusic.qq.com', 'aqqmusic.tc.qq.com', 
+            'amobile.music.tc.qq.com', 'localhost.ptlogin2.qq.com', '*.msftconnecttest.com', '*.msftncsi.com', 
+            '*.xiami.com', '*.music.migu.cn', 'music.migu.cn', '+.wotgame.cn', '+.wggames.cn', '+.wowsgame.cn', 
+            '+.wargaming.net', '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', 
+            '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*', 'speedtest.cros.wr.pvp.net', 
+            '+.jjvip8.com', 'www.douyu.com', 'activityapi.huya.com', 'activityapi.huya.com.w.cdngslb.com', 
+            'www.bilibili.com', 'api.bilibili.com', 'a.w.bilicdn1.com']
     }
     data['proxy-groups'] = [
         {
             'name': '♻️ 自动选择',
             'type': 'url-test',
-            'url': 'http://www.gstatic.com/generate_204',
+            'url': 'http://cp.cloudflare.com/',
             'interval': 30,
             'tolerance': 300,
             'lazy': False,
@@ -79,7 +89,7 @@ def generate_clash_config(yaml_file):
         {
             'name': '♻️ LOAD BALANCE',
             'type': 'load-balance',
-            'url': 'http://www.gstatic.com/generate_204',
+            'url': 'http://cp.cloudflare.com/',
             'interval': 30,
             'strategy': 'consistent-hashing',
             'proxies': all_proxies
@@ -87,53 +97,62 @@ def generate_clash_config(yaml_file):
         {
             'name': '♻️ Fallback',
             'type': 'fallback',
-            'url': 'http://www.gstatic.com/generate_204',
+            'url': 'http://cp.cloudflare.com/',
             'interval': 30,
             'tolerance': 300,
             'proxies': all_proxies
         },
         {   'name': '🚀 节点选择',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['DIRECT', '♻️ 自动选择', '♻️ LOAD BALANCE', '♻️ Fallback']
         },
         {
             'name': '🌍 国外媒体',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['🚀 节点选择', '♻️ 自动选择', '🎯 全球直连']
         },
         {
             'name': '📲 电报信息',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['🚀 节点选择', '🎯 全球直连']
         },
         {
             'name': 'Ⓜ️ 微软服务',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['🎯 全球直连', '🚀 节点选择']
         },
         {
             'name': '🍎 苹果服务',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['🚀 节点选择', '🎯 全球直连']
         },
         {
             'name': '🎯 全球直连',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['🚀 节点选择', '♻️ 自动选择']
         },
         {
             'name': '🛑 全球拦截',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['REJECT', 'DIRECT']
         },
         {
             'name': '🍃 应用净化',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['REJECT', 'DIRECT']
         },
         {
             'name': '🐟 漏网之鱼',
             'type': 'select',
+            'url': 'http://cp.cloudflare.com/',
             'proxies': ['🚀 节点选择', '🎯 全球直连', '♻️ 自动选择']
         },
     ]
