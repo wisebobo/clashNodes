@@ -53,13 +53,14 @@ def test_download_speed(node, proxies):
     return result
 
 def test_node(node, proxies, process=None):
-    response = requests.get("https://www.google.com", proxies=proxies, timeout=10, verify=False)
+    response = requests.get("https://www.google.com", proxies=proxies, timeout=5, verify=False)
     if process:
         process.terminate()
         process.wait()
 
     if response.status_code == 200:
-        return test_download_speed(node, proxies)
+        # return test_download_speed(node, proxies)
+        return node
     else:
         print(f"Invalid node: {node['name']} (Status code: {response.status_code})")
         return None
