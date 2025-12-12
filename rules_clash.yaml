@@ -105,47 +105,64 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
+- cipher: aes-256-cfb
+  name: 🇻🇳VN-103.186.155.207-7256
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.207
+  type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-142.202.48.7-8914
-  password: PCnnH6SQSnfoS27
-  port: 8091
-  server: 142.202.48.7
+  name: 🇬🇧GB-172.99.190.87-7733
+  password: Y6R9pAtvxxzmGC
+  port: 3389
+  server: 172.99.190.87
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇺🇸US-38.107.226.49-7919
+  password: g5MeD6Ft3CWlJId
+  port: 5004
+  server: 38.107.226.49
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-104.21.75.193-9430
+  name: 🇺🇸US-172.234.24.211-9506
   network: ws
   port: 443
-  server: www.vpslook.com
+  server: sgfqkqmltcy.site
+  servername: sgfqkqmltcy.site
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 4993f14e-5f9b-4249-dc43-99f4fdea84be
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   ws-opts:
     headers:
-      Host: wapkp01.5201314.cfd
+      Host: sgfqkqmltcy.site
     path: /
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-104.31.16.46-10969
+  name: 🇫🇷FR-194.9.172.65-9626
   network: ws
-  port: 2082
-  server: 104.31.16.46
+  port: 443
+  server: 194.9.172.65
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  uuid: 8d90c129-4156-4d6c-9115-24df25f26a02
   ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: beyonddbc.sbs
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-142.202.48.7-8914
-  - 🏁RELAY-104.21.75.193-9430
-  - 🏁RELAY-104.31.16.46-10969
+  - 🇻🇳VN-103.186.155.207-7256
+  - 🇬🇧GB-172.99.190.87-7733
+  - 🇺🇸US-38.107.226.49-7919
+  - 🇺🇸US-172.234.24.211-9506
+  - 🇫🇷FR-194.9.172.65-9626
   tolerance: 300
   type: url-test
   url: http://cp.cloudflare.com/
