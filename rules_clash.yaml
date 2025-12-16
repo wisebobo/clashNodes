@@ -105,41 +105,23 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: 🇺🇸US-38.68.135.18-4190
-  password: XKFKl2rULjIp74
-  port: 8009
-  server: 38.68.135.18
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦CA-51.161.118.38-1298
+  password: G!yBwPWH3Vao
+  port: 811
+  server: 51.161.118.38
   type: ss
 - cipher: aes-256-cfb
-  name: 🇻🇳VN-103.186.155.63-4971
+  name: 🇻🇳VN-103.186.155.103-5198
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.155.63
+  server: 103.186.155.103
   type: ss
 - cipher: aes-256-cfb
-  name: 🇻🇳VN-103.186.154.223-5230
+  name: 🇻🇳VN-103.186.154.182-5317
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.154.223
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇳🇱NL-172.99.188.71-5482
-  password: cdBIDV42DCwnfIN
-  port: 8118
-  server: 172.99.188.71
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇫🇷FR-149.202.82.172-5659
-  password: cdBIDV42DCwnfIN
-  port: 8118
-  server: 149.202.82.172
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇨🇦CA-85.208.108.59-5714
-  password: Y6R9pAtvxxzmGC
-  port: 3389
-  server: 85.208.108.59
+  server: 103.186.154.182
   type: ss
 - cipher: aes-256-gcm
   name: 🇬🇧GB-172.99.190.149-5806
@@ -148,156 +130,80 @@ proxies:
   server: 172.99.190.149
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.107.226.146-5907
+  name: 🇺🇸US-167.88.61.14-5797
   password: Y6R9pAtvxxzmGC
-  port: 3389
-  server: 38.107.226.146
+  port: 5001
+  server: 167.88.61.14
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.75.136.135-6214
+  name: 🇺🇸US-169.197.142.187-5839
+  password: zDNVedRFPQexG9v
+  port: 6379
+  server: 169.197.142.187
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇺🇸US-38.114.114.104-5911
   password: FoOiGlkAA9yPEGP
-  port: 7307
-  server: 38.75.136.135
+  port: 7306
+  server: 38.114.114.104
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.107.226.48-6599
+  name: 🇺🇸US-38.107.226.132-6460
   password: KixLvKzwjekG00rm
   port: 8080
-  server: 38.107.226.48
+  server: 38.107.226.132
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.64.138.145-6706
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 38.64.138.145
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇺🇸US-142.202.48.7-6880
-  password: TEzjfAYq2IjtuoS
-  port: 6679
-  server: 142.202.48.7
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇺🇸US-38.91.100.27-6912
+  name: 🇺🇸US-38.91.100.207-6509
   password: g5MeD6Ft3CWlJId
-  port: 5004
-  server: 38.91.100.27
+  port: 5003
+  server: 38.91.100.207
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-47.86.42.197-7380
-  network: ws
-  port: 20521
-  server: 47.86.42.197
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: 🇭🇰HK-8.210.203.189-7063
+  network: http
+  port: 37309
+  server: 8.210.203.189
+  servername: 8.210.203.189
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: fe0861ca-1e49-44dd-ad74-51406cb77165
-  ws-opts:
-    path: /
+  uuid: 74cdcc28-a0bc-421f-bd15-c6a6e401b523
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-185.148.104.118-7598
-  network: ws
+  grpc-opts:
+    grpc-service-name: /
+  name: 🇺🇦UA-95.164.37.67-8211
+  network: grpc
   port: 443
-  server: 185.148.104.118
-  servername: ab-test-frosty-flower-e7fb.tariroc864.workers.dev
+  server: 95.164.37.67
+  servername: ''
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  ws-opts:
-    headers:
-      Host: ab-test-frosty-flower-e7fb.tariroc864.workers.dev
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 🇪🇸ES-212.227.146.33-8493
-  password: GvsjQ0OZ5nGQXDGfzfWZf5
-  port: 443
-  server: 212.227.146.33
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇨🇴CO-190.120.231.45-8569
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 190.120.231.45
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇱🇻LV-185.135.86.173-8600
-  password: GA9KzeEgvfxNrgmM
-  port: 9019
-  server: 185.135.86.173
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-172.67.86.87-8634
-  network: ws
-  port: 2095
-  server: 172.67.86.87
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-  ws-opts:
-    path: /hgcefomn
-- cipher: aes-256-cfb
-  name: 🇨🇿CZ-143.244.58.102-8886
-  password: asdKkaskJKfnsa
-  port: 443
-  server: 143.244.58.102
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-104.31.16.28-9027
-  network: ws
-  port: 80
-  server: 104.31.16.28
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 8abe9496-5e24-4e49-b566-dcf86116017d
-  ws-opts:
-    path: /i99LgvSaslbsPLLQQ7j6Z
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-104.19.180.169-9107
-  network: ws
-  port: 443
-  server: 104.19.180.169
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 824c58b1-65ba-4680-a609-663a000dbb92
-  ws-opts:
-    path: /wss13889
+  uuid: 81594e2a-a2a1-4190-9a62-dc389f829807
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-38.68.135.18-4190
-  - 🇻🇳VN-103.186.155.63-4971
-  - 🇻🇳VN-103.186.154.223-5230
-  - 🇳🇱NL-172.99.188.71-5482
-  - 🇫🇷FR-149.202.82.172-5659
-  - 🇨🇦CA-85.208.108.59-5714
+  - 🇨🇦CA-51.161.118.38-1298
+  - 🇻🇳VN-103.186.155.103-5198
+  - 🇻🇳VN-103.186.154.182-5317
   - 🇬🇧GB-172.99.190.149-5806
-  - 🇺🇸US-38.107.226.146-5907
-  - 🇺🇸US-38.75.136.135-6214
-  - 🇺🇸US-38.107.226.48-6599
-  - 🇺🇸US-38.64.138.145-6706
-  - 🇺🇸US-142.202.48.7-6880
-  - 🇺🇸US-38.91.100.27-6912
-  - 🇭🇰HK-47.86.42.197-7380
-  - 🏁RELAY-185.148.104.118-7598
-  - 🇪🇸ES-212.227.146.33-8493
-  - 🇨🇴CO-190.120.231.45-8569
-  - 🇱🇻LV-185.135.86.173-8600
-  - 🏁RELAY-172.67.86.87-8634
-  - 🇨🇿CZ-143.244.58.102-8886
-  - 🏁RELAY-104.31.16.28-9027
-  - 🏁RELAY-104.19.180.169-9107
+  - 🇺🇸US-167.88.61.14-5797
+  - 🇺🇸US-169.197.142.187-5839
+  - 🇺🇸US-38.114.114.104-5911
+  - 🇺🇸US-38.107.226.132-6460
+  - 🇺🇸US-38.91.100.207-6509
+  - 🇭🇰HK-8.210.203.189-7063
+  - 🇺🇦UA-95.164.37.67-8211
   tolerance: 300
   type: url-test
   url: http://cp.cloudflare.com/
