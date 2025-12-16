@@ -105,124 +105,111 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
+- alterId: 2
+  cipher: auto
+  name: 07-0176-HK
+  network: ws
+  port: 30807
+  server: v10.heduian.link
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    host: v10.heduian.link
+    path: /oooo
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸US-23.33.192.6-0002
+  network: ws
+  port: 443
+  server: cacerts.digicert.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  ws-opts:
+    headers:
+      Host: sg1-v2ray.sshkit.org
+    path: /sshkit/1736960111/63859b5b38f53/
+- alterId: 0
+  cipher: auto
+  name: 🏁RELAY-141.193.213.10-0027
+  network: ws
+  port: 443
+  server: 141.193.213.10
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  ws-opts:
+    headers:
+      Host: fr1.trump2023.org
+    path: /9JZFDTKE
 - cipher: aes-256-gcm
-  name: 🇺🇸US-169.197.142.187-5858
-  password: KixLvKzwjekG00rm
-  port: 8080
+  name: 🇺🇸US-169.197.142.187-5838
+  password: g5MeD6Ft3CWlJId
+  port: 5003
   server: 169.197.142.187
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-167.88.61.50-6610
-  password: g5MeD6Ft3CWlJId
-  port: 5004
-  server: 167.88.61.50
+  name: 🇺🇸US-167.88.61.175-6355
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 167.88.61.175
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸US-38.68.134.196-6627
+  password: G!yBwPWH3Vao
+  port: 805
+  server: 38.68.134.196
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇺🇸US-38.64.138.145-6629
+  password: zDNVedRFPQexG9v
+  port: 6379
+  server: 38.64.138.145
   type: ss
 - cipher: rc4-md5
-  name: 🇨🇳CN-120.195.181.82-7009
+  name: 🇨🇳CN-120.195.181.82-7006
   password: Paofu
   plugin: obfs
   plugin-opts:
     host: e61b761245.microsoft.com
     mode: http
-  port: 5983
+  port: 5988
   server: 120.195.181.82
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇨🇦CA-15.235.85.156-7160
+  name: 🇮🇷IR-2.189.59.3-7571
   network: ws
   port: 443
-  server: 15.235.85.156
-  servername: kampong.org
+  server: 2.189.59.3
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
   ws-opts:
     headers:
-      Host: kampong.org
-    path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰HK-8.210.230.179-7289
-  network: ws
-  port: 12125
-  server: 8.210.230.179
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 8b0c11be-1ffe-4074-afc5-e734fe985b22
-  ws-opts:
+      Host: obdii.cfd
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸US-152.67.251.232-7474
-  network: ws
-  port: 443
-  server: 152.67.251.232
-  servername: irvideo.cfd
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-  ws-opts:
-    headers:
-      Host: irvideo.cfd
-    path: /linkws
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-172.67.131.108-7596
-  network: ws
-  port: 443
-  server: 172.67.131.108
-  servername: glweidf.cfd
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
-  ws-opts:
-    headers:
-      Host: glweidf.cfd
-    path: /linkws
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-154.92.9.8-8798
-  network: ws
-  port: 443
-  server: 154.92.9.8
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
-  ws-opts:
-    path: /blue
-- alterId: 64
-  cipher: auto
-  name: 🇬🇧GB-140.99.128.125-8904
-  network: ws
-  port: 443
-  server: 140.99.128.125
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    path: /path/1689849487190
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇺🇸US-169.197.142.187-5858
-  - 🇺🇸US-167.88.61.50-6610
-  - 🇨🇳CN-120.195.181.82-7009
-  - 🇨🇦CA-15.235.85.156-7160
-  - 🇭🇰HK-8.210.230.179-7289
-  - 🇺🇸US-152.67.251.232-7474
-  - 🏁RELAY-172.67.131.108-7596
-  - 🏁RELAY-154.92.9.8-8798
-  - 🇬🇧GB-140.99.128.125-8904
+  - 07-0176-HK
+  - 🇺🇸US-23.33.192.6-0002
+  - 🏁RELAY-141.193.213.10-0027
+  - 🇺🇸US-169.197.142.187-5838
+  - 🇺🇸US-167.88.61.175-6355
+  - 🇺🇸US-38.68.134.196-6627
+  - 🇺🇸US-38.64.138.145-6629
+  - 🇨🇳CN-120.195.181.82-7006
+  - 🇮🇷IR-2.189.59.3-7571
   tolerance: 300
   type: url-test
   url: http://cp.cloudflare.com/
