@@ -105,130 +105,38 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇷🇴RO-185.126.237.38-139
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 185.126.237.38
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇻🇳VN-103.163.218.2-172
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 103.163.218.2
-  type: ss
-- cipher: chacha20-ietf
-  name: 🇭🇰HK-103.141.221.88-174
-  password: asd123456
-  port: 8388
-  server: 103.141.221.88
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇰🇿KZ-45.159.250.190-214
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  port: 990
-  server: 45.159.250.190
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇦🇺AU-103.224.212.211-0660
+  name: 🇺🇸US-154.9.254.63-7366
   network: ws
-  port: 443
-  server: 25.72img.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-opts:
-    headers:
-      Host: 25.72img.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-138.2.45.89-1650
-  network: ws
-  port: 4430
-  server: 138.2.45.89
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 6abfad5a-24be-3657-85da-ceac782b7e19
-  ws-opts:
-    path: /osav101
-- cipher: aes-256-gcm
-  name: 🇺🇸US-38.91.102.30-2013
-  password: KixLvKzwjekG00rm
-  port: 8080
-  server: 38.91.102.30
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇺🇸US-104.243.25.95-4245
-  password: bwhskrskr03
-  port: 253
-  server: 104.243.25.95
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇻🇳VN-103.186.155.124-5357
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.124
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇨🇦CA-134.195.196.149-6039
-  password: g5MeD6Ft3CWlJId
-  port: 5003
-  server: 134.195.196.149
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB-172.99.190.39-6230
-  password: Y6R9pAtvxxzmGC
-  port: 3306
-  server: 172.99.190.39
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇺🇸US-38.75.136.102-6314
-  password: KixLvKzwjekG00rm
-  port: 8000
-  server: 38.75.136.102
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE-161.35.69.20-6690
-  password: Ultr@r00t_2017
-  port: 811
-  server: 161.35.69.20
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰HK-8.218.113.19-7270
-  network: ws
-  port: 54100
-  server: 8.218.113.19
+  port: 20521
+  server: 154.9.254.63
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 9b401fe8-7a80-4c9d-8126-e29407a6032c
+  uuid: d824764a-954e-4c75-9116-f6e5eba944a9
   ws-opts:
-    path: /arki?ed=2048
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK-47.86.160.177-7483
+  network: ws
+  port: 22083
+  server: 47.86.160.177
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 374f0ecb-2140-4f4f-bdd8-c43561cf383a
+  ws-opts:
+    path: /
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇷🇴RO-185.126.237.38-139
-  - 🇻🇳VN-103.163.218.2-172
-  - 🇭🇰HK-103.141.221.88-174
-  - 🇰🇿KZ-45.159.250.190-214
-  - 🇦🇺AU-103.224.212.211-0660
-  - 🇯🇵JP-138.2.45.89-1650
-  - 🇺🇸US-38.91.102.30-2013
-  - 🇺🇸US-104.243.25.95-4245
-  - 🇻🇳VN-103.186.155.124-5357
-  - 🇨🇦CA-134.195.196.149-6039
-  - 🇬🇧GB-172.99.190.39-6230
-  - 🇺🇸US-38.75.136.102-6314
-  - 🇩🇪DE-161.35.69.20-6690
-  - 🇭🇰HK-8.218.113.19-7270
+  - 🇺🇸US-154.9.254.63-7366
+  - 🇭🇰HK-47.86.160.177-7483
   tolerance: 300
   type: url-test
   url: http://cp.cloudflare.com/
