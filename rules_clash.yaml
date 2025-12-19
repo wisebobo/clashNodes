@@ -105,77 +105,87 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇵🇹PT-185.113.143.186-123
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  port: 990
-  server: 185.113.143.186
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇨🇦CA-23.95.76.59-132
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  port: 990
-  server: 23.95.76.59
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇿🇦ZA-156.38.168.58-143
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  port: 990
-  server: 156.38.168.58
-  type: ss
 - cipher: aes-256-cfb
-  name: 🇩🇰DK-192.36.27.94-163
+  name: 🇫🇮FI-37.143.129.230-120
   password: f8f7aCzcPKbsF8p3
   port: 989
-  server: 192.36.27.94
+  server: 37.143.129.230
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇱🇹LT-45.87.175.187-178
-  password: cvII85TrW6n0OGyfpHVS1u
-  port: 8080
-  server: 45.87.175.187
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇵🇱PL-217.30.10.70-184
-  password: FAdUvMJUq5vDgKEq
-  port: 9006
-  server: 217.30.10.70
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL-193.29.139.202-186
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.202
-  type: ss
-- cipher: chacha20-ietf
-  name: 🇭🇰HK-103.141.221.88-192
-  password: asd123456
-  port: 8388
-  server: 103.141.221.88
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇬SG-167.150.100.115-202
-  password: pJtDFXMfdW9VNdJpaf4e2LfFkXdWgxrz
+  name: 🇦🇺AU-95.111.222.113-128
+  password: SVt6ZiWzRI1Yxeig4xBZwiJOt6ceXwGa
   port: 443
-  server: 167.150.100.115
+  server: 95.111.222.113
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL-213.109.147.242-201
-  password: VpKABcOpNNA0l5G2AVOmw8
-  port: 62685
-  server: 213.109.147.242
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇰🇿KZ-45.159.250.190-203
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  name: 🇷🇴RO-185.126.237.38-148
+  password: f8f7aCzcPKbsF8p3
   port: 990
-  server: 45.159.250.190
+  server: 185.126.237.38
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸US-23.95.75.146-168
+  password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
+  port: 443
+  server: 23.95.75.146
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇵🇱PL-57.128.214.100-172
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 57.128.214.100
   type: ss
 - alterId: 0
   cipher: auto
-  name: 06-0028-CN
+  name: 🇲🇾MY-47.250.45.234-124
   network: ws
-  port: 45064
+  port: 8613
+  server: 47.250.45.234
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 80039b4d-bac0-4f89-82c7-54fad3b0a1ea
+  ws-opts:
+    path: /
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰HK-219.77.80.3-153
+  network: ws
+  port: 80
+  server: hkt.gotochinatown.net
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  ws-opts:
+    headers:
+      Host: hkt.gotochinatown.net
+    path: /
+- cipher: aes-256-cfb
+  name: 🇵🇱PL-217.30.10.70-182
+  password: UWZQeLRWnkqgkseq
+  port: 9032
+  server: 217.30.10.70
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 06-0011-CN
+  network: ws
+  port: 38637
+  server: tkcmi.5tk.top
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 93058ab5-bb29-44d4-c309-d224c0967732
+  ws-opts:
+    host: tkcmi.5tk.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 06-0112-CN
+  network: ws
+  port: 45052
   server: haa.dashuai.cyou
   skip-cert-verify: true
   tls: false
@@ -185,266 +195,176 @@ proxies:
   ws-opts:
     host: haa.dashuai.cyou
     path: /
+- cipher: aes-128-gcm
+  name: 07-0210-HK
+  password: I1qrYxOXxPYCOkhT
+  port: 50339
+  server: kr2.web3sp.com
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 10-0333-VN
+  password: Xn8jKdmDM00IeO%2525%2523%2524%2523fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.64
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 17-0411-MT
+  password: ARgvGZywA%252BgacgGV26Bvmu05%252BwZmRW/j%252BAdU%252BZ8Bt44%253D
+  port: 990
+  server: 171.22.254.129
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 17-0435-NL
+  password: 0NeN5ta7FLa5B9DLytU0um
+  port: 443
+  server: promo1o.bystrivpn.ru
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: 🇺🇸US-34.195.60.139-0001
+  name: 🏁RELAY-190.93.245.170-0017
   network: ws
-  port: 80
-  server: hk80-2.sanfen001.pics
+  port: 443
+  server: 190.93.245.170
+  servername: opfr1.v2rayfree1.xyz
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
-  uuid: a546b618-8728-4a1e-af2b-6e7d8b74aa74
+  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
   ws-opts:
     headers:
-      Host: hk80-2.sanfen001.pics
-    path: /zh-cn/download
+      Host: opfr1.v2rayfree1.xyz
+    path: /IYKLD53M
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-45.66.134.176-0165
+  name: 🇸🇬SG-81.90.189.152-0196
   password: G!yBwPWH3Vao
   port: 809
-  server: 45.66.134.176
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇺🇸US-38.114.114.67-0449
-  password: TEzjfAYq2IjtuoS
-  port: 6697
-  server: 38.114.114.67
+  server: 81.90.189.152
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-104.21.8.116-0668
+  name: 🇦🇺AU-103.224.212.211-0654
   network: ws
   port: 443
-  server: uk.xlkjjs.top
+  server: 34.72img.xyz
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 6ea22ab5-2923-3feb-827c-79e4b8cd3f38
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
   ws-opts:
     headers:
-      Host: uk.xlkjjs.top
+      Host: 34.72img.xyz
     path: /
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-141.101.115.111-0706
+  name: 🇺🇸US-198.23.174.168-0892
   network: ws
-  port: 443
-  server: 141.101.115.111
+  port: 20086
+  server: 198.23.174.168
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vmess
-  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
+  uuid: 2b36304b-4f88-4ff5-9033-f4d57dbb5490
   ws-opts:
-    headers:
-      Host: fr2.cfcdn4.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸US-3.229.186.102-1025
-  network: ws
-  port: 443
-  server: ac2088.herokuapp.com
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: d1babe08-f8ac-490b-b66f-9be27467f3cc
-  ws-opts:
-    headers:
-      Host: ac2088.herokuapp.com
-    path: /d1babe08-f8ac-490b-b66f-9be27467f3cc-vmess
-- alterId: 64
-  cipher: auto
-  name: 🏁RELAY-104.18.6.138-1035
-  network: ws
-  port: 443
-  server: 104.18.6.138
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  ws-opts:
-    headers:
-      Host: cdnde.irteyz.today
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-139.99.61.53-1112
+  name: 🇰🇷KR-52.78.213.224-1388
   network: ws
   port: 80
-  server: 139.99.61.53
+  server: 52.78.213.224
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: ce3868a4-e2ca-4a6f-8731-e7e88d098886
+  uuid: 6f442823-6b73-4b31-f1f5-aa1e907b051e
   ws-opts:
-    headers:
-      Host: 139.99.61.53
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸US-173.82.240.199-1700
-  network: ws
-  port: 44401
-  server: lav002.jd0001.top
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 6abfad5a-24be-3657-85da-ceac782b7e19
-  ws-opts:
-    headers:
-      Host: lav002.jd0001.top
-    path: /lav002
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸US-45.76.71.233-1892
-  network: ws
-  port: 46983
-  server: 45.76.71.233
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 69099258-1476-46dd-a51b-84e915e941be
-  ws-opts:
-    path: /1tGK82lU/
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-104.29.64.25-4372
-  network: ws
-  port: 443
-  server: 104.29.64.25
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- cipher: chacha20-ietf-poly1305
-  name: 🇱🇹LT-45.87.175.197-4899
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 45.87.175.197
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇻🇳VN-103.186.154.62-5330
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.62
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇻🇳VN-103.186.154.142-5439
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.142
+- cipher: aes-256-gcm
+  name: 🇨🇦CA-85.208.108.60-2276
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 85.208.108.60
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-142.202.48.34-6276
+  name: 🇺🇸US-167.88.61.175-5885
+  password: FoOiGlkAA9yPEGP
+  port: 7307
+  server: 167.88.61.175
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇬🇧GB-172.99.190.87-6352
   password: KixLvKzwjekG00rm
-  port: 8080
-  server: 142.202.48.34
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB-172.99.190.87-6339
-  password: Y6R9pAtvxxzmGC
-  port: 3306
+  port: 8000
   server: 172.99.190.87
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-167.88.63.59-6414
+  name: 🇺🇸US-142.202.48.52-6404
   password: KixLvKzwjekG00rm
-  port: 8000
-  server: 167.88.63.59
+  port: 8080
+  server: 142.202.48.52
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-142.202.48.74-6765
-  password: TEzjfAYq2IjtuoS
-  port: 6679
-  server: 142.202.48.74
+  name: 🇺🇸US-167.88.61.60-6562
+  password: cdBIDV42DCwnfIN
+  port: 8118
+  server: 167.88.61.60
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.91.107.16-6846
-  password: e4FCWrgpkji3QY
-  port: 9101
-  server: 38.91.107.16
-  type: ss
-- cipher: rc4-md5
-  name: 🇨🇳CN-111.6.86.119-7113
-  password: Paofu
-  plugin: obfs
-  plugin-opts:
-    host: e61b761245.microsoft.com
-    mode: http
-  port: 1190
-  server: 111.6.86.119
+  name: 🇳🇱NL-172.99.188.71-6856
+  password: FoOiGlkAA9yPEGP
+  port: 7306
+  server: 172.99.188.71
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-172.67.136.233-7578
+  name: 🇮🇷IR-2.189.59.7-7590
   network: ws
   port: 443
-  server: 172.67.136.233
+  server: 2.189.59.7
+  servername: obdii.cfd
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
   ws-opts:
     headers:
-      Host: az05.beyondy.cfd
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-172.67.237.176-8749
-  network: ws
-  port: 2095
-  server: 172.67.237.176
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-  ws-opts:
-    path: /hgcefomn
+      Host: obdii.cfd
+    path: /linkws
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇵🇹PT-185.113.143.186-123
-  - 🇨🇦CA-23.95.76.59-132
-  - 🇿🇦ZA-156.38.168.58-143
-  - 🇩🇰DK-192.36.27.94-163
-  - 🇱🇹LT-45.87.175.187-178
-  - 🇵🇱PL-217.30.10.70-184
-  - 🇳🇱NL-193.29.139.202-186
-  - 🇭🇰HK-103.141.221.88-192
-  - 🇸🇬SG-167.150.100.115-202
-  - 🇳🇱NL-213.109.147.242-201
-  - 🇰🇿KZ-45.159.250.190-203
-  - 06-0028-CN
-  - 🇺🇸US-34.195.60.139-0001
-  - 🇬🇧GB-45.66.134.176-0165
-  - 🇺🇸US-38.114.114.67-0449
-  - 🏁RELAY-104.21.8.116-0668
-  - 🏁RELAY-141.101.115.111-0706
-  - 🇺🇸US-3.229.186.102-1025
-  - 🏁RELAY-104.18.6.138-1035
-  - 🇸🇬SG-139.99.61.53-1112
-  - 🇺🇸US-173.82.240.199-1700
-  - 🇺🇸US-45.76.71.233-1892
-  - 🏁RELAY-104.29.64.25-4372
-  - 🇱🇹LT-45.87.175.197-4899
-  - 🇻🇳VN-103.186.154.62-5330
-  - 🇻🇳VN-103.186.154.142-5439
-  - 🇺🇸US-142.202.48.34-6276
-  - 🇬🇧GB-172.99.190.87-6339
-  - 🇺🇸US-167.88.63.59-6414
-  - 🇺🇸US-142.202.48.74-6765
-  - 🇺🇸US-38.91.107.16-6846
-  - 🇨🇳CN-111.6.86.119-7113
-  - 🏁RELAY-172.67.136.233-7578
-  - 🏁RELAY-172.67.237.176-8749
+  - 🇫🇮FI-37.143.129.230-120
+  - 🇦🇺AU-95.111.222.113-128
+  - 🇷🇴RO-185.126.237.38-148
+  - 🇺🇸US-23.95.75.146-168
+  - 🇵🇱PL-57.128.214.100-172
+  - 🇲🇾MY-47.250.45.234-124
+  - 🇭🇰HK-219.77.80.3-153
+  - 🇵🇱PL-217.30.10.70-182
+  - 06-0011-CN
+  - 06-0112-CN
+  - 07-0210-HK
+  - 10-0333-VN
+  - 17-0411-MT
+  - 17-0435-NL
+  - 🏁RELAY-190.93.245.170-0017
+  - 🇸🇬SG-81.90.189.152-0196
+  - 🇦🇺AU-103.224.212.211-0654
+  - 🇺🇸US-198.23.174.168-0892
+  - 🇰🇷KR-52.78.213.224-1388
+  - 🇨🇦CA-85.208.108.60-2276
+  - 🇺🇸US-167.88.61.175-5885
+  - 🇬🇧GB-172.99.190.87-6352
+  - 🇺🇸US-142.202.48.52-6404
+  - 🇺🇸US-167.88.61.60-6562
+  - 🇳🇱NL-172.99.188.71-6856
+  - 🇮🇷IR-2.189.59.7-7590
   tolerance: 300
   type: url-test
   url: http://cp.cloudflare.com/
