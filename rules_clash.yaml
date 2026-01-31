@@ -106,36 +106,30 @@ mode: Rule
 port: 7890
 proxies:
 - cipher: aes-256-cfb
-  name: 🇯🇵JP-43.207.153.185-1441
-  password: amazonskr05
-  port: 443
-  server: 43.207.153.185
+  name: 🇷🇺RU-213.183.53.222-4019
+  password: GA9KzeEgvfxNrgmM
+  port: 9019
+  server: 213.183.53.222
   type: ss
-- alterId: 0
+- alterId: 4
   cipher: auto
-  name: 🏁RELAY-172.67.173.73-1572
+  name: 🇫🇷FR-104.166.135.10-4376
   network: ws
-  port: 23245
-  server: jp04.170203.xyz
+  port: 443
+  server: 104.166.135.10
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
-  uuid: 1f3f5b8a-be41-4a92-9b90-6473702aaa3b
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
   ws-opts:
     headers:
-      Host: jp04.170203.xyz
-    path: /
+      Host: ahdaeph8.com
+    path: /ws
 - cipher: aes-256-cfb
-  name: 🇻🇳VN-103.186.154.218-4776
+  name: 🇻🇳VN-103.186.155.220-4782
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.154.218
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇻🇳VN-103.186.155.22-5064
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.22
+  server: 103.186.155.220
   type: ss
 - cipher: aes-256-gcm
   name: 🇺🇸US-169.197.142.187-5731
@@ -144,53 +138,55 @@ proxies:
   server: 169.197.142.187
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.75.136.135-6012
-  password: kDWvXYZoTBcGkC4
-  port: 8882
-  server: 38.75.136.135
+  name: 🇺🇸US-167.88.61.175-6041
+  password: g5MeD6Ft3CWlJId
+  port: 5004
+  server: 167.88.61.175
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.114.114.69-6264
-  password: Y6R9pAtvxxzmGC
-  port: 3306
-  server: 38.114.114.69
+  name: 🇺🇸US-167.88.63.59-6245
+  password: PCnnH6SQSnfoS27
+  port: 8090
+  server: 167.88.63.59
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇦🇹AT-212.183.88.77-7788
+  name: 🏁RELAY-154.92.9.86-8685
   network: ws
-  port: 443
-  server: 212.183.88.77
-  servername: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
+  port: 80
+  server: 154.92.9.86
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
   ws-opts:
-    headers:
-      Host: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
-    path: /obdii.cfd:443/linkws
-- cipher: aes-256-cfb
-  name: 🇵🇱PL-217.30.10.68-8367
-  password: UkXRsXvR6buDMG2Y
-  port: 9001
-  server: 217.30.10.68
-  type: ss
+    path: /blue
+- alterId: 0
+  cipher: auto
+  name: 🏁RELAY-172.64.165.188-8623
+  network: ws
+  port: 2095
+  server: 172.64.165.188
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+  ws-opts:
+    path: /hgcefomn
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇯🇵JP-43.207.153.185-1441
-  - 🏁RELAY-172.67.173.73-1572
-  - 🇻🇳VN-103.186.154.218-4776
-  - 🇻🇳VN-103.186.155.22-5064
+  - 🇷🇺RU-213.183.53.222-4019
+  - 🇫🇷FR-104.166.135.10-4376
+  - 🇻🇳VN-103.186.155.220-4782
   - 🇺🇸US-169.197.142.187-5731
-  - 🇺🇸US-38.75.136.135-6012
-  - 🇺🇸US-38.114.114.69-6264
-  - 🇦🇹AT-212.183.88.77-7788
-  - 🇵🇱PL-217.30.10.68-8367
+  - 🇺🇸US-167.88.61.175-6041
+  - 🇺🇸US-167.88.63.59-6245
+  - 🏁RELAY-154.92.9.86-8685
+  - 🏁RELAY-172.64.165.188-8623
   tolerance: 300
   type: url-test
   url: http://cp.cloudflare.com/
