@@ -106,108 +106,101 @@ mode: Rule
 port: 7890
 proxies:
 - cipher: chacha20-ietf-poly1305
-  name: 🇵🇰PK-156.59.243.6-0160
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  port: 990
-  server: 156.59.243.6
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-51.11.130.170-0151
-  password: W74XFALLLuw6m5IA
+  name: 🇿🇦ZA-102.37.156.224-0176
+  password: aduB9HGxQHjA2SBMRjkHX6
   port: 443
-  server: series-a2.samanehha.co
+  server: 102.37.156.224
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇵🇪PE-138.186.143.32-0206
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 138.186.143.32
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇺🇸US-173.249.209.146-0144
+  name: 🇭🇰HK-47.244.120.197-0234
   network: ws
-  port: 20086
-  server: 173.249.209.146
+  port: 36703
+  server: 47.244.120.197
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 3935c2dc-dbb0-43f7-b367-fe89abe87fdf
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   ws-opts:
     path: /
+- cipher: aes-256-gcm
+  name: 🇫🇷FR-195.154.200.150-0326
+  password: faBAoD54k87UJG7
+  port: 2376
+  server: 195.154.200.150
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-104.21.8.116-0520
+  name: 🇯🇵JP-139.162.117.173-0500
   network: ws
   port: 443
-  server: uk.xlkjjs.top
+  server: 139.162.117.173
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 6ea22ab5-2923-3feb-827c-79e4b8cd3f38
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-opts:
+    path: /chat
+- alterId: 0
+  cipher: auto
+  name: 🏁RELAY-23.227.38.24-0669
+  network: ws
+  port: 443
+  server: 23.227.38.24
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
   ws-opts:
     headers:
-      Host: uk.xlkjjs.top
-    path: /
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: 🇩🇪DE-5.75.168.155-2952
-  network: http
-  port: 443
-  server: 5.75.168.155
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+      Host: oplg1.cfcdn2.xyz
+    path: /AUIKN8AU
 - cipher: aes-256-gcm
-  name: 🇺🇸US-38.114.114.67-6395
-  password: pKEW8JPByTVTLtM
-  port: 443
-  server: 38.114.114.67
+  name: 🇺🇸US-167.88.61.60-6339
+  password: Y6R9pAtvxxzmGC
+  port: 3389
+  server: 167.88.61.60
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-167.88.63.59-6416
-  password: KixLvKzwjekG00rm
-  port: 5500
-  server: 167.88.63.59
+  name: 🇺🇸US-38.121.43.71-6429
+  password: Y6R9pAtvxxzmGC
+  port: 3389
+  server: 38.121.43.71
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇸🇨SC-154.201.67.40-7155
+  name: 🇭🇰HK-47.243.62.222-6783
   network: ws
-  port: 20840
-  server: 154.201.67.40
+  port: 443
+  server: 47.243.62.222
+  servername: lg30.cfcdn3.xyz
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
-  uuid: 6bdff969-dc85-4f83-9242-ddeacb9d6df1
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸US-82.29.132.9-7222
-  network: ws
-  port: 20086
-  server: 82.29.132.9
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: b2c61f53-a359-429c-900e-255f02def6be
-  ws-opts:
-    path: /
+    path: /ray
 proxy-groups:
 - interval: 30
   lazy: false
   max-failed-times: 3
   name: ♻️ 自动选择
   proxies: &id001
-  - 🇵🇰PK-156.59.243.6-0160
-  - 🇬🇧GB-51.11.130.170-0151
-  - 🇺🇸US-173.249.209.146-0144
-  - 🏁RELAY-104.21.8.116-0520
-  - 🇩🇪DE-5.75.168.155-2952
-  - 🇺🇸US-38.114.114.67-6395
-  - 🇺🇸US-167.88.63.59-6416
-  - 🇸🇨SC-154.201.67.40-7155
-  - 🇺🇸US-82.29.132.9-7222
+  - 🇿🇦ZA-102.37.156.224-0176
+  - 🇵🇪PE-138.186.143.32-0206
+  - 🇭🇰HK-47.244.120.197-0234
+  - 🇫🇷FR-195.154.200.150-0326
+  - 🇯🇵JP-139.162.117.173-0500
+  - 🏁RELAY-23.227.38.24-0669
+  - 🇺🇸US-167.88.61.60-6339
+  - 🇺🇸US-38.121.43.71-6429
+  - 🇭🇰HK-47.243.62.222-6783
   tolerance: 300
   type: url-test
   url: http://cp.cloudflare.com/
